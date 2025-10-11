@@ -1,0 +1,577 @@
+/* ===========================
+    VARIABLES Y RESET
+=========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #FFD700;
+    /* Dorado brillante */
+    --secondary-color: #FFC107;
+    /* Ámbar/Dorado más cálido */
+    --text-color: #fff;
+    --background-base: rgba(0, 0, 0, 0.88);
+    /* Fondo principal de la web */
+    --background-card: rgba(31, 31, 31, 0.95);
+    /* Fondo para tarjetas/bloques */
+    
+    /* 💥 VARIABLES CRÍTICAS PARA MENÚ Y SCROLL 💥 */
+    --header-height: 80px; 
+    --scroll-padding: 100px; /* Altura del header + margen para que el texto no se oculte */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    background: var(--background-base);
+    line-height: 1.6;
+    overflow-x: clip;
+    /* 💥 SOLUCIÓN MENÚ 1: Ajusta el desplazamiento del scroll */
+    scroll-padding-top: var(--scroll-padding); 
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* 💥 GRIDS ESPECÍFICOS PARA SECCIONES */
+.st-section-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+.st-section-grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
+
+
+/* ==================================== */
+/* 🌧️ ESTILOS PARA EL EFECTO DE LLUVIA (RAIN) 🌧️ */
+/* ==================================== */
+#rain-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    background-color: transparent;
+}
+
+
+/* ==================================== */
+/* ⚡ ESTILO DE HOVER GENÉRICO PARA TARJETAS (.st-hover-card) ⚡ */
+/* ==================================== */
+.st-hover-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    border-radius: 15px;
+    cursor: pointer;
+    padding: 15px;
+    box-sizing: border-box;
+    background: var(--background-card);
+}
+
+.st-hover-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(255, 215, 0, 0.35);
+    background-color: rgba(41, 41, 41, 0.98);
+}
+
+/* Ajustes de padding de tarjetas específicas */
+.st-contact-info .st-contact-item.st-hover-card { margin: 1.2rem 0; display: flex; padding: 15px 20px; }
+.st-contact-item.st-hover-card:hover .st-contact-icon { color: var(--secondary-color); }
+.st-resume-wrap .st-single-resume.st-hover-card { padding: 20px; margin-bottom: 25px; }
+.st-project-card.st-style2.st-hover-card { margin-bottom: 30px; padding: 2rem; }
+
+
+/* ===========================
+    HEADER (Menu) 
+=========================== */
+.st-site-header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background: rgba(15, 15, 15, 0.95);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    height: var(--header-height); 
+}
+
+.st-site-header.st-sticky-header { background: #111; }
+
+.st-main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    height: 100%;
+}
+
+.st-main-header-in {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.st-site-branding {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    text-decoration: none;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.st-nav {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.st-nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.st-nav-list li a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin: 0 0.8rem;
+    position: relative;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.st-nav-list li a.active,
+.st-nav-list li a:hover {
+    color: var(--primary-color);
+}
+
+.st-header-phone {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: 2rem;
+    white-space: nowrap;
+}
+
+.st-header-phone i {
+    color: var(--primary-color);
+}
+
+/* ESTILOS DE HAMBURGUESA (MÓVIL) */
+.st-munu-toggle {
+    display: none;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 101; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.st-munu-toggle span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: var(--primary-color);
+    border-radius: 3px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+.st-munu-toggle span:nth-child(1) { top: 5px; }
+.st-munu-toggle span:nth-child(2) { top: 13px; }
+.st-munu-toggle span:nth-child(3) { top: 21px; }
+.st-munu-toggle.active span:nth-child(1) { top: 13px; transform: rotate(135deg); }
+.st-munu-toggle.active span:nth-child(2) { opacity: 0; left: -60px; }
+.st-munu-toggle.active span:nth-child(3) { top: 13px; transform: rotate(-135deg); }
+
+
+/* ===========================
+    HERO & BOTONES
+=========================== */
+.st-hero-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0 5%;
+    background: transparent;
+}
+
+.st-hero-content-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.st-hero-text {
+    max-width: 50%;
+    text-align: left;
+}
+
+.st-hero-img-container {
+    max-width: 45%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.st-hero-text h3 { font-size: 1.5rem; color: var(--primary-color); margin-bottom: 0.5rem; }
+.st-hero-text h1 { font-size: 3.5rem; margin-bottom: 1rem; color: var(--text-color); }
+.st-hero-text h2 { font-size: 1.8rem; color: #ccc; margin-bottom: 1.5rem; }
+
+/* Base de todos los botones de ACCIÓN */
+.st-btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    font-weight: 600;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* ESTILO DE LOS BOTONES DE ACCIÓN */
+.st-btn.st-color1 {
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff !important;
+    box-shadow: none;
+}
+.st-btn.st-color1:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: #000 !important;
+    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.5);
+}
+
+/* Estilo de los BOTONES SOCIALES 💥 CORRECCIÓN: Horizontal */
+.st-hero-img img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    animation: float 6s ease-in-out infinite;
+}
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+.st-social-group.st-social-horizontal {
+    display: flex;
+    flex-direction: row; /* HACE QUE LOS BOTONES ESTÉN EN FILA */
+    gap: 1rem;
+    position: static;
+    justify-content: center; /* CENTRA LOS BOTONES */
+    margin-top: 15px; 
+}
+.st-social-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--text-color);
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+.st-social-btn.active,
+.st-social-btn:hover {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    transform: translateY(-3px);
+    color: #000;
+}
+
+
+/* ===========================
+    SECTIONS BASE & GRID (COLUMNAS)
+=========================== */
+section {
+    padding: 100px 0;
+    background: transparent;
+    /* 💥 SOLUCIÓN MENÚ 2: Asegura que el ID de la sección esté visible */
+    scroll-margin-top: var(--scroll-padding); 
+}
+
+/* Section Heading */
+.st-section-heading { text-align: center; }
+.st-section-heading-title { font-size: 1rem; color: var(--primary-color); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 0.5rem; }
+.st-section-heading-subtitle { font-size: 2rem; color: var(--text-color); margin-bottom: 3rem; font-weight: 700; }
+
+/* GRID/COLUMN SETUP - Base para Flexbox */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+/* Estilo base para las columnas */
+.col-lg-7, .col-lg-6, .col-lg-5, .col-lg-4, .col-lg-3, .col-md-6, .col-lg-12 {
+    padding: 0 15px;
+    margin-bottom: 30px;
+}
+
+/* Ancho de las columnas en pantallas grandes (>= 992px) */
+@media (min-width: 992px) {
+    .col-lg-7 { flex: 0 0 58.33333%; max-width: 58.33333%; }
+    .col-lg-6 { flex: 0 0 50%; max-width: 50%; }
+    .col-lg-5 { flex: 0 0 41.66667%; max-width: 41.66667%; }
+    .col-lg-4 { flex: 0 0 33.33333%; max-width: 33.33333%; }
+    .col-lg-3 { flex: 0 0 25%; max-width: 25%; }
+    .col-lg-12 { flex: 0 0 100%; max-width: 100%; }
+}
+
+
+/* ===========================
+    BLOQUES DE CONTENIDO (ABOUT, SKILLS, CONTACT)
+=========================== */
+.st-text-block, .st-details-block, .st-skill-image-block, .st-progressbar-wrap, .st-contact-info, .st-contact-form {
+    background: var(--background-card);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+.st-text-block:hover, .st-details-block:hover, .st-skill-image-block:hover, .st-progressbar-wrap:hover, .st-contact-info:hover, .st-contact-form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(255, 215, 0, 0.3);
+    background-color: rgba(41, 41, 41, 0.98);
+}
+
+.st-text-block-title { font-size: 1.8rem; margin-bottom: 0.5rem; color: var(--text-color); }
+.st-text-block-subtitle { font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.5rem; }
+.st-text-block-text p { margin-bottom: 1rem; color: #ccc; }
+
+/* Detalles (About) */
+.st-text-block-details { list-style: none; margin-top: 5px; padding: 0; }
+.st-text-block-details li { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+.st-text-block-details li span:first-child { font-weight: 600; color: var(--text-color); padding-right: 15px; }
+.st-text-block-details li span:last-child { color: #ccc; text-align: right; }
+
+/* Contacto 💥 CORRECCIÓN: Letras Blancas */
+.st-contact-icon { margin-right: 1rem; font-size: 1.5rem; color: var(--primary-color); transition: color 0.3s ease; }
+.st-contact-details span { display: block; font-size: 0.9rem; color: #aaa; } /* Gris para etiquetas pequeñas */
+
+.st-contact-details p { 
+    margin: 0; 
+    color: var(--text-color); /* Texto principal blanco */
+    line-height: 1.2; 
+}
+.st-contact-details a { 
+    color: var(--text-color); /* Enlaces blancos */
+    text-decoration: none; 
+    transition: color 0.3s; 
+}
+.st-contact-details a:hover { 
+    color: var(--primary-color); /* Hover dorado */
+}
+
+
+.form-control { width: 100%; padding: 10px 15px; border: 1px solid rgba(255, 255, 255, 0.1); background: #1a1a1a; color: var(--text-color); border-radius: 8px; transition: border-color 0.3s; }
+
+/* Habilidades (Skills) */
+.st-skill-icons { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-top: 20px; padding: 10px; }
+.st-skill-icons img { max-width: 50px; height: auto; }
+.st-progressbar { background: rgba(255, 255, 255, 0.1); border-radius: 50px; height: 10px; overflow: hidden; }
+.st-progressbar-in { height: 100%; background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)); width: 0; transition: width 1s ease-in-out; border-radius: 50px; }
+
+
+/* ===========================
+    SERVICES / PROJECT CARDS 💥 RESTAURADO
+=========================== */
+.st-service-card {
+    background: var(--background-card);
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+    min-height: 280px;
+    /* Asegura que el contenido esté bien alineado verticalmente */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.st-service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(255, 215, 0, 0.3);
+}
+
+.st-service-icon i {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+.st-service-title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+.st-service-text p {
+    color: #ccc;
+}
+
+
+/* ===========================
+    RESUME / EXPERIENCE 💥 CORRECCIÓN: Altura Uniforme
+=========================== */
+.st-resume-wrap {
+    display: flex;
+    gap: 30px;
+    /* CLAVE: Estirar los elementos hijos a la misma altura */
+    align-items: stretch; 
+}
+
+.st-resume-column {
+    flex: 1;
+    padding: 2rem;
+    border-radius: 20px;
+    background: var(--background-card);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    height: 100%; /* Toma la altura del elemento más alto gracias a align-items: stretch */
+}
+
+.st-resume-column:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(255, 215, 0, 0.3);
+    background-color: rgba(41, 41, 41, 0.98);
+}
+
+.st-single-resume { margin-bottom: 25px; padding-left: 15px; border-left: 3px solid var(--primary-color); }
+.st-resume-year { color: var(--secondary-color); font-size: 0.9rem; margin-bottom: 5px; }
+.st-resume-title { font-size: 1.2rem; margin-bottom: 5px; }
+.st-resume-subtitle { font-size: 1rem; color: #ccc; margin-bottom: 10px; }
+.st-resume-text p, .st-resume-text ul { color: #aaa; margin: 0; padding: 0; list-style-position: inside; }
+
+
+/* ===========================
+    FOOTER
+=========================== */
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    background: #111;
+    color: #ccc;
+}
+
+
+/* ======================================================= */
+/* 🚀 RESPONSIVE DESIGN - MEDIA QUERIES REFORZADAS 🚀 */
+/* ======================================================= */
+
+/* ------------------------------------------------ */
+/* 💻 AJUSTE DE ESCALA PARA PORTÁTILES (ENTRE 1200px y 992px) */
+/* (Simula el efecto de zoom out del 90%) */
+/* ------------------------------------------------ */
+@media (max-width: 1200px) and (min-width: 992px) {
+    /* 💥 SIMULACIÓN DE ZOOM OUT (90%) */
+    body {
+        font-size: 90%; 
+    }
+    
+    section { padding: 80px 0; }
+    
+    .st-text-block, .st-details-block, .st-progressbar-wrap, .st-service-card, .st-contact-info, .st-contact-form {
+        padding: 1.5rem; 
+    }
+    
+    .st-section-grid-3, .st-section-grid-2 { gap: 20px; }
+
+    .st-hero-text h1 { font-size: 3rem; }
+}
+
+
+/* ------------------------------------------------ */
+/* 💻 PORTÁTILES PEQUEÑOS Y TABLETAS (MAX 991px) */
+/* ------------------------------------------------ */
+@media (max-width: 991px) {
+    /* Variables actualizadas para móvil/tablet */
+    :root {
+        --header-height: 70px;
+        --scroll-padding: 80px;
+    }
+
+    .st-site-header { height: var(--header-height); }
+    .st-hero-wrap { padding: 120px 5% 50px; }
+
+    /* HERO: Apilamiento y redimensionamiento */
+    .st-hero-content-flex { flex-direction: column; text-align: center; }
+    .st-hero-text { order: 2; max-width: 100%; }
+    .st-hero-img-container { order: 1; max-width: 60%; margin-bottom: 40px; }
+    .st-hero-text h1 { font-size: 2.8rem; }
+    .st-hero-text h2 { font-size: 1.5rem; }
+    
+    /* GRID GENERAL: Reducir secciones de 3 a 2 columnas */
+    .st-section-grid-3 { grid-template-columns: repeat(2, 1fr); gap: 25px; }
+    
+    /* GRID GENERAL: Forzar secciones de 2 columnas a 1 */
+    .st-section-grid-2 { grid-template-columns: 1fr; gap: 40px; }
+
+    /* COLUMNAS FLEXBOX: Forzar apilamiento total (100% de ancho) */
+    .col-lg-7, .col-lg-6, .col-lg-5, .col-lg-4, .col-lg-3, .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    /* Resumen (Apilamiento vertical) */
+    .st-resume-wrap { flex-direction: column; gap: 0; }
+    .st-resume-column { margin-bottom: 30px; }
+}
+
+
+/* ------------------------------------------------ */
+/* 📱 TELÉFONOS MÓVILES (MAX 576px) 📱 */
+/* ------------------------------------------------ */
+@media (max-width: 576px) {
+    /* Variables actualizadas para móvil */
+    :root {
+        --header-height: 60px;
+        --scroll-padding: 70px;
+    }
+
+    .st-site-header { height: var(--header-height); }
+    
+    /* Menú: Ocultar teléfono y mostrar hamburguesa */
+    .st-header-phone { display: none; }
+    .st-munu-toggle { display: flex; order: 2; }
+    .st-icon-name { display: none; } 
+    
+    /* HERO SECTION */
+    .st-hero-wrap { padding: 100px 5% 40px; }
+    .st-hero-img-container { max-width: 80%; margin-bottom: 30px; }
+    .st-hero-text h1 { font-size: 1.8rem; }
+    .st-hero-text h2 { font-size: 1.1rem; }
+    
+    /* GRID GENERAL: Todas las secciones a 1 columna para evitar desbordamiento */
+    .st-section-grid-3, .st-section-grid-2 {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Ajuste de padding y elementos */
+    .st-hover-card { padding: 1rem; }
+    .st-skill-icons { gap: 10px; }
+    .st-skill-icons img { max-width: 40px; }
+    
+    /* FOOTER */
+    footer { padding: 1.5rem 0; font-size: 0.8rem; }
+}

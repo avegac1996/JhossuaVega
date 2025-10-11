@@ -1,0 +1,18 @@
+/* ===========================
+   FOOTER
+=========================== */
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    background: #111;
+    color: #ccc;
+}
+
+
+/* ------------------------------------------------ */
+/* 📱 TELÉFONOS MÓVILES (MAX 576px) 📱 */
+/* ------------------------------------------------ */
+@media (max-width: 576px) {
+    /* FOOTER */
+    footer { padding: 1.5rem 0; font-size: 0.8rem; }
+}
