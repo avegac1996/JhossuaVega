@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
     loadPartial('partials/footer.html', 'footer-placeholder', setupFooterYear);
 
     // ----------------------------------------------------
-    // 2. Header: sticky, menú móvil, scroll spy, smooth scroll
+    // 2. Header: sticky, menú móvil, scroll spy, smooth scroll, tema
     // ----------------------------------------------------
     function setupHeader() {
         const header = document.querySelector('.site-header');
@@ -28,6 +28,17 @@ document.addEventListener("DOMContentLoaded", function () {
         const navList = document.querySelector('.nav-list');
         const navLinks = document.querySelectorAll('.nav-link');
         const sections = document.querySelectorAll('main section[id]');
+        const themeToggle = document.querySelector('.theme-toggle');
+
+        if (themeToggle) {
+            themeToggle.addEventListener('click', () => {
+                const root = document.documentElement;
+                const isLight = root.getAttribute('data-theme') === 'light';
+                const next = isLight ? 'dark' : 'light';
+                root.setAttribute('data-theme', next);
+                try { localStorage.setItem('jv-theme', next); } catch (e) { /* almacenamiento no disponible */ }
+            });
+        }
 
         let isClickScrolling = false;
 
@@ -101,7 +112,24 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // ----------------------------------------------------
-    // 3. Scroll reveal (fade + slide up)
+    // 3. Diagramas interactivos (arquitectura / linaje por experiencia)
+    // ----------------------------------------------------
+    document.querySelectorAll('.flow-toggle').forEach((btn) => {
+        btn.addEventListener('click', () => {
+            const diagram = document.getElementById(btn.getAttribute('aria-controls'));
+            if (!diagram) return;
+            const willOpen = !diagram.classList.contains('is-open');
+
+            diagram.classList.toggle('is-open', willOpen);
+            btn.classList.toggle('is-open', willOpen);
+            btn.querySelector('.flow-toggle-label').textContent = willOpen
+                ? 'Ocultar diagrama'
+                : btn.dataset.label;
+        });
+    });
+
+    // ----------------------------------------------------
+    // 4. Scroll reveal (fade + slide up)
     // ----------------------------------------------------
     const revealEls = document.querySelectorAll('.reveal');
 

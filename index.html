@@ -14,6 +14,17 @@
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="cuerpo.css">
     <link rel="stylesheet" href="footer.css">
+
+    <script>
+        (function () {
+            try {
+                var saved = localStorage.getItem('jv-theme');
+                if (saved === 'light' || saved === 'dark') {
+                    document.documentElement.setAttribute('data-theme', saved);
+                }
+            } catch (e) { /* almacenamiento no disponible */ }
+        })();
+    </script>
 </head>
 <body id="home">
 
@@ -61,7 +72,7 @@
                         <img src="assets/img/hero-img.jpg" alt="Jhossua Vega">
                     </div>
                     <div class="hero-stat-chip chip-a">
-                        <span class="num">8+</span>
+                        <span class="num">5+</span>
                         <span class="lbl">Años en<br>Ingeniería de Datos</span>
                     </div>
                     <div class="hero-stat-chip chip-b">
@@ -86,7 +97,7 @@
                         <h3>Ingeniero en Ciencias de la Computación</h3>
                         <p class="role-line">Data Engineer &amp; Arquitecto de Soluciones Cloud</p>
                         <p>
-                            Soy <strong>Data Engineer</strong> con más de <strong>8 años de experiencia</strong>,
+                            Soy <strong>Data Engineer</strong> con más de <strong>5 años de experiencia</strong>,
                             enfocado en la construcción de infraestructura de datos escalable y gobernanza de
                             información. Experto en el diseño y optimización de pipelines <strong>ETL/ELT</strong>,
                             modelado de Data Warehouses bajo <strong>patrón Medallion</strong> y despliegue de
@@ -127,11 +138,84 @@
                         <div class="pillar-icon"><i class="fas fa-diagram-project"></i></div>
                         <h4>Ingeniería de Datos</h4>
                         <p>Pipelines ETL/ELT en Python y PySpark, arquitectura Medallion e integración de APIs y sistemas transaccionales.</p>
+
+                        <button class="flow-toggle" aria-controls="flow-pillar-ingenieria" data-label="Ver proceso de linaje">
+                            <span class="flow-toggle-label">Ver proceso de linaje</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="flow-diagram flow-diagram--compact" id="flow-pillar-ingenieria">
+                            <div class="flow-node">
+                                <span class="flow-node-icon"><i class="fas fa-plug"></i></span>
+                                <span class="flow-node-text">
+                                    <span class="flow-node-label">APIs / Sistemas Transaccionales</span>
+                                </span>
+                            </div>
+                            <div class="flow-connector"></div>
+                            <div class="flow-node">
+                                <span class="flow-node-icon"><i class="fas fa-diagram-project"></i></span>
+                                <span class="flow-node-text">
+                                    <span class="flow-node-label">Pipeline (PL) en Fabric</span>
+                                    <span class="flow-node-sub">PySpark + Dataflows</span>
+                                </span>
+                            </div>
+                            <div class="flow-connector"></div>
+                            <div class="flow-node">
+                                <span class="flow-node-icon"><i class="fas fa-table"></i></span>
+                                <span class="flow-node-text">
+                                    <span class="flow-node-label">Modelo Relacional</span>
+                                    <span class="flow-node-sub">Lakehouse Medallion</span>
+                                </span>
+                            </div>
+                            <div class="flow-connector"></div>
+                            <div class="flow-node">
+                                <span class="flow-node-icon"><i class="fas fa-chart-column"></i></span>
+                                <span class="flow-node-text">
+                                    <span class="flow-node-label">Data Mart / Reporting</span>
+                                </span>
+                            </div>
+                        </div>
                     </div>
                     <div class="card pillar-card reveal">
                         <div class="pillar-icon"><i class="fas fa-cloud"></i></div>
                         <h4>Arquitectura Cloud</h4>
                         <p>Diseño y despliegue de infraestructura en AWS, Azure y Databricks: Lakehouse, S3, Fabric, IAM y automatización.</p>
+
+                        <button class="flow-toggle" aria-controls="flow-pillar-cloud" data-label="Ver diseño de arquitectura">
+                            <span class="flow-toggle-label">Ver diseño de arquitectura</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="flow-diagram flow-diagram--compact" id="flow-pillar-cloud">
+                            <div class="flow-node">
+                                <span class="flow-node-icon"><i class="fas fa-database"></i></span>
+                                <span class="flow-node-text">
+                                    <span class="flow-node-label">Fuentes de Datos</span>
+                                </span>
+                            </div>
+                            <div class="flow-connector"></div>
+                            <div class="flow-node">
+                                <span class="flow-node-icon"><i class="fas fa-right-left"></i></span>
+                                <span class="flow-node-text">
+                                    <span class="flow-node-label">Ingesta</span>
+                                    <span class="flow-node-sub">Data Factory / Airflow</span>
+                                </span>
+                            </div>
+                            <div class="flow-connector"></div>
+                            <div class="flow-node">
+                                <span class="flow-node-icon"><i class="fas fa-server"></i></span>
+                                <span class="flow-node-text">
+                                    <span class="flow-node-label">Lakehouse</span>
+                                    <span class="flow-node-sub">S3 / ADLS</span>
+                                </span>
+                            </div>
+                            <div class="flow-connector"></div>
+                            <div class="flow-node">
+                                <span class="flow-node-icon"><i class="fas fa-chart-line"></i></span>
+                                <span class="flow-node-text">
+                                    <span class="flow-node-label">Serving</span>
+                                    <span class="flow-node-sub">Databricks SQL / Power BI</span>
+                                </span>
+                            </div>
+                        </div>
                     </div>
                     <div class="card pillar-card reveal">
                         <div class="pillar-icon"><i class="fas fa-shield-halved"></i></div>
@@ -173,6 +257,42 @@
                                 <li>Gobernanza de datos (linaje, catálogo, calidad) y construcción de Data Marts para analítica y reporting.</li>
                                 <li>Administración de infraestructura en Azure, Fabric, Databricks y AWS.</li>
                             </ul>
+
+                            <button class="flow-toggle" aria-controls="flow-handytec" data-label="Ver proceso de linaje">
+                                <span class="flow-toggle-label">Ver proceso de linaje</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="flow-diagram" id="flow-handytec">
+                                <div class="flow-node">
+                                    <span class="flow-node-icon"><i class="fas fa-plug"></i></span>
+                                    <span class="flow-node-text">
+                                        <span class="flow-node-label">APIs / Sistemas Transaccionales</span>
+                                    </span>
+                                </div>
+                                <div class="flow-connector"></div>
+                                <div class="flow-node">
+                                    <span class="flow-node-icon"><i class="fas fa-diagram-project"></i></span>
+                                    <span class="flow-node-text">
+                                        <span class="flow-node-label">Pipeline (PL) en Fabric</span>
+                                        <span class="flow-node-sub">PySpark + Dataflows</span>
+                                    </span>
+                                </div>
+                                <div class="flow-connector"></div>
+                                <div class="flow-node">
+                                    <span class="flow-node-icon"><i class="fas fa-table"></i></span>
+                                    <span class="flow-node-text">
+                                        <span class="flow-node-label">Modelo Relacional</span>
+                                        <span class="flow-node-sub">Lakehouse Medallion</span>
+                                    </span>
+                                </div>
+                                <div class="flow-connector"></div>
+                                <div class="flow-node">
+                                    <span class="flow-node-icon"><i class="fas fa-chart-column"></i></span>
+                                    <span class="flow-node-text">
+                                        <span class="flow-node-label">Data Marts / Reporting</span>
+                                    </span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -190,6 +310,43 @@
                                 <li>Definición del stack tecnológico y patrones arquitectónicos (microservicios, serverless).</li>
                                 <li>Dirección de un equipo técnico de 4 personas, garantizando escalabilidad, seguridad y optimización de costos.</li>
                             </ul>
+
+                            <button class="flow-toggle" aria-controls="flow-turingtech" data-label="Ver diseño de arquitectura">
+                                <span class="flow-toggle-label">Ver diseño de arquitectura</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="flow-diagram" id="flow-turingtech">
+                                <div class="flow-node">
+                                    <span class="flow-node-icon"><i class="fas fa-comments"></i></span>
+                                    <span class="flow-node-text">
+                                        <span class="flow-node-label">Requerimiento de Negocio</span>
+                                    </span>
+                                </div>
+                                <div class="flow-connector"></div>
+                                <div class="flow-node">
+                                    <span class="flow-node-icon"><i class="fas fa-drafting-compass"></i></span>
+                                    <span class="flow-node-text">
+                                        <span class="flow-node-label">Diseño Arquitectónico</span>
+                                        <span class="flow-node-sub">Microservicios / Serverless</span>
+                                    </span>
+                                </div>
+                                <div class="flow-connector"></div>
+                                <div class="flow-node">
+                                    <span class="flow-node-icon"><i class="fas fa-cloud-arrow-up"></i></span>
+                                    <span class="flow-node-text">
+                                        <span class="flow-node-label">Despliegue Cloud</span>
+                                        <span class="flow-node-sub">AWS / Azure</span>
+                                    </span>
+                                </div>
+                                <div class="flow-connector"></div>
+                                <div class="flow-node">
+                                    <span class="flow-node-icon"><i class="fas fa-people-group"></i></span>
+                                    <span class="flow-node-text">
+                                        <span class="flow-node-label">Equipo Técnico</span>
+                                        <span class="flow-node-sub">4 personas</span>
+                                    </span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -205,6 +362,43 @@
                                 <li>Gestión de infraestructura AWS (S3, EC2, IAM) y automatización de KPIs de cobranza.</li>
                                 <li>Construcción de Data Marts y reportes avanzados en Power BI.</li>
                             </ul>
+
+                            <button class="flow-toggle" aria-controls="flow-gestcobra" data-label="Ver proceso ETL">
+                                <span class="flow-toggle-label">Ver proceso ETL</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="flow-diagram" id="flow-gestcobra">
+                                <div class="flow-node">
+                                    <span class="flow-node-icon"><i class="fas fa-file-invoice-dollar"></i></span>
+                                    <span class="flow-node-text">
+                                        <span class="flow-node-label">APIs Financieras</span>
+                                    </span>
+                                </div>
+                                <div class="flow-connector"></div>
+                                <div class="flow-node">
+                                    <span class="flow-node-icon"><i class="fab fa-python"></i></span>
+                                    <span class="flow-node-text">
+                                        <span class="flow-node-label">ETL Python</span>
+                                        <span class="flow-node-sub">Patrón Medallion</span>
+                                    </span>
+                                </div>
+                                <div class="flow-connector"></div>
+                                <div class="flow-node">
+                                    <span class="flow-node-icon"><i class="fab fa-aws"></i></span>
+                                    <span class="flow-node-text">
+                                        <span class="flow-node-label">AWS</span>
+                                        <span class="flow-node-sub">S3 / EC2 / IAM</span>
+                                    </span>
+                                </div>
+                                <div class="flow-connector"></div>
+                                <div class="flow-node">
+                                    <span class="flow-node-icon"><i class="fas fa-chart-column"></i></span>
+                                    <span class="flow-node-text">
+                                        <span class="flow-node-label">Power BI</span>
+                                        <span class="flow-node-sub">KPIs de cobranza</span>
+                                    </span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -219,6 +413,40 @@
                                 <li>Estrategias de respaldo, recuperación y continuidad operativa (RPO/RTO).</li>
                                 <li>Automatización de migraciones estructuradas y digitalización documental.</li>
                             </ul>
+
+                            <button class="flow-toggle" aria-controls="flow-procuraduria" data-label="Ver estrategia de continuidad">
+                                <span class="flow-toggle-label">Ver estrategia de continuidad</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="flow-diagram" id="flow-procuraduria">
+                                <div class="flow-node">
+                                    <span class="flow-node-icon"><i class="fas fa-database"></i></span>
+                                    <span class="flow-node-text">
+                                        <span class="flow-node-label">Base de Datos Producción</span>
+                                    </span>
+                                </div>
+                                <div class="flow-connector"></div>
+                                <div class="flow-node">
+                                    <span class="flow-node-icon"><i class="fas fa-copy"></i></span>
+                                    <span class="flow-node-text">
+                                        <span class="flow-node-label">Backup / Réplica</span>
+                                    </span>
+                                </div>
+                                <div class="flow-connector"></div>
+                                <div class="flow-node">
+                                    <span class="flow-node-icon"><i class="fas fa-stopwatch"></i></span>
+                                    <span class="flow-node-text">
+                                        <span class="flow-node-label">RPO / RTO</span>
+                                    </span>
+                                </div>
+                                <div class="flow-connector"></div>
+                                <div class="flow-node">
+                                    <span class="flow-node-icon"><i class="fas fa-shield-halved"></i></span>
+                                    <span class="flow-node-text">
+                                        <span class="flow-node-label">Continuidad Operativa</span>
+                                    </span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -233,6 +461,40 @@
                                 <li>Modelos de datos y procedimientos almacenados en SQL Server y PL/SQL.</li>
                                 <li>Controles de calidad de datos y dashboards gerenciales en RShiny.</li>
                             </ul>
+
+                            <button class="flow-toggle" aria-controls="flow-fisa" data-label="Ver pipeline de datos">
+                                <span class="flow-toggle-label">Ver pipeline de datos</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="flow-diagram" id="flow-fisa">
+                                <div class="flow-node">
+                                    <span class="flow-node-icon"><i class="fas fa-server"></i></span>
+                                    <span class="flow-node-text">
+                                        <span class="flow-node-label">SQL Server / PL-SQL</span>
+                                    </span>
+                                </div>
+                                <div class="flow-connector"></div>
+                                <div class="flow-node">
+                                    <span class="flow-node-icon"><i class="fas fa-arrows-spin"></i></span>
+                                    <span class="flow-node-text">
+                                        <span class="flow-node-label">Pipelines ETL</span>
+                                    </span>
+                                </div>
+                                <div class="flow-connector"></div>
+                                <div class="flow-node">
+                                    <span class="flow-node-icon"><i class="fas fa-table"></i></span>
+                                    <span class="flow-node-text">
+                                        <span class="flow-node-label">Data Mart</span>
+                                    </span>
+                                </div>
+                                <div class="flow-connector"></div>
+                                <div class="flow-node">
+                                    <span class="flow-node-icon"><i class="fas fa-chart-line"></i></span>
+                                    <span class="flow-node-text">
+                                        <span class="flow-node-label">Dashboard RShiny</span>
+                                    </span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -246,6 +508,34 @@
                                 <li>Modelado de datos para control de inventarios y procesos logísticos.</li>
                                 <li>Pipelines en Python para ingesta desde fuentes no estructuradas.</li>
                             </ul>
+
+                            <button class="flow-toggle" aria-controls="flow-marmoles" data-label="Ver flujo de datos">
+                                <span class="flow-toggle-label">Ver flujo de datos</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="flow-diagram" id="flow-marmoles">
+                                <div class="flow-node">
+                                    <span class="flow-node-icon"><i class="fas fa-file-csv"></i></span>
+                                    <span class="flow-node-text">
+                                        <span class="flow-node-label">Fuentes No Estructuradas</span>
+                                    </span>
+                                </div>
+                                <div class="flow-connector"></div>
+                                <div class="flow-node">
+                                    <span class="flow-node-icon"><i class="fab fa-python"></i></span>
+                                    <span class="flow-node-text">
+                                        <span class="flow-node-label">Pipelines Python</span>
+                                    </span>
+                                </div>
+                                <div class="flow-connector"></div>
+                                <div class="flow-node">
+                                    <span class="flow-node-icon"><i class="fas fa-table"></i></span>
+                                    <span class="flow-node-text">
+                                        <span class="flow-node-label">Modelo Relacional</span>
+                                        <span class="flow-node-sub">Control de Inventarios</span>
+                                    </span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -259,6 +549,33 @@
                                 <li>Validación, estandarización y curaduría de grandes volúmenes de datos geoespaciales.</li>
                                 <li>Diseño y ejecución de procesos de Data Quality Assurance.</li>
                             </ul>
+
+                            <button class="flow-toggle" aria-controls="flow-igm" data-label="Ver proceso de calidad">
+                                <span class="flow-toggle-label">Ver proceso de calidad</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="flow-diagram" id="flow-igm">
+                                <div class="flow-node">
+                                    <span class="flow-node-icon"><i class="fas fa-map-location-dot"></i></span>
+                                    <span class="flow-node-text">
+                                        <span class="flow-node-label">Datos Geoespaciales</span>
+                                    </span>
+                                </div>
+                                <div class="flow-connector"></div>
+                                <div class="flow-node">
+                                    <span class="flow-node-icon"><i class="fas fa-magnifying-glass-chart"></i></span>
+                                    <span class="flow-node-text">
+                                        <span class="flow-node-label">Validación / DQA</span>
+                                    </span>
+                                </div>
+                                <div class="flow-connector"></div>
+                                <div class="flow-node">
+                                    <span class="flow-node-icon"><i class="fas fa-book"></i></span>
+                                    <span class="flow-node-text">
+                                        <span class="flow-node-label">Catálogo Estandarizado</span>
+                                    </span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 

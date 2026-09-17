@@ -25,7 +25,15 @@
     --accent: #35d0ba;
     --accent-2: #6ea8fe;
     --accent-warm: #f5b942;
+    --on-accent: #06121a;
     --gradient-brand: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+
+    /* Chrome (header, chips, overlays) */
+    --header-bg: rgba(10, 14, 23, 0.55);
+    --header-bg-scrolled: rgba(10, 14, 23, 0.88);
+    --overlay-bg: rgba(10, 14, 23, 0.98);
+    --chip-bg: rgba(19, 26, 42, 0.9);
+    --grid-line: rgba(255, 255, 255, 0.035);
 
     /* Layout */
     --header-height: 76px;
@@ -36,6 +44,34 @@
     --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.35);
     --shadow-hover: 0 18px 40px rgba(53, 208, 186, 0.18);
     --max-width: 1180px;
+
+    color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+    --bg-0: #f4f6fb;
+    --bg-1: #eaeef7;
+    --surface: #ffffff;
+    --surface-2: #eef1f8;
+    --border: rgba(15, 23, 42, 0.09);
+    --border-strong: rgba(15, 23, 42, 0.18);
+
+    --text-0: #10141f;
+    --text-1: #3a4152;
+    --text-2: #6b7284;
+
+    --on-accent: #06121a;
+
+    --header-bg: rgba(244, 246, 251, 0.7);
+    --header-bg-scrolled: rgba(244, 246, 251, 0.92);
+    --overlay-bg: rgba(255, 255, 255, 0.98);
+    --chip-bg: rgba(255, 255, 255, 0.92);
+    --grid-line: rgba(15, 23, 42, 0.05);
+
+    --shadow-card: 0 10px 30px rgba(15, 23, 42, 0.08);
+    --shadow-hover: 0 18px 40px rgba(53, 208, 186, 0.22);
+
+    color-scheme: light;
 }
 
 html {
@@ -49,6 +85,7 @@ body {
     line-height: 1.7;
     overflow-x: clip;
     scroll-padding-top: var(--scroll-padding);
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 h1, h2, h3, h4, h5 {
@@ -87,8 +124,8 @@ img { max-width: 100%; display: block; }
     position: absolute;
     inset: 0;
     background-image:
-        linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+        linear-gradient(var(--grid-line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
     background-size: 42px 42px;
     mask-image: radial-gradient(ellipse 80% 60% at 50% 20%, #000 40%, transparent 90%);
 }
@@ -103,7 +140,7 @@ img { max-width: 100%; display: block; }
     width: 100%;
     z-index: 999;
     height: var(--header-height);
-    background: rgba(10, 14, 23, 0.55);
+    background: var(--header-bg);
     backdrop-filter: blur(14px) saturate(140%);
     -webkit-backdrop-filter: blur(14px) saturate(140%);
     border-bottom: 1px solid transparent;
@@ -111,7 +148,7 @@ img { max-width: 100%; display: block; }
 }
 
 .site-header.is-scrolled {
-    background: rgba(10, 14, 23, 0.88);
+    background: var(--header-bg-scrolled);
     border-bottom-color: var(--border);
 }
 
@@ -216,6 +253,41 @@ img { max-width: 100%; display: block; }
     box-shadow: 0 10px 24px rgba(53, 208, 186, 0.35);
 }
 
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-shrink: 0;
+}
+
+.theme-toggle {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1px solid var(--border-strong);
+    background: var(--surface);
+    color: var(--text-1);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem;
+    flex-shrink: 0;
+    transition: all 0.25s ease;
+}
+
+.theme-toggle:hover {
+    color: var(--on-accent);
+    background: var(--gradient-brand);
+    border-color: transparent;
+    transform: translateY(-2px) rotate(15deg);
+}
+
+.theme-toggle .fa-sun { display: none; }
+
+:root[data-theme="light"] .theme-toggle .fa-sun { display: inline-block; }
+:root[data-theme="light"] .theme-toggle .fa-moon { display: none; }
+
 .nav-toggle {
     display: none;
     width: 34px;
@@ -264,13 +336,13 @@ img { max-width: 100%; display: block; }
         gap: 0;
         max-height: 0;
         overflow: hidden;
-        background: rgba(10, 14, 23, 0.98);
+        background: var(--overlay-bg);
         backdrop-filter: blur(16px);
         border-bottom: 1px solid var(--border);
         transition: max-height 0.4s ease;
     }
 
-    .nav-list.is-open { max-height: 420px; }
+    .nav-list.is-open { max-height: 480px; }
 
     .nav-list li { width: 100%; border-bottom: 1px solid var(--border); }
     .nav-list a { display: block; padding: 16px 24px; }
