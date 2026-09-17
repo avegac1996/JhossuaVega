@@ -3,721 +3,553 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV | Jhossua Vega Cruz - Data Engineer</title>
+    <title>Jhossua Vega | Data Engineer &amp; Arquitecto de Soluciones Cloud</title>
+    <meta name="description" content="Jhossua Vega — Data Engineer especializado en arquitecturas cloud (AWS, Azure, Databricks), pipelines ETL/ELT y gobernanza de datos. Quito, Ecuador.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="cuerpo.css">
     <link rel="stylesheet" href="footer.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body id="home">
 
-    <div id="rain-canvas"></div>
-    
+    <div id="bg-canvas"></div>
+
     <div id="header-placeholder"></div>
-    
-    <section class="st-hero-wrap">
-        <div class="st-hero st-style1">
+
+    <main>
+
+        <!-- ============ HERO ============ -->
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-copy reveal">
+                    <span class="hero-kicker"><span class="dot"></span> Disponible para nuevas oportunidades</span>
+
+                    <h1 class="hero-title">Hola, soy <span class="accent-text">Jhossua Vega</span></h1>
+
+                    <p class="hero-role"><strong>Data Engineer</strong> &amp; Arquitecto de Soluciones Cloud</p>
+
+                    <p class="hero-lede">
+                        Construyo infraestructura de datos escalable: pipelines ETL/ELT, arquitecturas Medallion
+                        y plataformas Lakehouse sobre AWS, Azure y Databricks — desde la ingesta hasta la
+                        gobernanza y el reporting.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="assets/cv/Jhossua_Vega_CV.pdf" target="_blank" class="btn btn-primary">
+                            <i class="fas fa-arrow-down"></i> Descargar CV
+                        </a>
+                        <a href="#contact" class="btn btn-ghost nav-link">
+                            <i class="fas fa-paper-plane"></i> Contáctame
+                        </a>
+                    </div>
+
+                    <div class="hero-social">
+                        <a href="https://www.linkedin.com/in/jhossua-vega-659526192/" target="_blank" class="social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/avegac1996" target="_blank" class="social-btn" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://wa.me/593959720085" target="_blank" class="social-btn" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="mailto:anthoy_vega95@hotmail.com" class="social-btn" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+
+                <div class="hero-visual reveal">
+                    <div class="hero-photo-ring">
+                        <img src="assets/img/hero-img.jpg" alt="Jhossua Vega">
+                    </div>
+                    <div class="hero-stat-chip chip-a">
+                        <span class="num">8+</span>
+                        <span class="lbl">Años en<br>Ingeniería de Datos</span>
+                    </div>
+                    <div class="hero-stat-chip chip-b">
+                        <span class="num">10+</span>
+                        <span class="lbl">Certificaciones<br>Cloud &amp; IA</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ ABOUT ============ -->
+        <section id="about" class="section-alt">
             <div class="container">
-                <div class="st-hero-content-flex">
-                    <div class="st-hero-text">
-                        <h3>Hola, soy</h3>
-                        <h1>Jhossua <br>Vega</h1>
-                        
-                        <h2>Data Engineer & Backend Developer</h2>
-                        <h2>AWS Cloud Solutions</h2>
-                        <div class="st-hero-btn ">
-                            <a href="#contact" class="st-btn st-style1 st-color1 st-smooth-move">Contratarme</a>
-                        </div>
-                    </div>
-                    
-                    <div class="st-hero-img-container">
-                        <div class="st-hero-img">
-                            <img src="assets/img/hero-img.jpg" alt="Jhossua Vega" width="400" height="auto">
-                        </div>
-                        
-                        <div class="st-social-group st-social-horizontal">
-                            <a href="https://www.linkedin.com/in/jhossua-vega-659526192/" target="_blank" class="st-social-btn">
-                                <span class="st-social-icon"><i class="fab fa-linkedin"></i></span>
-                                <span class="st-icon-name">LinkedIn</span>
-                            </a>
-                            <a href="https://github.com/avegac1996" target="_blank" class="st-social-btn active">
-                                <span class="st-social-icon"><i class="fab fa-github"></i></span>
-                                <span class="st-icon-name">GitHub</span>
-                            </a>
-                            <a href="https://wa.me/593959720085" target="_blank" class="st-social-btn">
-                                <span class="st-social-icon"><i class="fab fa-whatsapp"></i></span>
-                                <span class="st-icon-name">WhatsApp</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="about" class="st-dark-bg">
-        <div class="container">
-            <div class="st-section-heading">
-                <h4 class="st-section-heading-title">Sobre Mí</h4>
-                <h2 class="st-section-heading-subtitle">Conoce más sobre mi experiencia y habilidades.</h2>
-            </div>
-            <div class="st-height-b100 st-height-lg-80"></div>
-
-            <div class="row">
-
-                <div class="col-lg-7">
-                    <div class="st-text-block">
-                        <h2 class="st-text-block-title">Hola! Soy Jhossua Vega</h2>
-                        <h3 class="st-text-block-subtitle st-color1">Data Engineer & Backend Developer</h3>
-
-                        <div class="st-text-block-text">
-                            <p>Ingeniero en Ciencias de la Computación y **Data Engineer** con más de **8 años de experiencia**, enfocado en la construcción de infraestructura de datos escalable y gobernanza de información. Experto en el diseño y optimización de pipelines ETL/ELT, modelado de Data Warehouses (Patrón Medallón) y despliegue de soluciones robustas en **AWS**. Combino mi experiencia en Ingeniería de Datos con sólidas habilidades de desarrollo **Backend** (Python, Node.js) para crear soluciones completas, automatizadas y de alto rendimiento que impulsan la toma de decisiones empresariales.</p>
-                        </div>
-
-                        <div class="st-height-b25 st-height-lg-25"></div>
-
-                        <a href="assets/cv/Jhossua_Vega_CV.pdf" target="_blank" class="st-btn st-style1 st-color1">Descargar CV</a>
-                    </div>
+                <div class="section-head">
+                    <span class="section-eyebrow">Perfil</span>
+                    <h2 class="section-title">Sobre mí</h2>
+                    <p class="section-sub">Ingeniería de datos con visión de arquitectura y gobernanza.</p>
                 </div>
 
-                <div class="col-lg-5">
-                    <div class="st-text-block st-details-block">
-                        <ul class="st-text-block-details">
-                            <li><span>Fecha Nac.</span> <span>Octubre 27, 1996</span></li>
-                            <li><span>Teléfono</span> <span>+593 959 720 085</span></li>
-                            <li><span>Email</span> <span>ti.iris096@gmail.com</span></li>
-                            <li><span>De</span> <span>Quito, Ecuador</span></li>
-                            <li><span>Idiomas</span> <span>Español, Inglés</span></li>
-                            <li><span>Freelance</span> <span>Disponible</span></li>
+                <div class="about-grid">
+                    <div class="card about-text reveal">
+                        <h3>Ingeniero en Ciencias de la Computación</h3>
+                        <p class="role-line">Data Engineer &amp; Arquitecto de Soluciones Cloud</p>
+                        <p>
+                            Soy <strong>Data Engineer</strong> con más de <strong>8 años de experiencia</strong>,
+                            enfocado en la construcción de infraestructura de datos escalable y gobernanza de
+                            información. Experto en el diseño y optimización de pipelines <strong>ETL/ELT</strong>,
+                            modelado de Data Warehouses bajo <strong>patrón Medallion</strong> y despliegue de
+                            soluciones robustas en <strong>AWS, Azure y Databricks</strong>.
+                        </p>
+                        <p>
+                            Combino la ingeniería de datos con sólidas habilidades de desarrollo backend en
+                            <strong> Python</strong> para crear soluciones completas, automatizadas y de alto
+                            rendimiento que impulsan la toma de decisiones empresariales.
+                        </p>
+                    </div>
+
+                    <div class="card about-details reveal">
+                        <ul class="detail-list">
+                            <li><span>Fecha de nacimiento</span><span>27 oct. 1996</span></li>
+                            <li><span>Teléfono</span><span>+593 959 720 085</span></li>
+                            <li><span>Email</span><span>anthoy_vega95@hotmail.com</span></li>
+                            <li><span>Ubicación</span><span>Quito, Ecuador</span></li>
+                            <li><span>Idiomas</span><span>Español, Inglés</span></li>
+                            <li><span>Disponibilidad</span><span class="availability-pill"><span class="dot"></span> Abierto a oportunidades</span></li>
                         </ul>
                     </div>
                 </div>
-
-            </div> </div>
-    </section>
-    
-    <section id="services" class="st-dark-bg">
-        <div class="st-height-b100 st-height-lg-b80"></div>
-        <div class="container">
-            <div class="st-section-heading st-style1">
-                <h4 class="st-section-heading-title">SERVICIOS</h4>
-                <h2 class="st-section-heading-subtitle">SERVICIOS</h2>
             </div>
-            <div class="st-height-b25 st-height-lg-b25"></div>
-            
-            <div class="row">
-                
-                <div class="col-lg-3 col-md-6">
-                    <div class="st-service-card st-style1">
-                        <div class="st-service-icon"><i class="fas fa-sitemap"></i></div>
-                        <h4 class="st-service-title">Ingeniería de Datos</h4>
-                        <div class="st-service-text">
-                            <p>Diseño de Arquitectura Medallón, construcción de pipelines ETL/ELT con Python y modelado para Data Governance.</p>
-                        </div>
-                    </div>
+        </section>
+
+        <!-- ============ SERVICIOS / PILARES ============ -->
+        <section id="services">
+            <div class="container">
+                <div class="section-head">
+                    <span class="section-eyebrow">Qué hago</span>
+                    <h2 class="section-title">Áreas de especialización</h2>
+                    <p class="section-sub">El mismo stack que uso día a día en producción.</p>
                 </div>
 
-                <div class="col-lg-3 col-md-6">
-                    <div class="st-service-card st-style1">
-                        <div class="st-service-icon"><i class="fas fa-chart-area"></i></div>
-                        <h4 class="st-service-title">Business Intelligence (BI)</h4>
-                        <div class="st-service-text">
-                            <p>Creación de dashboards e informes estratégicos usando Power BI, Tableau y R Shiny para la toma de decisiones empresariales.</p>
-                        </div>
+                <div class="pillars-grid">
+                    <div class="card pillar-card reveal">
+                        <div class="pillar-icon"><i class="fas fa-diagram-project"></i></div>
+                        <h4>Ingeniería de Datos</h4>
+                        <p>Pipelines ETL/ELT en Python y PySpark, arquitectura Medallion e integración de APIs y sistemas transaccionales.</p>
+                    </div>
+                    <div class="card pillar-card reveal">
+                        <div class="pillar-icon"><i class="fas fa-cloud"></i></div>
+                        <h4>Arquitectura Cloud</h4>
+                        <p>Diseño y despliegue de infraestructura en AWS, Azure y Databricks: Lakehouse, S3, Fabric, IAM y automatización.</p>
+                    </div>
+                    <div class="card pillar-card reveal">
+                        <div class="pillar-icon"><i class="fas fa-shield-halved"></i></div>
+                        <h4>Gobernanza &amp; Calidad</h4>
+                        <p>Frameworks de linaje, catálogo, calidad y versionamiento de datos para asegurar trazabilidad end-to-end.</p>
+                    </div>
+                    <div class="card pillar-card reveal">
+                        <div class="pillar-icon"><i class="fas fa-chart-column"></i></div>
+                        <h4>BI &amp; Analítica</h4>
+                        <p>Data Marts y dashboards ejecutivos en Power BI y RShiny para decisiones de negocio basadas en datos.</p>
                     </div>
                 </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="st-service-card st-style1">
-                        <div class="st-service-icon"><i class="fas fa-cloud"></i></div>
-                        <h4 class="st-service-title">DevOps y Cloud</h4>
-                        <div class="st-service-text">
-                            <p>Despliegue de infraestructura en la nube (AWS/Azure) e implementación de contenedores Docker para CI/CD.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="st-service-card st-style1">
-                        <div class="st-service-icon"><i class="fas fa-server"></i></div>
-                        <h4 class="st-service-title">Desarrollo Back-End</h4>
-                        <div class="st-service-text">
-                            <p>Creación de APIs RESTful robustas y escalables utilizando Python, PHP y Node.js para lógica de negocio eficiente.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="st-service-card st-style1">
-                        <div class="st-service-icon"><i class="fas fa-desktop"></i></div>
-                        <h4 class="st-service-title">Desarrollo Front-End</h4>
-                        <div class="st-service-text">
-                            <p>Diseño y programación de interfaces de usuario modernas y responsive con frameworks como ReactJS y Angular.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-3 col-md-6">
-                    <div class="st-service-card st-style1">
-                        <div class="st-service-icon"><i class="fas fa-database"></i></div>
-                        <h4 class="st-service-title">Gestión de Bases de Datos</h4>
-                        <div class="st-service-text">
-                            <p>Administración de sistemas SQL (MySQL/Postgres) y NoSQL (MongoDB), garantizando integridad y optimización de consultas.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-3 col-md-6">
-                    <div class="st-service-card st-style1">
-                        <div class="st-service-icon"><i class="fas fa-network-wired"></i></div>
-                        <h4 class="st-service-title">Infraestructura y Networking</h4>
-                        <div class="st-service-text">
-                            <p>Configuración de servidores (VPS/Cloud), topologías de red, Gateways y sistemas operativos para conectividad estable.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-3 col-md-6">
-                    <div class="st-service-card st-style1">
-                        <div class="st-service-icon"><i class="fas fa-phone-volume"></i></div>
-                        <h4 class="st-service-title">Call Center y Telefonía IP</h4>
-                        <div class="st-service-text">
-                            <p>Implementación y soporte de plataformas IP como Issabel y Asterisk. Optimización de campañas y IVRs.</p>
-                        </div>
-                    </div>
-                </div>
-
             </div>
-        </div>
-        <div class="st-height-b100 st-height-lg-b80"></div>
-    </section>
-    
-    <section id="experience" class="st-dark-bg">
-        <div class="st-height-b100 st-height-lg-b80"></div>
-        <div class="container">
-            <div class="st-section-heading st-style1">
-                <h4 class="st-section-heading-title">TRAYECTORIA</h4>
-                <h2 class="st-section-heading-subtitle">RESUMEN</h2>
+        </section>
+
+        <!-- ============ EXPERIENCIA ============ -->
+        <section id="experience" class="section-alt">
+            <div class="container">
+                <div class="section-head">
+                    <span class="section-eyebrow">Trayectoria</span>
+                    <h2 class="section-title">Experiencia profesional</h2>
+                    <p class="section-sub">Progresión desde calidad de datos hasta arquitectura cloud.</p>
+                </div>
+
+                <div class="timeline">
+
+                    <div class="timeline-item is-current reveal">
+                        <span class="timeline-dot"></span>
+                        <div class="card timeline-card">
+                            <div class="timeline-top">
+                                <span class="timeline-date">Nov 2025 — Actualidad</span>
+                                <span class="timeline-current-badge">Actual</span>
+                            </div>
+                            <h4>Data Engineer</h4>
+                            <p class="timeline-company">Handytec</p>
+                            <ul>
+                                <li>Implementación de soluciones de datos en Microsoft Fabric y Databricks: Lakehouses, notebooks y pipelines ETL/ELT con PySpark, Dataflows y Python.</li>
+                                <li>Diseño de arquitecturas bajo patrón Medallion e integración de datos desde APIs y sistemas transaccionales.</li>
+                                <li>Gobernanza de datos (linaje, catálogo, calidad) y construcción de Data Marts para analítica y reporting.</li>
+                                <li>Administración de infraestructura en Azure, Fabric, Databricks y AWS.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item is-current reveal">
+                        <span class="timeline-dot"></span>
+                        <div class="card timeline-card">
+                            <div class="timeline-top">
+                                <span class="timeline-date">Ene 2025 — Actualidad</span>
+                                <span class="timeline-current-badge">Actual</span>
+                            </div>
+                            <h4>Arquitecto de Soluciones y Tech Lead</h4>
+                            <p class="timeline-company">Corporación TuringTech</p>
+                            <ul>
+                                <li>Diseño arquitectónico y despliegue cloud de soluciones a medida en BI, IA e Ingeniería de Datos.</li>
+                                <li>Definición del stack tecnológico y patrones arquitectónicos (microservicios, serverless).</li>
+                                <li>Dirección de un equipo técnico de 4 personas, garantizando escalabilidad, seguridad y optimización de costos.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item reveal">
+                        <span class="timeline-dot"></span>
+                        <div class="card timeline-card">
+                            <div class="timeline-top"><span class="timeline-date">Mar 2024 — Nov 2025</span></div>
+                            <h4>Data Engineer</h4>
+                            <p class="timeline-company">Gestcobra Cía. Ltda.</p>
+                            <ul>
+                                <li>Diseño de arquitectura de datos empresarial bajo patrón Medallion, con estandarización y trazabilidad.</li>
+                                <li>Pipelines ETL/ELT en Python para datos transaccionales y APIs financieras.</li>
+                                <li>Gestión de infraestructura AWS (S3, EC2, IAM) y automatización de KPIs de cobranza.</li>
+                                <li>Construcción de Data Marts y reportes avanzados en Power BI.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item reveal">
+                        <span class="timeline-dot"></span>
+                        <div class="card timeline-card">
+                            <div class="timeline-top"><span class="timeline-date">Ago 2023 — Feb 2024</span></div>
+                            <h4>Administrador de Base de Datos</h4>
+                            <p class="timeline-company">Procuraduría General del Estado</p>
+                            <ul>
+                                <li>Administración y optimización de bases de datos institucionales de alta disponibilidad.</li>
+                                <li>Estrategias de respaldo, recuperación y continuidad operativa (RPO/RTO).</li>
+                                <li>Automatización de migraciones estructuradas y digitalización documental.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item reveal">
+                        <span class="timeline-dot"></span>
+                        <div class="card timeline-card">
+                            <div class="timeline-top"><span class="timeline-date">Ene 2022 — Jul 2023</span></div>
+                            <h4>Data Engineer y BI Developer</h4>
+                            <p class="timeline-company">Fisa Group</p>
+                            <ul>
+                                <li>Orquestación y optimización de pipelines ETL, reduciendo tiempos de carga.</li>
+                                <li>Modelos de datos y procedimientos almacenados en SQL Server y PL/SQL.</li>
+                                <li>Controles de calidad de datos y dashboards gerenciales en RShiny.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item reveal">
+                        <span class="timeline-dot"></span>
+                        <div class="card timeline-card">
+                            <div class="timeline-top"><span class="timeline-date">Feb 2021 — Dic 2021</span></div>
+                            <h4>Pasante de Data Engineering</h4>
+                            <p class="timeline-company">Mármoles Vásquez</p>
+                            <ul>
+                                <li>Modelado de datos para control de inventarios y procesos logísticos.</li>
+                                <li>Pipelines en Python para ingesta desde fuentes no estructuradas.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item reveal">
+                        <span class="timeline-dot"></span>
+                        <div class="card timeline-card">
+                            <div class="timeline-top"><span class="timeline-date">Sep 2017 — Ene 2019</span></div>
+                            <h4>Especialista en Calidad y Confiabilidad de Datos</h4>
+                            <p class="timeline-company">Instituto Geográfico Militar</p>
+                            <ul>
+                                <li>Validación, estandarización y curaduría de grandes volúmenes de datos geoespaciales.</li>
+                                <li>Diseño y ejecución de procesos de Data Quality Assurance.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-            <div class="st-height-b50 st-height-lg-b50"></div>
-            
-            
-            <div class="st-resume-wrap">
-                <div class="row">
-                    
-                    <div class="col-lg-4 col-md-12">
-                        <div class="st-section-heading st-style1">
-                            <h4 class="st-section-heading-title" style="margin-bottom: 30px;">EXPERIENCIA LABORAL</h4>
-                        </div>
-                        
-                        <div class="st-single-resume st-hover-card mb-4">
-                            <div class="st-resume-year">Noviembre 2025 – Actualidad</div>
-                            <h4 class="st-resume-title">Data Engineer</h4>
-                            <h5 class="st-resume-subtitle">Handytec</h5>
-                            <div class="st-resume-text">
-                                <ul>
-                                    <li>Implementación de soluciones de datos en Microsoft Fabric y Databricks: Lakehouses, notebooks y pipelines ETL/ELT con PySpark, Dataflows y Python.</li>
-                                    <li>Diseño de arquitecturas bajo patrón Medallion e integración de datos desde APIs y sistemas transaccionales.</li>
-                                    <li>Aplicación de gobernanza de datos (linaje, catálogo, calidad) y construcción de Data Marts para analítica y reporting.</li>
-                                    <li>Administración de infraestructura en Azure, Fabric, Databricks y AWS.</li>
-                                </ul>
-                            </div>
-                        </div>
+        </section>
 
-                        <div class="st-single-resume st-hover-card mb-4">
-                            <div class="st-resume-year">Enero 2025 – Actualidad</div>
-                            <h4 class="st-resume-title">Arquitecto de Soluciones y Tech Lead</h4>
-                            <h5 class="st-resume-subtitle">Corporación TuringTech</h5>
-                            <div class="st-resume-text">
-                                <ul>
-                                    <li>Diseño arquitectónico y despliegue cloud de soluciones a medida (BI, IA e Ingeniería de Datos).</li>
-                                    <li>Definición del stack tecnológico y patrones arquitectónicos (Microservicios, Serverless).</li>
-                                    <li>Dirección de un equipo técnico de 4 personas, garantizando escalabilidad, seguridad y optimización de costos operativos.</li>
-                                </ul>
-                            </div>
-                        </div>
+        <!-- ============ EDUCACIÓN ============ -->
+        <section id="education">
+            <div class="container">
+                <div class="section-head">
+                    <span class="section-eyebrow">Formación</span>
+                    <h2 class="section-title">Educación</h2>
+                </div>
 
-                        <div class="st-single-resume st-hover-card mb-4">
-                            <div class="st-resume-year">Marzo 2024 – Noviembre 2025</div>
-                            <h4 class="st-resume-title">Data Engineer</h4>
-                            <h5 class="st-resume-subtitle">Gestcobra Cía. Ltda.</h5>
-                            <div class="st-resume-text">
-                                <ul>
-                                    <li>Diseño de arquitectura de datos enterprise basada en Patrón Medallón.</li>
-                                    <li>Construcción de pipelines ETL/ELT con Python para ingesta de datos transaccionales y APIs financieras.</li>
-                                    <li>Desarrollo de frameworks de gobernanza: linaje, catálogo, calidad y versionamiento.</li>
-                                    <li>Gestión de infraestructura AWS (S3, EC2, IAM) para análisis, automatización y despliegue.</li>
-                                    <li>Automatización inteligente para reducir tiempos operativos y mejorar KPIs de cobranza.</li>
-                                    <li>Construcción de Data Marts y reporting avanzado en Power BI.</li>
-                                </ul>
-                            </div>
-                        </div>
-                        
-                        <div class="st-single-resume st-hover-card mb-4">
-                            <div class="st-resume-year">Agosto 2023 – Febrero 2024</div>
-                            <h4 class="st-resume-title">Administrador de Base de Datos</h4>
-                            <h5 class="st-resume-subtitle">Procuraduría General del Estado</h5>
-                            <div class="st-resume-text">
-                                <ul>
-                                    <li>Administración, monitoreo y optimización de bases de datos institucionales.</li>
-                                    <li>Implementación de estrategias robustas de respaldo y recuperación (RPO/RTO).</li>
-                                    <li>Automatización de procesos y migraciones estructuradas entre entornos.</li>
-                                    <li>Documentación técnica y estandarización de procedimientos de soporte y mantenimiento.</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="st-single-resume st-hover-card mb-4">
-                            <div class="st-resume-year">Enero 2022 – Julio 2023</div>
-                            <h4 class="st-resume-title">Data Engineer y BI Developer</h4>
-                            <h5 class="st-resume-subtitle">Fisa Group</h5>
-                            <div class="st-resume-text">
-                                <ul>
-                                    <li>Orquestación y optimización de pipelines ETL reduciendo tiempos de carga.</li>
-                                    <li>Diseño de modelos de datos y procedimientos almacenados en SQL Server y PL/SQL.</li>
-                                    <li>Controles de calidad de datos y dashboards gerenciales en RShiny.</li>
-                                    <li>Construcción de Data Marts para áreas financieras y operativas.</li>
-                                </ul>
-                            </div>
-                        </div>
-                        
-                        <div class="st-single-resume st-hover-card mb-4">
-                            <div class="st-resume-year">Febrero 2021 – Diciembre 2021</div>
-                            <h4 class="st-resume-title">Pasante de Data Engineering</h4>
-                            <h5 class="st-resume-subtitle">Mármoles Vásquez</h5>
-                            <div class="st-resume-text">
-                                <ul>
-                                    <li>Modelado de datos para control de inventarios y procesos logísticos.</li>
-                                    <li>Desarrollo de pipelines con Python para ingesta desde fuentes no estructuradas.</li>
-                                    <li>Gestión y mantenimiento de bases de datos relacionales.</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="st-single-resume st-hover-card mb-4">
-                            <div class="st-resume-year">Septiembre 2017 – Enero 2019</div>
-                            <h4 class="st-resume-title">Especialista en Calidad y Confiabilidad de Datos</h4>
-                            <h5 class="st-resume-subtitle">Instituto Geográfico Militar</h5>
-                            <div class="st-resume-text">
-                                <ul>
-                                    <li>Validación, estandarización y curaduría de grandes volúmenes de datos geoespaciales.</li>
-                                    <li>Diseño y ejecución de procesos de Data Quality Assurance.</li>
-                                    <li>Auditorías de integridad y normalización de información.</li>
-                                </ul>
-                            </div>
-                        </div>
+                <div class="edu-grid">
+                    <div class="card edu-card reveal">
+                        <div class="edu-year">Ago 2018 — Feb 2025</div>
+                        <h4>Ingeniería en Ciencias de la Computación</h4>
+                        <p>Universidad Politécnica Salesiana (UPS)</p>
                     </div>
-                    
-                    <div class="col-lg-4 col-md-12">
-                        <div class="st-section-heading st-style1">
-                            <h4 class="st-section-heading-title" style="margin-bottom: 30px;">EDUCACIÓN</h4>
-                        </div>
-                        
-                        <div class="st-single-resume st-hover-card mb-4">
-                            <div class="st-resume-year">Ago 2018– Feb 2025</div>
-                            <h4 class="st-resume-title">Ingeniería en Ciencias de la Computación</h4>
-                            <h5 class="st-resume-subtitle">Universidad Politécnica Salesiana (UPS)</h5>
-                        </div>
-                        
-                        <div class="st-single-resume st-hover-card mb-4">
-                            <div class="st-resume-year">Ago 2021– Feb 2025</div>
-                            <h4 class="st-resume-title">Pedagogía de los Idiomas (Inglés)</h4>
-                            <h5 class="st-resume-subtitle">Universidad Estatal de Milagro (UNEMI)</h5>
-                        </div>
-                        
-                        <div class="st-single-resume st-hover-card mb-4">
-                            <div class="st-resume-year">2009 – 2016</div>
-                            <h4 class="st-resume-title">Bachillerato Técnico en Informática</h4>
-                            <h5 class="st-resume-subtitle">Colegio Técnico Vida Nueva</h5>
-                        </div>
-                        
-                        <div class="st-single-resume st-hover-card mb-4">
-                            <div class="st-resume-year">2016 – 2017</div>
-                            <h4 class="st-resume-title">Servicio Militar (reservista)</h4>
-                            <h5 class="st-resume-subtitle">Fuerte Militar Atahualpa</h5>
-                        </div>
+                    <div class="card edu-card reveal">
+                        <div class="edu-year">Ago 2021 — Feb 2025</div>
+                        <h4>Pedagogía de los Idiomas (Inglés)</h4>
+                        <p>Universidad Estatal de Milagro (UNEMI)</p>
                     </div>
-                    
-                    <div class="col-lg-4 col-md-12">
-                        <div class="st-section-heading st-style1">
-                            <h4 class="st-section-heading-title" style="margin-bottom: 30px;">CERTIFICACIONES</h4>
-                        </div>
-                        
-                        <div class="st-single-resume st-hover-card mb-4">
-                            <h4 class="st-resume-title">Microsoft Certified: Ingeniero de Datos de Fabric Asociado (DP-700)</h4>
-                            <h5 class="st-resume-subtitle">Microsoft, 09.2026</h5>
-                        </div>
-
-                        <div class="st-single-resume st-hover-card mb-4">
-                            <h4 class="st-resume-title">Bootcamp Ingeniero de Datos en Fabric</h4>
-                            <h5 class="st-resume-subtitle">03.2026</h5>
-                        </div>
-
-                        <div class="st-single-resume st-hover-card mb-4">
-                            <h4 class="st-resume-title">Agent Fundamentals</h4>
-                            <h5 class="st-resume-subtitle">Databricks, 07.2026</h5>
-                        </div>
-
-                        <div class="st-single-resume st-hover-card mb-4">
-                            <h4 class="st-resume-title">Generative AI Fundamentals</h4>
-                            <h5 class="st-resume-subtitle">Databricks, 07.2026</h5>
-                        </div>
-
-                        <div class="st-single-resume st-hover-card mb-4">
-                            <h4 class="st-resume-title">Databricks Fundamentals</h4>
-                            <h5 class="st-resume-subtitle">Databricks, 07.2026</h5>
-                        </div>
-
-                        <div class="st-single-resume st-hover-card mb-4">
-                            <h4 class="st-resume-title">AI Practitioner Certificate</h4>
-                            <h5 class="st-resume-subtitle">04.2026</h5>
-                        </div>
-
-                        <div class="st-single-resume st-hover-card mb-4">
-                            <h4 class="st-resume-title">Claude Code in Action</h4>
-                            <h5 class="st-resume-subtitle">Anthropic Education, 03.2026</h5>
-                        </div>
-
-                        <div class="st-single-resume st-hover-card mb-4">
-                            <h4 class="st-resume-title">Model Context Protocol</h4>
-                            <h5 class="st-resume-subtitle">Anthropic Education, 02.2026</h5>
-                        </div>
-
-                        <div class="st-single-resume st-hover-card mb-4">
-                            <h4 class="st-resume-title">AWS Certified Solutions Architect – Professional</h4>
-                            <h5 class="st-resume-subtitle">Amazon Web Services, 08.2025</h5>
-                            <div class="st-resume-text">
-                                <p>Capacidad para diseñar y optimizar arquitecturas cloud seguras, escalables y de alto rendimiento en AWS.</p>
-                            </div>
-                        </div>
-
-                        <div class="st-single-resume st-hover-card mb-4">
-                            <h4 class="st-resume-title">AWS Certified Solutions Architect – Associate</h4>
-                            <h5 class="st-resume-subtitle">Amazon Web Services, 05.2025</h5>
-                            <div class="st-resume-text">
-                                <p>Diseño e implementación de soluciones seguras y eficientes en la nube de AWS, aplicando buenas prácticas de arquitectura.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="st-single-resume st-hover-card mb-4">
-                            <h4 class="st-resume-title">Google Cloud AI Essentials – Gemini</h4>
-                            <h5 class="st-resume-subtitle">Google Cloud, 09.2025</h5>
-                            <div class="st-resume-text">
-                                <p>Fundamentos de inteligencia artificial generativa, uso de modelos Gemini y aplicación práctica en soluciones empresariales basadas en IA.</p>
-                            </div>
-                        </div>
-
-                        <div class="st-single-resume st-hover-card mb-4">
-                            <h4 class="st-resume-title">Especialización en Data</h4>
-                            <h5 class="st-resume-subtitle">Data Engineer, Data Analytics, ETL/ELT (Datacamp, Udemy)</h5>
-                        </div>
-
-                        <div class="st-single-resume st-hover-card mb-4">
-                            <h4 class="st-resume-title">Desarrollo Fullstack y Cloud</h4>
-                            <h5 class="st-resume-subtitle">Frontend, Backend, Angular, React, Python, C#, Scrum (Udemy, AWS)</h5>
-                        </div>
-
-                        <div class="st-single-resume st-hover-card mb-4">
-                            <h4 class="st-resume-title">Bootcamps y Concursos</h4>
-                            <h5 class="st-resume-subtitle">Retos, Recreate, Concursos de Java y Desarrollo Front-End</h5>
-                        </div>
-                        
-                        <div class="st-single-resume st-hover-card mb-4">
-                            <h4 class="st-resume-title">Liderazgo y Primeros Auxilios</h4>
-                            <h5 class="st-resume-subtitle">Curso de Liderazgo (Coworking) y Curso Primeros Auxilios (Cruz Roja)</h5>
-                        </div>
-
-                        <div class="st-single-resume st-hover-card mb-4">
-                            <h4 class="st-resume-title">Soldado de reserva</h4>
-                            <h5 class="st-resume-subtitle">Fuerte militar Atahualpa</h5>
-                        </div>
-
+                    <div class="card edu-card reveal">
+                        <div class="edu-year">2009 — 2016</div>
+                        <h4>Bachillerato Técnico en Informática</h4>
+                        <p>Colegio Técnico Vida Nueva</p>
                     </div>
-                    
-                </div> </div>
-        </div>
-        <div class="st-height-b100 st-height-lg-b80"></div>
-    </section>
-    
-    <section id="iris-proyect">
-        <div class="st-height-b100 st-height-lg-b80"></div>
-        <div class="container">
-            <div class="st-section-heading st-style1">
-                <h4 class="st-section-heading-title">EMPRENDIMIENTO Y PROYECTOS</h4>
-                <h2 class="st-section-heading-subtitle">IRIS BUSINESS DATA ANALYTICS</h2>
+                </div>
             </div>
-            <div class="st-height-b50 st-height-lg-b50"></div>
+        </section>
 
-            <div class="st-text-block st-style1 mb-5">
-                <p>
-                    Como freelancer y fundador de mi emprendimiento, Iris Business Data Analytics, he tenido la oportunidad de liderar y ejecutar una amplia gama de proyectos que abarcan todo el espectro tecnológico: desde el desarrollo full-stack hasta la implementación de infraestructuras complejas y la ingeniería de datos. Mi enfoque se centra en ofrecer soluciones integrales bajo el lema: "Iris, tecnología a tu alcance", garantizando resultados de alta calidad, escalables y optimizados.
-                </p>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-3 col-md-6">
-                    <div class="st-project-card st-style2 st-hover-card st-service-card-project">
-                        <div class="st-service-icon">
-                            <i class="fas fa-desktop"></i>
-                        </div>
-                        <div class="st-project-info">
-                            <h4 class="st-project-title">Desarrollo Front-End</h4>
-                            <p class="st-project-description">Desarrollo del software de cobranzas TCOBRO, optimizando la interfaz para la gestión de carteras vencidas o compradas de clientes financieros.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-3 col-md-6">
-                    <div class="st-project-card st-style2 st-hover-card st-service-card-project">
-                        <div class="st-service-icon">
-                            <i class="fas fa-server"></i>
-                        </div>
-                        <div class="st-project-info">
-                            <h4 class="st-project-title">Desarrollo Back-End</h4>
-                            <p class="st-project-description">Diseño y programación de flujos de trabajo ETL en Python para la automatización del procesamiento de datos en la Cooperativa Santa Rosa.</p>
-                        </div>
-                    </div>
+        <!-- ============ HABILIDADES ============ -->
+        <section id="skills" class="section-alt">
+            <div class="container">
+                <div class="section-head">
+                    <span class="section-eyebrow">Stack técnico</span>
+                    <h2 class="section-title">Habilidades</h2>
+                    <p class="section-sub">Las tecnologías que uso a diario, organizadas por área.</p>
                 </div>
 
-                <div class="col-lg-3 col-md-6">
-                    <div class="st-project-card st-style2 st-hover-card st-service-card-project">
-                        <div class="st-service-icon">
-                            <i class="fas fa-database"></i>
+                <div class="skills-grid">
+                    <div class="card skill-group reveal">
+                        <div class="skill-group-head">
+                            <span class="skill-group-icon"><i class="fas fa-code"></i></span>
+                            <h4>Lenguajes &amp; Procesamiento</h4>
                         </div>
-                        <div class="st-project-info">
-                            <h4 class="st-project-title">Gestión de Bases de Datos</h4>
-                            <p class="st-project-description">Desarrollo de un Data Warehouse estructurado para el software de cobranzas TCobro, asegurando la integridad y el acceso rápido a los datos.</p>
+                        <div class="chip-row">
+                            <span class="chip">Python</span>
+                            <span class="chip">SQL</span>
+                            <span class="chip">PySpark</span>
+                            <span class="chip">Apache Spark</span>
+                            <span class="chip">Apache Flink</span>
+                            <span class="chip">Kafka</span>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-lg-3 col-md-6">
-                    <div class="st-project-card st-style2 st-hover-card st-service-card-project">
-                        <div class="st-service-icon">
-                            <i class="fas fa-network-wired"></i>
+                    <div class="card skill-group reveal">
+                        <div class="skill-group-head">
+                            <span class="skill-group-icon"><i class="fas fa-cloud-arrow-up"></i></span>
+                            <h4>Cloud &amp; Plataformas</h4>
                         </div>
-                        <div class="st-project-info">
-                            <h4 class="st-project-title">Infraestructura y Networking</h4>
-                            <p class="st-project-description">Configuración integral de servidor Issabel y Gateway Openbox para la operación y gestión del Call Center de Multigesión Ambato.</p>
+                        <div class="chip-row">
+                            <span class="chip">AWS</span>
+                            <span class="chip">Azure</span>
+                            <span class="chip">S3</span>
+                            <span class="chip">Databricks</span>
+                            <span class="chip">Data Factory</span>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-lg-3 col-md-6">
-                    <div class="st-project-card st-style2 st-hover-card st-service-card-project">
-                        <div class="st-service-icon">
-                            <i class="fas fa-cloud"></i>
+                    <div class="card skill-group reveal">
+                        <div class="skill-group-head">
+                            <span class="skill-group-icon"><i class="fas fa-layer-group"></i></span>
+                            <h4>Arquitectura &amp; Modelado</h4>
                         </div>
-                        <div class="st-project-info">
-                            <h4 class="st-project-title">DevOps & Cloud</h4>
-                            <p class="st-project-description">Implementación de pipelines CI/CD y gestión de contenedores Docker en entornos de nube (AWS/Azure) para despliegue automatizado de APIs y aplicaciones.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-3 col-md-6">
-                    <div class="st-project-card st-style2 st-hover-card st-service-card-project">
-                        <div class="st-service-icon">
-                            <i class="fas fa-phone-volume"></i>
-                        </div>
-                        <div class="st-project-info">
-                            <h4 class="st-project-title">Call Center y Telefonía IP</h4>
-                            <p class="st-project-description">Optimización de plataformas de contacto masivo mediante la integración de telefonía IP y la automatización de IVRs y campañas de marcación outbound.</p>
+                        <div class="chip-row">
+                            <span class="chip">Data Lakehouse</span>
+                            <span class="chip">Data Warehouse</span>
+                            <span class="chip">Data Mesh</span>
+                            <span class="chip">Data Fabric</span>
+                            <span class="chip">Delta Lake</span>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-lg-3 col-md-6">
-                    <div class="st-project-card st-style2 st-hover-card st-service-card-project">
-                        <div class="st-service-icon">
-                            <i class="fas fa-sitemap"></i>
+                    <div class="card skill-group reveal">
+                        <div class="skill-group-head">
+                            <span class="skill-group-icon"><i class="fas fa-gears"></i></span>
+                            <h4>Orquestación, DevOps &amp; Calidad</h4>
                         </div>
-                        <div class="st-project-info">
-                            <h4 class="st-project-title">Ingeniería de Datos</h4>
-                            <p class="st-project-description">Implementación de la Arquitectura Medallón y Data Governance en Gestcobra para estandarizar el flujo y la calidad de los datos empresariales.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="st-project-card st-style2 st-hover-card st-service-card-project">
-                        <div class="st-service-icon">
-                            <i class="fas fa-chart-area"></i>
-                        </div>
-                        <div class="st-project-info">
-                            <h4 class="st-project-title">Business Intelligence (BI)</h4>
-                            <p class="st-project-description">Desarrollo de cuadros de mando e informes analíticos con Power BI para la optimización de procesos en GVMARMOL y la Panadería Nathalia.</p>
+                        <div class="chip-row">
+                            <span class="chip">ETL / ELT</span>
+                            <span class="chip">Apache Airflow</span>
+                            <span class="chip">CI/CD</span>
+                            <span class="chip">Docker</span>
+                            <span class="chip">Git</span>
+                            <span class="chip">Grafana</span>
+                            <span class="chip">SSIS</span>
+                            <span class="chip">Backend Development</span>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <div class="st-height-b100 st-height-lg-b80"></div>
+        </section>
 
-           <section id="skills" class="st-dark-bg">
-                <div class="container">
-                    <div class="st-section-heading">
-                        <h4 class="st-section-heading-title">Aptitudes</h4>
-                        <h2 class="st-section-heading-subtitle">Mis Habilidades</h2>
-                    </div>
-                    <div class="st-height-b100 st-height-lg-80"></div>
+        <!-- ============ CERTIFICACIONES ============ -->
+        <section id="certifications">
+            <div class="container">
+                <div class="section-head">
+                    <span class="section-eyebrow">Credenciales</span>
+                    <h2 class="section-title">Certificaciones</h2>
+                    <p class="section-sub">Formación continua en cloud, datos e inteligencia artificial.</p>
+                </div>
 
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="st-text-block">
-                                <p>Trabajo con tecnologías que se adaptan a cada proyecto. En el frontend utilizo ReactJS por su rendimiento y flexibilidad, y en el backend prefiero Node.js por su eficiencia en entornos de microservicios.</p>
-
-                                <p>He desplegado soluciones en nubes como AWS, Azure y DigitalOcean, optimizando VPS para garantizar alto rendimiento y escalabilidad.</p>
-
-                                <p>Para análisis y procesamiento de datos empleo Python, y complemento con R cuando se requieren modelos predictivos o estadísticos.</p>
-                                <div class="st-tech-icons mt-3">
-                                    <i class="fab fa-react fa-2x mx-1" title="ReactJS" style="color:#61DAFB; opacity:0.8; font-size: 3.5em;"></i>
-                                    <i class="fab fa-node-js fa-2x mx-1" title="Node.js" style="color:#68A063; opacity:0.8; font-size: 3.5em;"></i>
-                                    <i class="fab fa-aws fa-2x mx-1" title="AWS" style="color:#FF9900; opacity:0.8; font-size: 3.5em;"></i>
-                                    <i class="fab fa-python fa-2x mx-1" title="Python" style="color:#3776AB; opacity:0.8; font-size: 3.5em;"></i>
-                                    <i class="fab fa-r-project fa-2x mx-1" title="R" style="color:#276DC3; opacity:0.8; font-size: 3.5em;"></i>
-                                    <i class="fas fa-cloud fa-2x mx-1" title="Azure" style="color:#0078D4; opacity:0.8; font-size: 3.5em;"></i>
-                                    <i class="fas fa-server fa-2x mx-1" title="DigitalOcean/VPS" style="color:#0080FF; opacity:0.8; font-size: 3.5em;"></i>
-                                </div>
-                            </div>
+                <div class="cert-category reveal">
+                    <div class="cert-category-title">Arquitectura Cloud e Ingeniería de Datos</div>
+                    <div class="cert-grid">
+                        <div class="card cert-card">
+                            <span class="cert-badge"><i class="fas fa-certificate"></i></span>
+                            <div><h5>Ingeniero de Datos de Fabric Asociado (DP-700)</h5><span>Microsoft, 09.2026</span></div>
                         </div>
-                        
-                        <div class="col-lg-6">
-                            <div class="st-progressbar-wrap">
-                                <div class="st-single-progressbar">
-                                    <div class="st-progressbar-heading">
-                                        <h5>Desarrollador front-end</h5>
-                                        <div class="st-progressbar-percentage">85%</div>
-                                    </div>
-                                    <div class="st-progressbar" data-progress="85">
-                                        <div class="st-progressbar-in"></div>
-                                    </div>
-                                </div>
-                                <div class="st-single-progressbar">
-                                    <div class="st-progressbar-heading">
-                                        <h5>Desarrollador back-end</h5>
-                                        <div class="st-progressbar-percentage">90%</div>
-                                    </div>
-                                    <div class="st-progressbar" data-progress="90">
-                                        <div class="st-progressbar-in"></div>
-                                    </div>
-                                </div>
-                                <div class="st-single-progressbar">
-                                    <div class="st-progressbar-heading">
-                                        <h5>Gestión de bases de datos</h5>
-                                        <div class="st-progressbar-percentage">90%</div>
-                                    </div>
-                                    <div class="st-progressbar" data-progress="90">
-                                        <div class="st-progressbar-in"></div>
-                                    </div>
-                                </div>
-                                <div class="st-single-progressbar">
-                                    <div class="st-progressbar-heading">
-                                        <h5>Computación en la nube</h5>
-                                        <div class="st-progressbar-percentage">85%</div>
-                                    </div>
-                                    <div class="st-progressbar" data-progress="85">
-                                        <div class="st-progressbar-in"></div>
-                                    </div>
-                                </div>
-                                <div class="st-single-progressbar">
-                                    <div class="st-progressbar-heading">
-                                        <h5>Administración de VPS</h5>
-                                        <div class="st-progressbar-percentage">90%</div>
-                                    </div>
-                                    <div class="st-progressbar" data-progress="90">
-                                        <div class="st-progressbar-in"></div>
-                                    </div>
-                                </div>
-                                <div class="st-single-progressbar">
-                                    <div class="st-progressbar-heading">
-                                        <h5>Contenedores Docker</h5>
-                                        <div class="st-progressbar-percentage">90%</div>
-                                    </div>
-                                    <div class="st-progressbar" data-progress="90">
-                                        <div class="st-progressbar-in"></div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="card cert-card">
+                            <span class="cert-badge"><i class="fas fa-certificate"></i></span>
+                            <div><h5>Bootcamp Ingeniero de Datos en Fabric</h5><span>03.2026</span></div>
+                        </div>
+                        <div class="card cert-card">
+                            <span class="cert-badge"><i class="fab fa-aws"></i></span>
+                            <div><h5>AWS Certified Solutions Architect – Professional</h5><span>Amazon Web Services, 08.2025</span></div>
+                        </div>
+                        <div class="card cert-card">
+                            <span class="cert-badge"><i class="fab fa-aws"></i></span>
+                            <div><h5>AWS Certified Solutions Architect – Associate</h5><span>Amazon Web Services, 05.2025</span></div>
                         </div>
                     </div>
                 </div>
-                <div class="st-height-b100 st-height-lg-b80"></div>
-            </section>
 
-    <section id="contact">
-        <div class="container">
-            <div class="st-section-heading">
-                <h4 class="st-section-heading-title">Trabajemos Juntos</h4>
-                <h2 class="st-section-heading-subtitle">Ponte en Contacto</h2>
+                <div class="cert-category reveal">
+                    <div class="cert-category-title">Data Lakehouse &amp; Ecosistema Databricks</div>
+                    <div class="cert-grid">
+                        <div class="card cert-card">
+                            <span class="cert-badge"><i class="fas fa-database"></i></span>
+                            <div><h5>Agent Fundamentals</h5><span>Databricks, 07.2026</span></div>
+                        </div>
+                        <div class="card cert-card">
+                            <span class="cert-badge"><i class="fas fa-database"></i></span>
+                            <div><h5>Generative AI Fundamentals</h5><span>Databricks, 07.2026</span></div>
+                        </div>
+                        <div class="card cert-card">
+                            <span class="cert-badge"><i class="fas fa-database"></i></span>
+                            <div><h5>Databricks Fundamentals</h5><span>Databricks, 07.2026</span></div>
+                        </div>
+                        <div class="card cert-card">
+                            <span class="cert-badge"><i class="fas fa-robot"></i></span>
+                            <div><h5>AI Practitioner Certificate</h5><span>04.2026</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cert-category reveal">
+                    <div class="cert-category-title">Inteligencia Artificial Generativa y LLMs</div>
+                    <div class="cert-grid">
+                        <div class="card cert-card">
+                            <span class="cert-badge"><i class="fas fa-brain"></i></span>
+                            <div><h5>Claude Code in Action</h5><span>Anthropic Education, 03.2026</span></div>
+                        </div>
+                        <div class="card cert-card">
+                            <span class="cert-badge"><i class="fas fa-brain"></i></span>
+                            <div><h5>Model Context Protocol</h5><span>Anthropic Education, 02.2026</span></div>
+                        </div>
+                        <div class="card cert-card">
+                            <span class="cert-badge"><i class="fab fa-google"></i></span>
+                            <div><h5>Google Cloud AI Essentials: Gemini</h5><span>Google Cloud, 09.2025</span></div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="st-height-b100 st-height-lg-80"></div>
+        </section>
 
-            <div class="row">
-
-                <div class="col-lg-6">
-                    <div class="st-contact-info st-hover-group">
-                        <h2 class="st-contact-form-title">Información de Contacto</h2>
-                        <p>Estoy disponible para discutir nuevas oportunidades, proyectos de consultoría o soporte para tu infraestructura tecnológica. ¡Contáctame!</p>
-                        
-                        <div class="st-contact-item st-hover-card">
-                            <span class="st-contact-icon"><i class="fas fa-envelope"></i></span>
-                            <div class="st-contact-details">
-                                <span>Email</span>
-                                <p><a href="mailto:ti.iris096@gmail.com">ti.iris096@gmail.com</a></p>
-                            </div>
-                        </div>
-                        
-                        <div class="st-contact-item st-hover-card">
-                            <span class="st-contact-icon"><i class="fab fa-whatsapp"></i></span>
-                            <div class="st-contact-details">
-                                <span>Teléfono/WhatsApp</span>
-                                
-                                <a href="https://wa.me/593959720085" target="_blank" >
-                                    <div class="sp-phone-no">095 9720 085</div>
-                                </a>
-
-                            </div>
-                        </div>
-                        
-                        <div class="st-contact-item st-hover-card">
-                            <span class="st-contact-icon"><i class="fab fa-linkedin"></i></span>
-                            <div class="st-contact-details">
-                                <span>LinkedIn</span>
-                                <p><a href="https://www.linkedin.com/in/jhossua-vega-659526192/" target="_blank">jhossua-vega-559626192</a></p>
-                            
-                            </div>
-                        </div>
-                        
-                        <div class="st-contact-item st-hover-card">
-                            <span class="st-contact-icon"><i class="fab fa-github"></i></span>
-                            <div class="st-contact-details">
-                                <span>GitHub</span>
-                                <p><a href="https://github.com/avegac1996" target="_blank">avega1996</a></p>
-                            </div>
-                        </div>
-                        
-                        <div class="st-contact-item st-hover-card">
-                            <span class="st-contact-icon"><i class="fas fa-map-marker-alt"></i></span>
-                            <div class="st-contact-details">
-                                <span>Ubicación</span>
-                                <p>Quito, Ecuador</p>
-                            </div>
-                        </div>
-                    </div>
+        <!-- ============ PROYECTOS / IRIS ============ -->
+        <section id="projects" class="section-alt">
+            <div class="container">
+                <div class="section-head">
+                    <span class="section-eyebrow">Emprendimiento</span>
+                    <h2 class="section-title">Iris Business Data Analytics</h2>
+                    <p class="section-sub">Proyectos ejecutados como freelancer y fundador.</p>
                 </div>
 
-                <div class="col-lg-6">
-                    <div class="st-contact-image" style="height: 100%; display: flex; align-items: center; justify-content: center; background-color: #1a1a1a; border-radius: 5px;">
-                        <img src="assets/img/2-hero.jpg" alt="Ilustración de Contacto" style="max-width: 90%; max-height: 100%; object-fit: contain;">
-                    </div>
+                <div class="card iris-banner reveal">
+                    <p>
+                        Como freelancer y fundador de <strong>Iris Business Data Analytics</strong>, lidero proyectos
+                        de extremo a extremo: desarrollo full-stack, infraestructura cloud e ingeniería de datos,
+                        bajo el lema <em>"Iris, tecnología a tu alcance"</em>.
+                    </p>
                 </div>
 
-            </div> </div>
-    </section>
+                <div class="projects-grid">
+                    <div class="card project-card reveal">
+                        <div class="pillar-icon"><i class="fas fa-sitemap"></i></div>
+                        <h5>Ingeniería de Datos</h5>
+                        <p>Arquitectura Medallion y Data Governance en Gestcobra para estandarizar el flujo y la calidad de los datos.</p>
+                    </div>
+                    <div class="card project-card reveal">
+                        <div class="pillar-icon"><i class="fas fa-database"></i></div>
+                        <h5>Data Warehouse</h5>
+                        <p>Diseño de un Data Warehouse estructurado para el software de cobranzas TCobro.</p>
+                    </div>
+                    <div class="card project-card reveal">
+                        <div class="pillar-icon"><i class="fas fa-chart-column"></i></div>
+                        <h5>Business Intelligence</h5>
+                        <p>Cuadros de mando e informes analíticos en Power BI para GVMARMOL y Panadería Nathalia.</p>
+                    </div>
+                    <div class="card project-card reveal">
+                        <div class="pillar-icon"><i class="fas fa-cloud"></i></div>
+                        <h5>DevOps &amp; Cloud</h5>
+                        <p>Pipelines CI/CD y contenedores Docker en AWS/Azure para despliegue automatizado de APIs.</p>
+                    </div>
+                    <div class="card project-card reveal">
+                        <div class="pillar-icon"><i class="fas fa-server"></i></div>
+                        <h5>Backend</h5>
+                        <p>Flujos ETL en Python para automatizar el procesamiento de datos en la Cooperativa Santa Rosa.</p>
+                    </div>
+                    <div class="card project-card reveal">
+                        <div class="pillar-icon"><i class="fas fa-desktop"></i></div>
+                        <h5>Front-End</h5>
+                        <p>Interfaz del software de cobranzas TCOBRO para gestión de carteras vencidas.</p>
+                    </div>
+                    <div class="card project-card reveal">
+                        <div class="pillar-icon"><i class="fas fa-network-wired"></i></div>
+                        <h5>Infraestructura &amp; Networking</h5>
+                        <p>Servidor Issabel y Gateway Openbox para el Call Center de Multigesión Ambato.</p>
+                    </div>
+                    <div class="card project-card reveal">
+                        <div class="pillar-icon"><i class="fas fa-phone-volume"></i></div>
+                        <h5>Telefonía IP</h5>
+                        <p>Optimización de campañas outbound e IVRs sobre plataformas de telefonía IP.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ CONTACTO ============ -->
+        <section id="contact">
+            <div class="container">
+                <div class="section-head">
+                    <span class="section-eyebrow">Contacto</span>
+                    <h2 class="section-title">Trabajemos juntos</h2>
+                    <p class="section-sub">Disponible para nuevas oportunidades, proyectos de consultoría o soporte de infraestructura.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-list reveal">
+                        <a href="mailto:anthoy_vega95@hotmail.com" class="card contact-item">
+                            <span class="contact-icon"><i class="fas fa-envelope"></i></span>
+                            <span><span class="lbl">Email</span><span class="val">anthoy_vega95@hotmail.com</span></span>
+                        </a>
+                        <a href="https://wa.me/593959720085" target="_blank" class="card contact-item">
+                            <span class="contact-icon"><i class="fab fa-whatsapp"></i></span>
+                            <span><span class="lbl">Teléfono / WhatsApp</span><span class="val">+593 959 720 085</span></span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/jhossua-vega-659526192/" target="_blank" class="card contact-item">
+                            <span class="contact-icon"><i class="fab fa-linkedin-in"></i></span>
+                            <span><span class="lbl">LinkedIn</span><span class="val">jhossua-vega-659526192</span></span>
+                        </a>
+                        <a href="https://github.com/avegac1996" target="_blank" class="card contact-item">
+                            <span class="contact-icon"><i class="fab fa-github"></i></span>
+                            <span><span class="lbl">GitHub</span><span class="val">avegac1996</span></span>
+                        </a>
+                        <div class="card contact-item">
+                            <span class="contact-icon"><i class="fas fa-map-marker-alt"></i></span>
+                            <span><span class="lbl">Ubicación</span><span class="val">Quito, Ecuador</span></span>
+                        </div>
+                    </div>
+
+                    <div class="card contact-cta reveal">
+                        <h3>¿Tienes un proyecto de datos en mente?</h3>
+                        <p>Escríbeme y conversemos sobre cómo puedo ayudarte a construir tu plataforma de datos.</p>
+                        <a href="mailto:anthoy_vega95@hotmail.com" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Enviar un correo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
 
     <div id="footer-placeholder"></div>
-    
+
     <script src="script.js"></script>
 </body>
 </html>

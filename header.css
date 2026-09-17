@@ -1,5 +1,5 @@
 /* ===========================
-    VARIABLES Y RESET (Se mantienen aquí por ser fundamentales)
+    RESET & DESIGN TOKENS
 =========================== */
 * {
     margin: 0;
@@ -8,244 +8,271 @@
 }
 
 :root {
-    /* Colores y Fondos */
-    --primary-color: #FFD700; /* Dorado brillante */
-    --secondary-color: #FFC107; /* Ámbar/Dorado más cálido */
-    --text-color: #fff;
-    --background-base: rgba(0, 0, 0, 0.88); /* Fondo principal de la web */
-    --background-card: rgba(31, 31, 31, 0.95); /* Fondo para tarjetas/bloques */
-    
-    /* 💥 VARIABLES CRÍTICAS PARA MENÚ Y SCROLL 💥 */
-    --header-height: 80px; 
-    --scroll-padding: 100px; /* Altura del header + margen para que el texto no se oculte */
+    /* Superficie */
+    --bg-0: #0a0e17;
+    --bg-1: #0f1420;
+    --surface: #131a2a;
+    --surface-2: #1a2236;
+    --border: rgba(255, 255, 255, 0.08);
+    --border-strong: rgba(255, 255, 255, 0.16);
+
+    /* Texto */
+    --text-0: #f4f6fb;
+    --text-1: #c4cbdb;
+    --text-2: #8791a8;
+
+    /* Marca */
+    --accent: #35d0ba;
+    --accent-2: #6ea8fe;
+    --accent-warm: #f5b942;
+    --gradient-brand: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+
+    /* Layout */
+    --header-height: 76px;
+    --scroll-padding: 96px;
+    --radius-lg: 20px;
+    --radius-md: 14px;
+    --radius-sm: 10px;
+    --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.35);
+    --shadow-hover: 0 18px 40px rgba(53, 208, 186, 0.18);
+    --max-width: 1180px;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    color: var(--text-color);
-    background: var(--background-base);
-    line-height: 1.6;
+    font-family: 'Inter', sans-serif;
+    color: var(--text-1);
+    background: var(--bg-0);
+    line-height: 1.7;
     overflow-x: clip;
-    /* 💥 SOLUCIÓN MENÚ 1: Ajusta el desplazamiento del scroll */
-    scroll-padding-top: var(--scroll-padding); 
+    scroll-padding-top: var(--scroll-padding);
 }
 
+h1, h2, h3, h4, h5 {
+    font-family: 'Sora', sans-serif;
+    color: var(--text-0);
+    line-height: 1.25;
+}
+
+a { color: inherit; }
+
+img { max-width: 100%; display: block; }
+
 .container {
-    max-width: 1200px;
+    max-width: var(--max-width);
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 24px;
 }
 
 /* ===========================
-    HEADER (Menu) 
+    BACKDROP (reemplaza el efecto "matrix")
 =========================== */
-.st-site-header {
+#bg-canvas {
     position: fixed;
-    width: 100%;
+    inset: 0;
+    z-index: -2;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 15% 20%, rgba(53, 208, 186, 0.14), transparent 45%),
+        radial-gradient(circle at 85% 10%, rgba(110, 168, 254, 0.12), transparent 40%),
+        radial-gradient(circle at 50% 90%, rgba(245, 185, 66, 0.08), transparent 45%),
+        var(--bg-0);
+}
+
+#bg-canvas::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+    background-size: 42px 42px;
+    mask-image: radial-gradient(ellipse 80% 60% at 50% 20%, #000 40%, transparent 90%);
+}
+
+/* ===========================
+    HEADER / NAV
+=========================== */
+.site-header {
+    position: fixed;
     top: 0;
     left: 0;
+    width: 100%;
     z-index: 999;
-    background: rgba(15, 15, 15, 0.95);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
-    height: var(--header-height); 
+    height: var(--header-height);
+    background: rgba(10, 14, 23, 0.55);
+    backdrop-filter: blur(14px) saturate(140%);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+    border-bottom: 1px solid transparent;
+    transition: background 0.3s ease, border-color 0.3s ease;
 }
 
-.st-site-header.st-sticky-header { background: #111; }
+.site-header.is-scrolled {
+    background: rgba(10, 14, 23, 0.88);
+    border-bottom-color: var(--border);
+}
 
-.st-main-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 0;
+.nav-inner {
     height: 100%;
-}
-
-.st-main-header-in {
-    width: 100%;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    align-items: center;
 }
 
-.st-site-branding {
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    font-family: 'Sora', sans-serif;
     font-weight: 700;
-    font-size: 1.5rem;
-    color: var(--text-color);
-    text-decoration: none;
+    font-size: 1.05rem;
+    color: var(--text-0);
+    letter-spacing: 0.02em;
     white-space: nowrap;
-    display: flex;
-    align-items: center;
-    margin-right: 20px;
+    flex-shrink: 0;
 }
 
-/* Contenedor del menú y teléfono (Escritorio) */
-.st-nav {
+.brand-mark {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
-    flex-grow: 1;
     justify-content: center;
+    background: var(--gradient-brand);
+    color: #06121a;
+    font-weight: 800;
+    font-size: 0.95rem;
+    flex-shrink: 0;
 }
 
-.st-nav-list {
+.nav-list {
     display: flex;
+    align-items: center;
+    gap: 1.6rem;
     list-style: none;
-    margin: 0;
-    padding: 0;
 }
 
-.st-nav-list li a {
-    color: var(--text-color);
+@media (max-width: 1080px) {
+    .nav-list { gap: 1.1rem; }
+    .nav-list a { font-size: 0.86rem; }
+    .brand { font-size: 0.92rem; }
+}
+
+.nav-list a {
     text-decoration: none;
-    margin: 0 0.8rem;
-    position: relative;
+    color: var(--text-1);
+    font-size: 0.92rem;
     font-weight: 500;
-    transition: all 0.3s ease;
-    white-space: nowrap;
-}
-
-.st-nav-list li a.active,
-.st-nav-list li a:hover {
-    color: var(--primary-color);
-}
-
-.st-header-phone {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-left: 2rem;
-    white-space: nowrap;
-}
-
-.st-header-phone i {
-    color: var(--primary-color);
-}
-
-/* ESTILOS DE HAMBURGUESA (MÓVIL) */
-.st-munu-toggle {
-    display: none; /* Oculto por defecto */
     position: relative;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    z-index: 1000; /* Alto z-index para que esté sobre el menú desplegado */
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding: 6px 2px;
+    transition: color 0.25s ease;
+    white-space: nowrap;
 }
-.st-munu-toggle span {
-    display: block;
+
+.nav-list a::after {
+    content: "";
     position: absolute;
-    height: 3px;
-    width: 100%;
-    background: var(--primary-color);
-    border-radius: 3px;
-    opacity: 1;
     left: 0;
-    transform: rotate(0deg);
-    transition: .25s ease-in-out;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background: var(--gradient-brand);
+    border-radius: 2px;
+    transition: width 0.25s ease;
 }
-.st-munu-toggle span:nth-child(1) { top: 5px; }
-.st-munu-toggle span:nth-child(2) { top: 13px; }
-.st-munu-toggle span:nth-child(3) { top: 21px; }
-.st-munu-toggle.st-active span:nth-child(1) { top: 13px; transform: rotate(135deg); }
-.st-munu-toggle.st-active span:nth-child(2) { opacity: 0; left: -60px; }
-.st-munu-toggle.st-active span:nth-child(3) { top: 13px; transform: rotate(-135deg); }
 
+.nav-list a:hover,
+.nav-list a.active {
+    color: var(--text-0);
+}
 
-/* ------------------------------------------------ */
-/* 💻 PORTÁTILES PEQUEÑOS Y TABLETAS (MAX 991px) */
-/* ------------------------------------------------ */
-@media (max-width: 991px) {
-    :root {
-        --header-height: 70px;
-        --scroll-padding: 80px;
-    }
-    .st-site-header { height: var(--header-height); }
-    
-    /* 1. MOSTRAR BOTÓN DE HAMBURGUESA */
-    .st-munu-toggle { 
-        display: flex; 
-        order: 2; /* Asegura que el botón esté a la derecha del todo */
-    }
+.nav-list a:hover::after,
+.nav-list a.active::after {
+    width: 100%;
+}
 
-    /* 2. OCULTAR EL MENÚ DE NAVEGACIÓN POR DEFECTO (OFF-CANVAS) */
-    .st-nav {
-        /* Posiciona el menú debajo del encabezado */
-        position: absolute;
-        top: var(--header-height); 
+.nav-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 18px;
+    border-radius: 100px;
+    background: var(--gradient-brand);
+    color: #06121a !important;
+    font-weight: 700;
+    font-size: 0.88rem;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.nav-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(53, 208, 186, 0.35);
+}
+
+.nav-toggle {
+    display: none;
+    width: 34px;
+    height: 34px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    z-index: 1001;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--text-0);
+    border-radius: 2px;
+    transition: 0.25s ease-in-out;
+}
+
+.nav-toggle.is-active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle.is-active span:nth-child(2) { opacity: 0; }
+.nav-toggle.is-active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+@media (max-width: 900px) {
+    .nav-list { gap: 1.4rem; }
+    .nav-cta { display: none; }
+}
+
+@media (max-width: 780px) {
+    :root { --header-height: 66px; --scroll-padding: 82px; }
+
+    .nav-toggle { display: flex; }
+
+    .nav-list {
+        position: fixed;
+        top: var(--header-height);
         left: 0;
         width: 100%;
-        
-        /* Oculta la altura y el contenido, listo para desplegar */
-        max-height: 0; 
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        max-height: 0;
         overflow: hidden;
-        
-        /* Estilos del contenedor del menú */
-        background-color: rgba(15, 15, 15, 0.98);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-        border-top: 1px solid var(--primary-color);
-        transition: max-height 0.5s ease-in-out;
-
-        /* Reorganizar elementos en columna */
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        flex-grow: 0; /* No crece más allá de su contenido */
+        background: rgba(10, 14, 23, 0.98);
+        backdrop-filter: blur(16px);
+        border-bottom: 1px solid var(--border);
+        transition: max-height 0.4s ease;
     }
 
-    /* 3. CLASE PARA ABRIR EL MENÚ (AÑADIDA POR JS) */
-    .st-nav.st-mobile-open {
-        max-height: 400px; /* Valor arbitrario suficiente para todos los enlaces */
-        padding-bottom: 20px;
-    }
+    .nav-list.is-open { max-height: 420px; }
 
-    /* 4. AJUSTAR LA LISTA DE ENLACES PARA VISTA MÓVIL */
-    .st-nav-list {
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-        padding: 20px 0;
-    }
-
-    .st-nav-list li {
-        margin: 5px 0;
-        width: 100%;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    }
-    
-    .st-nav-list li:last-child {
-        border-bottom: none;
-    }
-
-    .st-nav-list li a {
-        display: block;
-        padding: 10px 0;
-        margin: 0;
-    }
-
-    /* 5. MOVER EL BOTÓN DE TELÉFONO DENTRO DEL MENÚ DESPLEGABLE */
-    .st-nav .st-header-phone {
-        margin-left: 0;
-        margin-bottom: 15px;
-    }
-    
-    /* Ocultar el botón de teléfono si está fuera del st-nav, pero como está dentro no hace falta */
-}
-
-/* ------------------------------------------------ */
-/* 📱 TELÉFONOS MÓVILES (MAX 576px) 📱 */
-/* ------------------------------------------------ */
-@media (max-width: 576px) {
-    :root {
-        --header-height: 60px;
-        --scroll-padding: 70px;
-    }
-    .st-site-header { height: var(--header-height); }
-    .st-nav { top: var(--header-height); } /* Ajustar la posición superior del menú */
-
-    /* Ocultar el teléfono en el header principal y mostrar la hamburguesa */
-    .st-header-phone { display: none; }
-    .st-munu-toggle { display: flex; order: 2; }
-    .st-icon-name { display: none; } /* Si tienes alguna clase para ocultar texto pequeño */
+    .nav-list li { width: 100%; border-bottom: 1px solid var(--border); }
+    .nav-list a { display: block; padding: 16px 24px; }
+    .nav-list a::after { display: none; }
 }
