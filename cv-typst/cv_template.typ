@@ -30,30 +30,32 @@
   #line(length: 100%, stroke: 1.1pt + navy)
 ]
 
-#let edu-item(line1, line2, dates) = block(below: 4pt)[
+#let edu-item(line1, line2, dates) = block(below: 6pt, spacing: 0pt)[
   #text(size: 9pt, weight: 600, fill: navy)[#line1] \
   #text(size: 8.4pt, fill: text-mid)[#line2] #h(5pt) #text(size: 7.6pt, fill: text-soft)[#dates]
 ]
 
-#let exp-item(title-line, dates, bullets) = block(below: 5pt)[
+#let exp-item(title-line, dates, bullets) = block(below: 10pt, spacing: 0pt)[
   #text(size: 9.2pt, weight: 700, fill: navy)[#title-line] #h(5pt) #text(size: 7.8pt, fill: text-soft)[#dates]
-  #v(0.5pt)
+  #v(4pt)
   #for b in bullets [
-    #block(below: 0.6pt)[
-      #text(size: 7.9pt, fill: text-dark)[#sym.bullet #h(3pt) #b]
+    #block(below: 4.5pt, spacing: 0pt)[
+      #par(leading: 0.6em)[#text(size: 7.9pt, fill: text-dark)[#sym.bullet #h(3pt) #b]]
     ]
   ]
 ]
 
-#let cert-group(cat, items) = block(below: 3pt)[
+#let cert-group(cat, items) = block(below: 9pt, spacing: 0pt)[
   #text(size: 8pt, weight: 700, fill: navy)[#cat]
-  #v(0.6pt)
+  #v(3pt)
   #for it in items [
-    #block(below: 0.3pt)[#text(size: 6.9pt, fill: text-mid)[#sym.dot.c #h(2pt) #it]]
+    #block(below: 4pt, spacing: 0pt)[
+      #par(leading: 0.62em)[#text(size: 6.9pt, fill: text-mid)[#sym.dot.c #h(2pt) #it]]
+    ]
   ]
 ]
 
-#let ref-item(name, role, cell) = block(below: 2.5pt)[
+#let ref-item(name, role, cell) = block(below: 4pt, spacing: 0pt)[
   #text(size: 7.9pt, weight: 600, fill: navy)[#name] #text(size: 7.3pt, fill: text-soft)[, #role — #cell]
 ]
 
@@ -82,7 +84,7 @@
 ) = {
   set page(width: 21cm, height: 29.7cm, margin: 0pt, fill: white)
   set text(font: "Liberation Sans", fill: text-dark)
-  set par(leading: 0.48em, spacing: 0.6em)
+  set par(leading: 0.58em, spacing: 0.6em)
 
   // ---------- HEADER ----------
   block(width: 100%, fill: navy, inset: (left: 34pt, right: 34pt, top: 18pt, bottom: 14pt))[
@@ -115,18 +117,19 @@
   ]
 
   // ---------- BODY ----------
-  grid(columns: (1.62fr, 1fr), gutter: 22pt,
+  grid(columns: (1.5fr, 1.12fr), gutter: 10pt,
     inset: (left: 34pt, right: 34pt, top: 11pt, bottom: 10pt),
     // -- MAIN COLUMN --
     [
+      #set par(justify: true)
       #section-title(section-education)
       #for e in education [#edu-item(e.at(0), e.at(1), e.at(2))]
 
-      #v(4pt)
+      #v(2pt)
       #section-title(section-experience)
       #for e in experience [#exp-item(e.at(0), e.at(1), e.at(2))]
 
-      #v(4pt)
+      #v(2pt)
       #section-title(section-references)
       #grid(columns: (1fr, 1fr), gutter: 10pt, row-gutter: 2.5pt,
         ..references.map(r => ref-item(r.at(0), r.at(1), r.at(2)))
@@ -147,9 +150,18 @@
       ]
 
       #section-title(section-languages)
-      #grid(columns: (1fr, 1fr), gutter: 8pt,
-        [#text(size: 8.3pt)[#lang-spanish] #v(1.5pt) #lang-bar(5, 5)],
-        [#text(size: 8.3pt)[#lang-english] #v(1.5pt) #lang-bar(5, 3)],
+      #grid(columns: (1fr, auto, 1fr), gutter: 10pt, align: horizon,
+        [
+          #text(size: 8.3pt, weight: 700, fill: navy)[#lang-spanish]
+          #v(2.5pt)
+          #lang-bar(5, 5)
+        ],
+        box(width: 1pt, height: 22pt, fill: rule-light),
+        [
+          #text(size: 8.3pt, weight: 700, fill: navy)[#lang-english]
+          #v(2.5pt)
+          #lang-bar(5, 3)
+        ],
       )
 
       #v(4pt)
