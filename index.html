@@ -137,43 +137,6 @@
                         <div class="pillar-icon"><i class="fas fa-cloud"></i></div>
                         <h4 data-i18n="pillar.cloud.title">Arquitectura de Datos &amp; Cloud</h4>
                         <p data-i18n="pillar.cloud.desc">Diseño arquitecturas de datos y despliego infraestructura en AWS, Azure y Databricks: Lakehouse, S3, Fabric, IAM y automatización.</p>
-
-                        <button class="flow-toggle" aria-controls="flow-pillar-cloud" data-label-key="pillar.cloud.toggle" data-label="Ver diseño de arquitectura">
-                            <span class="flow-toggle-label" data-i18n="pillar.cloud.toggle">Ver diseño de arquitectura</span>
-                            <i class="fas fa-chevron-down"></i>
-                        </button>
-                        <div class="flow-diagram flow-diagram--compact" id="flow-pillar-cloud">
-                            <div class="flow-node">
-                                <span class="flow-node-icon"><i class="fas fa-database"></i></span>
-                                <span class="flow-node-text">
-                                    <span class="flow-node-label" data-i18n="flow.dataSources">Fuentes de Datos</span>
-                                </span>
-                            </div>
-                            <div class="flow-connector"></div>
-                            <div class="flow-node">
-                                <span class="flow-node-icon"><i class="fas fa-right-left"></i></span>
-                                <span class="flow-node-text">
-                                    <span class="flow-node-label" data-i18n="flow.ingestion">Ingesta</span>
-                                    <span class="flow-node-sub">Data Factory / Airflow</span>
-                                </span>
-                            </div>
-                            <div class="flow-connector"></div>
-                            <div class="flow-node">
-                                <span class="flow-node-icon"><i class="fas fa-server"></i></span>
-                                <span class="flow-node-text">
-                                    <span class="flow-node-label">Lakehouse</span>
-                                    <span class="flow-node-sub">S3 / ADLS</span>
-                                </span>
-                            </div>
-                            <div class="flow-connector"></div>
-                            <div class="flow-node">
-                                <span class="flow-node-icon"><i class="fas fa-chart-line"></i></span>
-                                <span class="flow-node-text">
-                                    <span class="flow-node-label">Serving</span>
-                                    <span class="flow-node-sub">Databricks SQL / Power BI</span>
-                                </span>
-                            </div>
-                        </div>
                     </div>
                     <div class="card pillar-card reveal">
                         <div class="pillar-icon"><i class="fas fa-shield-halved"></i></div>
@@ -184,42 +147,6 @@
                         <div class="pillar-icon"><i class="fas fa-diagram-project"></i></div>
                         <h4 data-i18n="pillar.engineering.title">Ingeniería de Datos</h4>
                         <p data-i18n="pillar.engineering.desc">Base técnica: construyo pipelines ETL/ELT en Python y PySpark, arquitectura Medallion e integración de APIs y sistemas transaccionales.</p>
-
-                        <button class="flow-toggle" aria-controls="flow-pillar-ingenieria" data-label-key="pillar.engineering.toggle" data-label="Ver proceso de linaje">
-                            <span class="flow-toggle-label" data-i18n="pillar.engineering.toggle">Ver proceso de linaje</span>
-                            <i class="fas fa-chevron-down"></i>
-                        </button>
-                        <div class="flow-diagram flow-diagram--compact" id="flow-pillar-ingenieria">
-                            <div class="flow-node">
-                                <span class="flow-node-icon"><i class="fas fa-plug"></i></span>
-                                <span class="flow-node-text">
-                                    <span class="flow-node-label" data-i18n="flow.apisTransactional">APIs / Sistemas Transaccionales</span>
-                                </span>
-                            </div>
-                            <div class="flow-connector"></div>
-                            <div class="flow-node">
-                                <span class="flow-node-icon"><i class="fas fa-diagram-project"></i></span>
-                                <span class="flow-node-text">
-                                    <span class="flow-node-label" data-i18n="flow.pipelineFabric">Pipeline (PL) en Fabric</span>
-                                    <span class="flow-node-sub">PySpark + Dataflows</span>
-                                </span>
-                            </div>
-                            <div class="flow-connector"></div>
-                            <div class="flow-node">
-                                <span class="flow-node-icon"><i class="fas fa-table"></i></span>
-                                <span class="flow-node-text">
-                                    <span class="flow-node-label" data-i18n="flow.relationalModel">Modelo Relacional</span>
-                                    <span class="flow-node-sub">Lakehouse Medallion</span>
-                                </span>
-                            </div>
-                            <div class="flow-connector"></div>
-                            <div class="flow-node">
-                                <span class="flow-node-icon"><i class="fas fa-chart-column"></i></span>
-                                <span class="flow-node-text">
-                                    <span class="flow-node-label">Data Mart / Reporting</span>
-                                </span>
-                            </div>
-                        </div>
                     </div>
                     <div class="card pillar-card reveal">
                         <div class="pillar-icon"><i class="fas fa-chart-column"></i></div>
@@ -628,10 +555,47 @@
                         <div class="chip-row">
                             <span class="chip">Python</span>
                             <span class="chip">SQL</span>
+                            <span class="chip">Java</span>
+                            <span class="chip">JavaScript</span>
+                            <span class="chip">TypeScript</span>
                             <span class="chip">PySpark</span>
                             <span class="chip">Apache Spark</span>
                             <span class="chip">Apache Flink</span>
                             <span class="chip">Kafka</span>
+                        </div>
+                    </div>
+
+                    <div class="card skill-group reveal">
+                        <div class="skill-group-head">
+                            <span class="skill-group-icon"><i class="fas fa-laptop-code"></i></span>
+                            <h4 data-i18n="skillgroup.dev">Frameworks &amp; Desarrollo</h4>
+                        </div>
+                        <div class="chip-row">
+                            <span class="chip">Angular</span>
+                            <span class="chip">React</span>
+                            <span class="chip">Node.js</span>
+                            <span class="chip">.NET / C#</span>
+                        </div>
+                    </div>
+
+                    <div class="card skill-group reveal">
+                        <div class="skill-group-head">
+                            <span class="skill-group-icon"><i class="fas fa-database"></i></span>
+                            <h4 data-i18n="skillgroup.db">Bases de Datos</h4>
+                        </div>
+                        <span class="chip-row-label" data-i18n="skillgroup.db.relational">Relacionales</span>
+                        <div class="chip-row">
+                            <span class="chip">SQL Server</span>
+                            <span class="chip">Oracle / PL-SQL</span>
+                            <span class="chip">PostgreSQL</span>
+                            <span class="chip">MySQL</span>
+                        </div>
+                        <span class="chip-row-label" data-i18n="skillgroup.db.nonRelational">No relacionales</span>
+                        <div class="chip-row">
+                            <span class="chip">MongoDB</span>
+                            <span class="chip">Cosmos DB</span>
+                            <span class="chip">DynamoDB</span>
+                            <span class="chip">Redis</span>
                         </div>
                     </div>
 
@@ -645,6 +609,7 @@
                             <span class="chip">Azure</span>
                             <span class="chip">S3</span>
                             <span class="chip">Databricks</span>
+                            <span class="chip">Microsoft Fabric</span>
                             <span class="chip">Data Factory</span>
                         </div>
                     </div>
@@ -676,7 +641,6 @@
                             <span class="chip">Git</span>
                             <span class="chip">Grafana</span>
                             <span class="chip">SSIS</span>
-                            <span class="chip">Backend Development</span>
                         </div>
                     </div>
                 </div>
