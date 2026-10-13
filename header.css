@@ -288,6 +288,36 @@ img { max-width: 100%; display: block; }
 :root[data-theme="light"] .theme-toggle .fa-sun { display: inline-block; }
 :root[data-theme="light"] .theme-toggle .fa-moon { display: none; }
 
+.lang-toggle {
+    height: 38px;
+    min-width: 46px;
+    padding: 0 12px;
+    border-radius: 999px;
+    border: 1px solid var(--border-strong);
+    background: var(--surface);
+    color: var(--text-1);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    flex-shrink: 0;
+    transition: all 0.25s ease;
+}
+
+.lang-toggle:hover {
+    color: var(--on-accent);
+    background: var(--gradient-brand);
+    border-color: transparent;
+    transform: translateY(-2px);
+}
+
+.lang-toggle-label {
+    pointer-events: none;
+}
+
 .nav-toggle {
     display: none;
     width: 34px;

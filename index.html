@@ -38,24 +38,24 @@
         <section class="hero">
             <div class="container hero-grid">
                 <div class="hero-copy reveal">
-                    <span class="hero-kicker"><span class="dot"></span> Disponible para nuevas oportunidades</span>
+                    <span class="hero-kicker"><span class="dot"></span> <span data-i18n="hero.kicker">Disponible para nuevas oportunidades</span></span>
 
-                    <h1 class="hero-title">Hola, soy <span class="accent-text">Jhossua Vega</span></h1>
+                    <h1 class="hero-title"><span data-i18n="hero.titleLead">Hola, soy</span> <span class="accent-text">Jhossua Vega</span></h1>
 
-                    <p class="hero-role"><strong>Arquitecto de Datos</strong> &amp; Soluciones Cloud</p>
+                    <p class="hero-role" data-i18n="hero.role"><strong>Arquitecto de Datos</strong> &amp; Soluciones Cloud</p>
 
-                    <p class="hero-lede">
+                    <p class="hero-lede" data-i18n="hero.lede">
                         Diseño arquitecturas de datos escalables: plataformas Lakehouse, patrones Medallion
                         y estrategias cloud sobre AWS, Azure y Databricks — desde la gobernanza y los
                         estándares técnicos hasta la ejecución, con base en más de 5 años de ingeniería de datos.
                     </p>
 
                     <div class="hero-actions">
-                        <a href="assets/cv/Jhossua_Vega_CV.pdf" target="_blank" class="btn btn-primary">
-                            <i class="fas fa-arrow-down"></i> Descargar CV
+                        <a href="assets/cv/Jhossua_Vega_CV.pdf" data-cv-es="assets/cv/Jhossua_Vega_CV.pdf" data-cv-en="assets/cv/Jhossua_Vega_CV_EN.pdf" target="_blank" class="btn btn-primary cv-link">
+                            <i class="fas fa-arrow-down"></i> <span data-i18n="hero.ctaCv">Descargar CV</span>
                         </a>
                         <a href="#contact" class="btn btn-ghost nav-link">
-                            <i class="fas fa-paper-plane"></i> Contáctame
+                            <i class="fas fa-paper-plane"></i> <span data-i18n="hero.ctaContact">Contáctame</span>
                         </a>
                     </div>
 
@@ -73,11 +73,11 @@
                     </div>
                     <div class="hero-stat-chip chip-a">
                         <span class="num">5+</span>
-                        <span class="lbl">Años en<br>Datos &amp; Cloud</span>
+                        <span class="lbl" data-i18n="hero.statA">Años en<br>Datos &amp; Cloud</span>
                     </div>
                     <div class="hero-stat-chip chip-b">
                         <span class="num">10+</span>
-                        <span class="lbl">Certificaciones<br>Cloud &amp; IA</span>
+                        <span class="lbl" data-i18n="hero.statB">Certificaciones<br>Cloud &amp; IA</span>
                     </div>
                 </div>
             </div>
@@ -87,38 +87,36 @@
         <section id="about" class="section-alt">
             <div class="container">
                 <div class="section-head">
-                    <span class="section-eyebrow">Perfil</span>
-                    <h2 class="section-title">Sobre mí</h2>
-                    <p class="section-sub">Arquitectura de datos con base sólida en ingeniería y gobernanza.</p>
+                    <span class="section-eyebrow" data-i18n="about.eyebrow">Perfil</span>
+                    <h2 class="section-title" data-i18n="about.title">Sobre mí</h2>
+                    <p class="section-sub" data-i18n="about.sub">Arquitectura de datos con base sólida en ingeniería y gobernanza.</p>
                 </div>
 
                 <div class="about-grid">
                     <div class="card about-text reveal">
-                        <h3>Ingeniero en Ciencias de la Computación</h3>
-                        <p class="role-line">Arquitecto de Datos &amp; Soluciones Cloud</p>
-                        <p>
+                        <h3 data-i18n="about.cardTitle">Ingeniero en Ciencias de la Computación</h3>
+                        <p class="role-line" data-i18n="about.roleLine">Arquitecto de Datos &amp; Soluciones Cloud</p>
+                        <p data-i18n="about.p1">
                             Soy <strong>Arquitecto de Datos</strong> con más de <strong>5 años de trayectoria</strong>
-                            en ingeniería y gobernanza de datos, hoy enfocado en el diseño de arquitecturas
-                            escalables: definición del stack tecnológico, patrones <strong>Medallion</strong> y
-                            <strong>Data Lakehouse</strong>, y despliegue de soluciones robustas en
-                            <strong>AWS, Azure y Databricks</strong>.
+                            en ingeniería y gobernanza de datos. Defino el stack tecnológico, diseño patrones
+                            <strong>Medallion</strong> y <strong>Data Lakehouse</strong>, y despliego soluciones
+                            robustas en <strong>AWS, Azure y Databricks</strong>.
                         </p>
-                        <p>
-                            Lidero equipos técnicos y combino la visión arquitectónica con experiencia hands-on en
-                            <strong> Python</strong> y pipelines ETL/ELT, lo que me permite diseñar soluciones
-                            realistas, automatizadas y de alto rendimiento que impulsan la toma de decisiones
-                            empresariales.
+                        <p data-i18n="about.p2">
+                            Lidero equipos técnicos y combino visión arquitectónica con experiencia hands-on en
+                            <strong> Python</strong> y pipelines ETL/ELT, lo que se traduce en soluciones
+                            realistas, automatizadas y de alto rendimiento que sostienen decisiones de negocio.
                         </p>
                     </div>
 
                     <div class="card about-details reveal">
                         <ul class="detail-list">
-                            <li><span>Fecha de nacimiento</span><span>27 oct. 1996</span></li>
-                            <li><span>Teléfono</span><span>+593 959 720 085</span></li>
-                            <li><span>Email</span><span>anthoy_vega95@hotmail.com</span></li>
-                            <li><span>Ubicación</span><span>Quito, Ecuador</span></li>
-                            <li><span>Idiomas</span><span>Español, Inglés</span></li>
-                            <li><span>Disponibilidad</span><span class="availability-pill"><span class="dot"></span> Abierto a oportunidades</span></li>
+                            <li><span data-i18n="about.detail.birth">Fecha de nacimiento</span><span data-i18n="about.detail.birthValue">27 oct. 1996</span></li>
+                            <li><span data-i18n="about.detail.phone">Teléfono</span><span>+593 959 720 085</span></li>
+                            <li><span data-i18n="about.detail.email">Email</span><span>anthoy_vega95@hotmail.com</span></li>
+                            <li><span data-i18n="about.detail.location">Ubicación</span><span>Quito, Ecuador</span></li>
+                            <li><span data-i18n="about.detail.languages">Idiomas</span><span data-i18n="about.detail.languagesValue">Español, Inglés</span></li>
+                            <li><span data-i18n="about.detail.availability">Disponibilidad</span><span class="availability-pill"><span class="dot"></span> <span data-i18n="about.detail.availabilityValue">Abierto a oportunidades</span></span></li>
                         </ul>
                     </div>
                 </div>
@@ -129,33 +127,33 @@
         <section id="services">
             <div class="container">
                 <div class="section-head">
-                    <span class="section-eyebrow">Qué hago</span>
-                    <h2 class="section-title">Áreas de especialización</h2>
-                    <p class="section-sub">Del diseño arquitectónico a la ejecución, con el mismo stack que opero en producción.</p>
+                    <span class="section-eyebrow" data-i18n="services.eyebrow">Qué hago</span>
+                    <h2 class="section-title" data-i18n="services.title">Áreas de especialización</h2>
+                    <p class="section-sub" data-i18n="services.sub">Del diseño arquitectónico a la ejecución, con el mismo stack que opero en producción.</p>
                 </div>
 
                 <div class="pillars-grid">
                     <div class="card pillar-card reveal">
                         <div class="pillar-icon"><i class="fas fa-cloud"></i></div>
-                        <h4>Arquitectura de Datos &amp; Cloud</h4>
-                        <p>Diseño de arquitecturas de datos y despliegue de infraestructura en AWS, Azure y Databricks: Lakehouse, S3, Fabric, IAM y automatización.</p>
+                        <h4 data-i18n="pillar.cloud.title">Arquitectura de Datos &amp; Cloud</h4>
+                        <p data-i18n="pillar.cloud.desc">Diseño arquitecturas de datos y despliego infraestructura en AWS, Azure y Databricks: Lakehouse, S3, Fabric, IAM y automatización.</p>
 
-                        <button class="flow-toggle" aria-controls="flow-pillar-cloud" data-label="Ver diseño de arquitectura">
-                            <span class="flow-toggle-label">Ver diseño de arquitectura</span>
+                        <button class="flow-toggle" aria-controls="flow-pillar-cloud" data-label-key="pillar.cloud.toggle" data-label="Ver diseño de arquitectura">
+                            <span class="flow-toggle-label" data-i18n="pillar.cloud.toggle">Ver diseño de arquitectura</span>
                             <i class="fas fa-chevron-down"></i>
                         </button>
                         <div class="flow-diagram flow-diagram--compact" id="flow-pillar-cloud">
                             <div class="flow-node">
                                 <span class="flow-node-icon"><i class="fas fa-database"></i></span>
                                 <span class="flow-node-text">
-                                    <span class="flow-node-label">Fuentes de Datos</span>
+                                    <span class="flow-node-label" data-i18n="flow.dataSources">Fuentes de Datos</span>
                                 </span>
                             </div>
                             <div class="flow-connector"></div>
                             <div class="flow-node">
                                 <span class="flow-node-icon"><i class="fas fa-right-left"></i></span>
                                 <span class="flow-node-text">
-                                    <span class="flow-node-label">Ingesta</span>
+                                    <span class="flow-node-label" data-i18n="flow.ingestion">Ingesta</span>
                                     <span class="flow-node-sub">Data Factory / Airflow</span>
                                 </span>
                             </div>
@@ -179,30 +177,30 @@
                     </div>
                     <div class="card pillar-card reveal">
                         <div class="pillar-icon"><i class="fas fa-shield-halved"></i></div>
-                        <h4>Gobernanza &amp; Calidad</h4>
-                        <p>Frameworks de linaje, catálogo, calidad y versionamiento de datos para asegurar trazabilidad end-to-end.</p>
+                        <h4 data-i18n="pillar.governance.title">Gobernanza &amp; Calidad</h4>
+                        <p data-i18n="pillar.governance.desc">Diseño frameworks de linaje, catálogo, calidad y versionamiento de datos que garantizan trazabilidad end-to-end.</p>
                     </div>
                     <div class="card pillar-card reveal">
                         <div class="pillar-icon"><i class="fas fa-diagram-project"></i></div>
-                        <h4>Ingeniería de Datos</h4>
-                        <p>Base técnica: pipelines ETL/ELT en Python y PySpark, arquitectura Medallion e integración de APIs y sistemas transaccionales.</p>
+                        <h4 data-i18n="pillar.engineering.title">Ingeniería de Datos</h4>
+                        <p data-i18n="pillar.engineering.desc">Base técnica: construyo pipelines ETL/ELT en Python y PySpark, arquitectura Medallion e integración de APIs y sistemas transaccionales.</p>
 
-                        <button class="flow-toggle" aria-controls="flow-pillar-ingenieria" data-label="Ver proceso de linaje">
-                            <span class="flow-toggle-label">Ver proceso de linaje</span>
+                        <button class="flow-toggle" aria-controls="flow-pillar-ingenieria" data-label-key="pillar.engineering.toggle" data-label="Ver proceso de linaje">
+                            <span class="flow-toggle-label" data-i18n="pillar.engineering.toggle">Ver proceso de linaje</span>
                             <i class="fas fa-chevron-down"></i>
                         </button>
                         <div class="flow-diagram flow-diagram--compact" id="flow-pillar-ingenieria">
                             <div class="flow-node">
                                 <span class="flow-node-icon"><i class="fas fa-plug"></i></span>
                                 <span class="flow-node-text">
-                                    <span class="flow-node-label">APIs / Sistemas Transaccionales</span>
+                                    <span class="flow-node-label" data-i18n="flow.apisTransactional">APIs / Sistemas Transaccionales</span>
                                 </span>
                             </div>
                             <div class="flow-connector"></div>
                             <div class="flow-node">
                                 <span class="flow-node-icon"><i class="fas fa-diagram-project"></i></span>
                                 <span class="flow-node-text">
-                                    <span class="flow-node-label">Pipeline (PL) en Fabric</span>
+                                    <span class="flow-node-label" data-i18n="flow.pipelineFabric">Pipeline (PL) en Fabric</span>
                                     <span class="flow-node-sub">PySpark + Dataflows</span>
                                 </span>
                             </div>
@@ -210,7 +208,7 @@
                             <div class="flow-node">
                                 <span class="flow-node-icon"><i class="fas fa-table"></i></span>
                                 <span class="flow-node-text">
-                                    <span class="flow-node-label">Modelo Relacional</span>
+                                    <span class="flow-node-label" data-i18n="flow.relationalModel">Modelo Relacional</span>
                                     <span class="flow-node-sub">Lakehouse Medallion</span>
                                 </span>
                             </div>
@@ -225,8 +223,8 @@
                     </div>
                     <div class="card pillar-card reveal">
                         <div class="pillar-icon"><i class="fas fa-chart-column"></i></div>
-                        <h4>BI &amp; Analítica</h4>
-                        <p>Data Marts y dashboards ejecutivos en Power BI y RShiny para decisiones de negocio basadas en datos.</p>
+                        <h4 data-i18n="pillar.bi.title">BI &amp; Analítica</h4>
+                        <p data-i18n="pillar.bi.desc">Construyo Data Marts y dashboards ejecutivos en Power BI y RShiny que impulsan decisiones de negocio basadas en datos.</p>
                     </div>
                 </div>
             </div>
@@ -236,9 +234,9 @@
         <section id="experience" class="section-alt">
             <div class="container">
                 <div class="section-head">
-                    <span class="section-eyebrow">Trayectoria</span>
-                    <h2 class="section-title">Experiencia profesional</h2>
-                    <p class="section-sub">Progresión desde ingeniería y calidad de datos hasta arquitectura de datos y liderazgo técnico.</p>
+                    <span class="section-eyebrow" data-i18n="exp.eyebrow">Trayectoria</span>
+                    <h2 class="section-title" data-i18n="exp.title">Experiencia profesional</h2>
+                    <p class="section-sub" data-i18n="exp.sub">Progresión desde ingeniería y calidad de datos hasta arquitectura de datos y liderazgo técnico.</p>
                 </div>
 
                 <div class="timeline">
@@ -247,33 +245,33 @@
                         <span class="timeline-dot"></span>
                         <div class="card timeline-card">
                             <div class="timeline-top">
-                                <span class="timeline-date">Ene 2025 — Actualidad</span>
-                                <span class="timeline-current-badge">Actual</span>
+                                <span class="timeline-date" data-i18n="exp.turingtech.date">Ene 2025 — Actualidad</span>
+                                <span class="timeline-current-badge" data-i18n="exp.badge.current">Actual</span>
                             </div>
-                            <h4>Arquitecto de Soluciones y Tech Lead</h4>
+                            <h4 data-i18n="exp.turingtech.title">Arquitecto de Soluciones y Tech Lead</h4>
                             <p class="timeline-company">Corporación TuringTech</p>
-                            <ul>
-                                <li>Diseño arquitectónico y despliegue cloud de soluciones a medida en BI, IA e Ingeniería de Datos.</li>
-                                <li>Definición del stack tecnológico y patrones arquitectónicos (microservicios, serverless).</li>
-                                <li>Dirección de un equipo técnico de 4 personas, garantizando escalabilidad, seguridad y optimización de costos.</li>
+                            <ul data-i18n-list="exp.turingtech.bullets">
+                                <li>Diseño la arquitectura y lidero el despliegue cloud de soluciones a medida en BI, IA e Ingeniería de Datos.</li>
+                                <li>Defino el stack tecnológico y los patrones arquitectónicos (microservicios, serverless).</li>
+                                <li>Dirijo un equipo técnico de 4 personas, garantizando escalabilidad, seguridad y optimización de costos.</li>
                             </ul>
 
-                            <button class="flow-toggle" aria-controls="flow-turingtech" data-label="Ver diseño de arquitectura">
-                                <span class="flow-toggle-label">Ver diseño de arquitectura</span>
+                            <button class="flow-toggle" aria-controls="flow-turingtech" data-label-key="exp.turingtech.toggle" data-label="Ver diseño de arquitectura">
+                                <span class="flow-toggle-label" data-i18n="exp.turingtech.toggle">Ver diseño de arquitectura</span>
                                 <i class="fas fa-chevron-down"></i>
                             </button>
                             <div class="flow-diagram" id="flow-turingtech">
                                 <div class="flow-node">
                                     <span class="flow-node-icon"><i class="fas fa-comments"></i></span>
                                     <span class="flow-node-text">
-                                        <span class="flow-node-label">Requerimiento de Negocio</span>
+                                        <span class="flow-node-label" data-i18n="flow.businessRequirement">Requerimiento de Negocio</span>
                                     </span>
                                 </div>
                                 <div class="flow-connector"></div>
                                 <div class="flow-node">
                                     <span class="flow-node-icon"><i class="fas fa-drafting-compass"></i></span>
                                     <span class="flow-node-text">
-                                        <span class="flow-node-label">Diseño Arquitectónico</span>
+                                        <span class="flow-node-label" data-i18n="flow.architecturalDesign">Diseño Arquitectónico</span>
                                         <span class="flow-node-sub">Microservicios / Serverless</span>
                                     </span>
                                 </div>
@@ -281,7 +279,7 @@
                                 <div class="flow-node">
                                     <span class="flow-node-icon"><i class="fas fa-cloud-arrow-up"></i></span>
                                     <span class="flow-node-text">
-                                        <span class="flow-node-label">Despliegue Cloud</span>
+                                        <span class="flow-node-label" data-i18n="flow.cloudDeployment">Despliegue Cloud</span>
                                         <span class="flow-node-sub">AWS / Azure</span>
                                     </span>
                                 </div>
@@ -289,8 +287,8 @@
                                 <div class="flow-node">
                                     <span class="flow-node-icon"><i class="fas fa-people-group"></i></span>
                                     <span class="flow-node-text">
-                                        <span class="flow-node-label">Equipo Técnico</span>
-                                        <span class="flow-node-sub">4 personas</span>
+                                        <span class="flow-node-label" data-i18n="flow.technicalTeam">Equipo Técnico</span>
+                                        <span class="flow-node-sub" data-i18n="flow.fourPeople">4 personas</span>
                                     </span>
                                 </div>
                             </div>
@@ -301,34 +299,34 @@
                         <span class="timeline-dot"></span>
                         <div class="card timeline-card">
                             <div class="timeline-top">
-                                <span class="timeline-date">Nov 2025 — Actualidad</span>
-                                <span class="timeline-current-badge">Actual</span>
+                                <span class="timeline-date" data-i18n="exp.handytec.date">Nov 2025 — Actualidad</span>
+                                <span class="timeline-current-badge" data-i18n="exp.badge.current">Actual</span>
                             </div>
                             <h4>Data Engineer</h4>
                             <p class="timeline-company">Handytec</p>
-                            <ul>
-                                <li>Implementación de soluciones de datos en Microsoft Fabric y Databricks: Lakehouses, notebooks y pipelines ETL/ELT con PySpark, Dataflows y Python.</li>
-                                <li>Diseño de arquitecturas bajo patrón Medallion e integración de datos desde APIs y sistemas transaccionales.</li>
-                                <li>Gobernanza de datos (linaje, catálogo, calidad) y construcción de Data Marts para analítica y reporting.</li>
-                                <li>Administración de infraestructura en Azure, Fabric, Databricks y AWS.</li>
+                            <ul data-i18n-list="exp.handytec.bullets">
+                                <li>Implemento soluciones de datos en Microsoft Fabric y Databricks: Lakehouses, notebooks y pipelines ETL/ELT con PySpark, Dataflows y Python.</li>
+                                <li>Diseño arquitecturas bajo patrón Medallion e integro datos desde APIs y sistemas transaccionales.</li>
+                                <li>Gobierno los datos (linaje, catálogo, calidad) y construyo Data Marts para analítica y reporting.</li>
+                                <li>Administro la infraestructura en Azure, Fabric, Databricks y AWS.</li>
                             </ul>
 
-                            <button class="flow-toggle" aria-controls="flow-handytec" data-label="Ver proceso de linaje">
-                                <span class="flow-toggle-label">Ver proceso de linaje</span>
+                            <button class="flow-toggle" aria-controls="flow-handytec" data-label-key="exp.handytec.toggle" data-label="Ver proceso de linaje">
+                                <span class="flow-toggle-label" data-i18n="exp.handytec.toggle">Ver proceso de linaje</span>
                                 <i class="fas fa-chevron-down"></i>
                             </button>
                             <div class="flow-diagram" id="flow-handytec">
                                 <div class="flow-node">
                                     <span class="flow-node-icon"><i class="fas fa-plug"></i></span>
                                     <span class="flow-node-text">
-                                        <span class="flow-node-label">APIs / Sistemas Transaccionales</span>
+                                        <span class="flow-node-label" data-i18n="flow.apisTransactional">APIs / Sistemas Transaccionales</span>
                                     </span>
                                 </div>
                                 <div class="flow-connector"></div>
                                 <div class="flow-node">
                                     <span class="flow-node-icon"><i class="fas fa-diagram-project"></i></span>
                                     <span class="flow-node-text">
-                                        <span class="flow-node-label">Pipeline (PL) en Fabric</span>
+                                        <span class="flow-node-label" data-i18n="flow.pipelineFabric">Pipeline (PL) en Fabric</span>
                                         <span class="flow-node-sub">PySpark + Dataflows</span>
                                     </span>
                                 </div>
@@ -336,7 +334,7 @@
                                 <div class="flow-node">
                                     <span class="flow-node-icon"><i class="fas fa-table"></i></span>
                                     <span class="flow-node-text">
-                                        <span class="flow-node-label">Modelo Relacional</span>
+                                        <span class="flow-node-label" data-i18n="flow.relationalModel">Modelo Relacional</span>
                                         <span class="flow-node-sub">Lakehouse Medallion</span>
                                     </span>
                                 </div>
@@ -357,22 +355,22 @@
                             <div class="timeline-top"><span class="timeline-date">Mar 2024 — Nov 2025</span></div>
                             <h4>Data Engineer</h4>
                             <p class="timeline-company">Gestcobra Cía. Ltda.</p>
-                            <ul>
-                                <li>Diseño de arquitectura de datos empresarial bajo patrón Medallion, con estandarización y trazabilidad.</li>
-                                <li>Pipelines ETL/ELT en Python para datos transaccionales y APIs financieras.</li>
-                                <li>Gestión de infraestructura AWS (S3, EC2, IAM) y automatización de KPIs de cobranza.</li>
-                                <li>Construcción de Data Marts y reportes avanzados en Power BI.</li>
+                            <ul data-i18n-list="exp.gestcobra.bullets">
+                                <li>Diseñé la arquitectura de datos empresarial bajo patrón Medallion, con estandarización y trazabilidad.</li>
+                                <li>Construí pipelines ETL/ELT en Python para datos transaccionales y APIs financieras.</li>
+                                <li>Gestioné la infraestructura AWS (S3, EC2, IAM) y automaticé los KPIs de cobranza.</li>
+                                <li>Entregué Data Marts y reportes avanzados en Power BI.</li>
                             </ul>
 
-                            <button class="flow-toggle" aria-controls="flow-gestcobra" data-label="Ver proceso ETL">
-                                <span class="flow-toggle-label">Ver proceso ETL</span>
+                            <button class="flow-toggle" aria-controls="flow-gestcobra" data-label-key="exp.gestcobra.toggle" data-label="Ver proceso ETL">
+                                <span class="flow-toggle-label" data-i18n="exp.gestcobra.toggle">Ver proceso ETL</span>
                                 <i class="fas fa-chevron-down"></i>
                             </button>
                             <div class="flow-diagram" id="flow-gestcobra">
                                 <div class="flow-node">
                                     <span class="flow-node-icon"><i class="fas fa-file-invoice-dollar"></i></span>
                                     <span class="flow-node-text">
-                                        <span class="flow-node-label">APIs Financieras</span>
+                                        <span class="flow-node-label" data-i18n="flow.financialApis">APIs Financieras</span>
                                     </span>
                                 </div>
                                 <div class="flow-connector"></div>
@@ -380,7 +378,7 @@
                                     <span class="flow-node-icon"><i class="fab fa-python"></i></span>
                                     <span class="flow-node-text">
                                         <span class="flow-node-label">ETL Python</span>
-                                        <span class="flow-node-sub">Patrón Medallion</span>
+                                        <span class="flow-node-sub" data-i18n="flow.medallionPattern">Patrón Medallion</span>
                                     </span>
                                 </div>
                                 <div class="flow-connector"></div>
@@ -396,7 +394,7 @@
                                     <span class="flow-node-icon"><i class="fas fa-chart-column"></i></span>
                                     <span class="flow-node-text">
                                         <span class="flow-node-label">Power BI</span>
-                                        <span class="flow-node-sub">KPIs de cobranza</span>
+                                        <span class="flow-node-sub" data-i18n="flow.collectionsKpis">KPIs de cobranza</span>
                                     </span>
                                 </div>
                             </div>
@@ -407,30 +405,30 @@
                         <span class="timeline-dot"></span>
                         <div class="card timeline-card">
                             <div class="timeline-top"><span class="timeline-date">Ago 2023 — Feb 2024</span></div>
-                            <h4>Administrador de Base de Datos</h4>
-                            <p class="timeline-company">Procuraduría General del Estado</p>
-                            <ul>
-                                <li>Administración y optimización de bases de datos institucionales de alta disponibilidad.</li>
-                                <li>Estrategias de respaldo, recuperación y continuidad operativa (RPO/RTO).</li>
-                                <li>Automatización de migraciones estructuradas y digitalización documental.</li>
+                            <h4 data-i18n="exp.procuraduria.title">Administrador de Base de Datos</h4>
+                            <p class="timeline-company" data-i18n="exp.procuraduria.company">Procuraduría General del Estado</p>
+                            <ul data-i18n-list="exp.procuraduria.bullets">
+                                <li>Administré y optimicé bases de datos institucionales de alta disponibilidad.</li>
+                                <li>Implementé estrategias de respaldo, recuperación y continuidad operativa (RPO/RTO).</li>
+                                <li>Automaticé migraciones estructuradas y la digitalización documental.</li>
                             </ul>
 
-                            <button class="flow-toggle" aria-controls="flow-procuraduria" data-label="Ver estrategia de continuidad">
-                                <span class="flow-toggle-label">Ver estrategia de continuidad</span>
+                            <button class="flow-toggle" aria-controls="flow-procuraduria" data-label-key="exp.procuraduria.toggle" data-label="Ver estrategia de continuidad">
+                                <span class="flow-toggle-label" data-i18n="exp.procuraduria.toggle">Ver estrategia de continuidad</span>
                                 <i class="fas fa-chevron-down"></i>
                             </button>
                             <div class="flow-diagram" id="flow-procuraduria">
                                 <div class="flow-node">
                                     <span class="flow-node-icon"><i class="fas fa-database"></i></span>
                                     <span class="flow-node-text">
-                                        <span class="flow-node-label">Base de Datos Producción</span>
+                                        <span class="flow-node-label" data-i18n="flow.productionDb">Base de Datos Producción</span>
                                     </span>
                                 </div>
                                 <div class="flow-connector"></div>
                                 <div class="flow-node">
                                     <span class="flow-node-icon"><i class="fas fa-copy"></i></span>
                                     <span class="flow-node-text">
-                                        <span class="flow-node-label">Backup / Réplica</span>
+                                        <span class="flow-node-label" data-i18n="flow.backupReplica">Backup / Réplica</span>
                                     </span>
                                 </div>
                                 <div class="flow-connector"></div>
@@ -444,7 +442,7 @@
                                 <div class="flow-node">
                                     <span class="flow-node-icon"><i class="fas fa-shield-halved"></i></span>
                                     <span class="flow-node-text">
-                                        <span class="flow-node-label">Continuidad Operativa</span>
+                                        <span class="flow-node-label" data-i18n="flow.operationalContinuity">Continuidad Operativa</span>
                                     </span>
                                 </div>
                             </div>
@@ -455,16 +453,16 @@
                         <span class="timeline-dot"></span>
                         <div class="card timeline-card">
                             <div class="timeline-top"><span class="timeline-date">Ene 2022 — Jul 2023</span></div>
-                            <h4>Data Engineer y BI Developer</h4>
+                            <h4 data-i18n="exp.fisa.title">Data Engineer y BI Developer</h4>
                             <p class="timeline-company">Fisa Group</p>
-                            <ul>
-                                <li>Orquestación y optimización de pipelines ETL, reduciendo tiempos de carga.</li>
-                                <li>Modelos de datos y procedimientos almacenados en SQL Server y PL/SQL.</li>
-                                <li>Controles de calidad de datos y dashboards gerenciales en RShiny.</li>
+                            <ul data-i18n-list="exp.fisa.bullets">
+                                <li>Orquesté y optimicé pipelines ETL, reduciendo los tiempos de carga.</li>
+                                <li>Diseñé modelos y procedimientos almacenados en SQL Server y PL/SQL.</li>
+                                <li>Implementé controles de calidad de datos y dashboards gerenciales en RShiny.</li>
                             </ul>
 
-                            <button class="flow-toggle" aria-controls="flow-fisa" data-label="Ver pipeline de datos">
-                                <span class="flow-toggle-label">Ver pipeline de datos</span>
+                            <button class="flow-toggle" aria-controls="flow-fisa" data-label-key="exp.fisa.toggle" data-label="Ver pipeline de datos">
+                                <span class="flow-toggle-label" data-i18n="exp.fisa.toggle">Ver pipeline de datos</span>
                                 <i class="fas fa-chevron-down"></i>
                             </button>
                             <div class="flow-diagram" id="flow-fisa">
@@ -478,7 +476,7 @@
                                 <div class="flow-node">
                                     <span class="flow-node-icon"><i class="fas fa-arrows-spin"></i></span>
                                     <span class="flow-node-text">
-                                        <span class="flow-node-label">Pipelines ETL</span>
+                                        <span class="flow-node-label" data-i18n="flow.etlPipelines">Pipelines ETL</span>
                                     </span>
                                 </div>
                                 <div class="flow-connector"></div>
@@ -492,7 +490,7 @@
                                 <div class="flow-node">
                                     <span class="flow-node-icon"><i class="fas fa-chart-line"></i></span>
                                     <span class="flow-node-text">
-                                        <span class="flow-node-label">Dashboard RShiny</span>
+                                        <span class="flow-node-label" data-i18n="flow.rshinyDashboard">Dashboard RShiny</span>
                                     </span>
                                 </div>
                             </div>
@@ -503,37 +501,37 @@
                         <span class="timeline-dot"></span>
                         <div class="card timeline-card">
                             <div class="timeline-top"><span class="timeline-date">Feb 2021 — Dic 2021</span></div>
-                            <h4>Pasante de Data Engineering</h4>
+                            <h4 data-i18n="exp.marmoles.title">Pasante de Data Engineering</h4>
                             <p class="timeline-company">Mármoles Vásquez</p>
-                            <ul>
-                                <li>Modelado de datos para control de inventarios y procesos logísticos.</li>
-                                <li>Pipelines en Python para ingesta desde fuentes no estructuradas.</li>
+                            <ul data-i18n-list="exp.marmoles.bullets">
+                                <li>Modelé datos para control de inventarios y procesos logísticos.</li>
+                                <li>Construí pipelines en Python para ingesta desde fuentes no estructuradas.</li>
                             </ul>
 
-                            <button class="flow-toggle" aria-controls="flow-marmoles" data-label="Ver flujo de datos">
-                                <span class="flow-toggle-label">Ver flujo de datos</span>
+                            <button class="flow-toggle" aria-controls="flow-marmoles" data-label-key="exp.marmoles.toggle" data-label="Ver flujo de datos">
+                                <span class="flow-toggle-label" data-i18n="exp.marmoles.toggle">Ver flujo de datos</span>
                                 <i class="fas fa-chevron-down"></i>
                             </button>
                             <div class="flow-diagram" id="flow-marmoles">
                                 <div class="flow-node">
                                     <span class="flow-node-icon"><i class="fas fa-file-csv"></i></span>
                                     <span class="flow-node-text">
-                                        <span class="flow-node-label">Fuentes No Estructuradas</span>
+                                        <span class="flow-node-label" data-i18n="flow.unstructuredSources">Fuentes No Estructuradas</span>
                                     </span>
                                 </div>
                                 <div class="flow-connector"></div>
                                 <div class="flow-node">
                                     <span class="flow-node-icon"><i class="fab fa-python"></i></span>
                                     <span class="flow-node-text">
-                                        <span class="flow-node-label">Pipelines Python</span>
+                                        <span class="flow-node-label" data-i18n="flow.pythonPipelines">Pipelines Python</span>
                                     </span>
                                 </div>
                                 <div class="flow-connector"></div>
                                 <div class="flow-node">
                                     <span class="flow-node-icon"><i class="fas fa-table"></i></span>
                                     <span class="flow-node-text">
-                                        <span class="flow-node-label">Modelo Relacional</span>
-                                        <span class="flow-node-sub">Control de Inventarios</span>
+                                        <span class="flow-node-label" data-i18n="flow.relationalModel">Modelo Relacional</span>
+                                        <span class="flow-node-sub" data-i18n="flow.inventoryControl">Control de Inventarios</span>
                                     </span>
                                 </div>
                             </div>
@@ -544,36 +542,36 @@
                         <span class="timeline-dot"></span>
                         <div class="card timeline-card">
                             <div class="timeline-top"><span class="timeline-date">Sep 2017 — Ene 2019</span></div>
-                            <h4>Especialista en Calidad y Confiabilidad de Datos</h4>
+                            <h4 data-i18n="exp.igm.title">Especialista en Calidad y Confiabilidad de Datos</h4>
                             <p class="timeline-company">Instituto Geográfico Militar</p>
-                            <ul>
-                                <li>Validación, estandarización y curaduría de grandes volúmenes de datos geoespaciales.</li>
-                                <li>Diseño y ejecución de procesos de Data Quality Assurance.</li>
+                            <ul data-i18n-list="exp.igm.bullets">
+                                <li>Validé, estandaricé y curé grandes volúmenes de datos geoespaciales.</li>
+                                <li>Diseñé y ejecuté procesos de Data Quality Assurance.</li>
                             </ul>
 
-                            <button class="flow-toggle" aria-controls="flow-igm" data-label="Ver proceso de calidad">
-                                <span class="flow-toggle-label">Ver proceso de calidad</span>
+                            <button class="flow-toggle" aria-controls="flow-igm" data-label-key="exp.igm.toggle" data-label="Ver proceso de calidad">
+                                <span class="flow-toggle-label" data-i18n="exp.igm.toggle">Ver proceso de calidad</span>
                                 <i class="fas fa-chevron-down"></i>
                             </button>
                             <div class="flow-diagram" id="flow-igm">
                                 <div class="flow-node">
                                     <span class="flow-node-icon"><i class="fas fa-map-location-dot"></i></span>
                                     <span class="flow-node-text">
-                                        <span class="flow-node-label">Datos Geoespaciales</span>
+                                        <span class="flow-node-label" data-i18n="flow.geospatialData">Datos Geoespaciales</span>
                                     </span>
                                 </div>
                                 <div class="flow-connector"></div>
                                 <div class="flow-node">
                                     <span class="flow-node-icon"><i class="fas fa-magnifying-glass-chart"></i></span>
                                     <span class="flow-node-text">
-                                        <span class="flow-node-label">Validación / DQA</span>
+                                        <span class="flow-node-label" data-i18n="flow.validationDqa">Validación / DQA</span>
                                     </span>
                                 </div>
                                 <div class="flow-connector"></div>
                                 <div class="flow-node">
                                     <span class="flow-node-icon"><i class="fas fa-book"></i></span>
                                     <span class="flow-node-text">
-                                        <span class="flow-node-label">Catálogo Estandarizado</span>
+                                        <span class="flow-node-label" data-i18n="flow.standardizedCatalog">Catálogo Estandarizado</span>
                                     </span>
                                 </div>
                             </div>
@@ -588,24 +586,24 @@
         <section id="education">
             <div class="container">
                 <div class="section-head">
-                    <span class="section-eyebrow">Formación</span>
-                    <h2 class="section-title">Educación</h2>
+                    <span class="section-eyebrow" data-i18n="edu.eyebrow">Formación</span>
+                    <h2 class="section-title" data-i18n="edu.title">Educación</h2>
                 </div>
 
                 <div class="edu-grid">
                     <div class="card edu-card reveal">
                         <div class="edu-year">Ago 2018 — Feb 2025</div>
-                        <h4>Ingeniería en Ciencias de la Computación</h4>
+                        <h4 data-i18n="edu1.title">Ingeniería en Ciencias de la Computación</h4>
                         <p>Universidad Politécnica Salesiana (UPS)</p>
                     </div>
                     <div class="card edu-card reveal">
                         <div class="edu-year">Ago 2021 — Feb 2025</div>
-                        <h4>Pedagogía de los Idiomas (Inglés)</h4>
+                        <h4 data-i18n="edu2.title">Pedagogía de los Idiomas (Inglés)</h4>
                         <p>Universidad Estatal de Milagro (UNEMI)</p>
                     </div>
                     <div class="card edu-card reveal">
                         <div class="edu-year">2009 — 2016</div>
-                        <h4>Bachillerato Técnico en Informática</h4>
+                        <h4 data-i18n="edu3.title">Bachillerato Técnico en Informática</h4>
                         <p>Colegio Técnico Vida Nueva</p>
                     </div>
                 </div>
@@ -616,16 +614,16 @@
         <section id="skills" class="section-alt">
             <div class="container">
                 <div class="section-head">
-                    <span class="section-eyebrow">Stack técnico</span>
-                    <h2 class="section-title">Habilidades</h2>
-                    <p class="section-sub">Las tecnologías que uso a diario, organizadas por área.</p>
+                    <span class="section-eyebrow" data-i18n="skills.eyebrow">Stack técnico</span>
+                    <h2 class="section-title" data-i18n="skills.title">Habilidades</h2>
+                    <p class="section-sub" data-i18n="skills.sub">Las tecnologías que uso a diario, organizadas por área.</p>
                 </div>
 
                 <div class="skills-grid">
                     <div class="card skill-group reveal">
                         <div class="skill-group-head">
                             <span class="skill-group-icon"><i class="fas fa-code"></i></span>
-                            <h4>Lenguajes &amp; Procesamiento</h4>
+                            <h4 data-i18n="skillgroup.lang">Lenguajes &amp; Procesamiento</h4>
                         </div>
                         <div class="chip-row">
                             <span class="chip">Python</span>
@@ -640,7 +638,7 @@
                     <div class="card skill-group reveal">
                         <div class="skill-group-head">
                             <span class="skill-group-icon"><i class="fas fa-cloud-arrow-up"></i></span>
-                            <h4>Cloud &amp; Plataformas</h4>
+                            <h4 data-i18n="skillgroup.cloud">Cloud &amp; Plataformas</h4>
                         </div>
                         <div class="chip-row">
                             <span class="chip">AWS</span>
@@ -654,7 +652,7 @@
                     <div class="card skill-group reveal">
                         <div class="skill-group-head">
                             <span class="skill-group-icon"><i class="fas fa-layer-group"></i></span>
-                            <h4>Arquitectura &amp; Modelado</h4>
+                            <h4 data-i18n="skillgroup.arch">Arquitectura &amp; Modelado</h4>
                         </div>
                         <div class="chip-row">
                             <span class="chip">Data Lakehouse</span>
@@ -668,7 +666,7 @@
                     <div class="card skill-group reveal">
                         <div class="skill-group-head">
                             <span class="skill-group-icon"><i class="fas fa-gears"></i></span>
-                            <h4>Orquestación, DevOps &amp; Calidad</h4>
+                            <h4 data-i18n="skillgroup.devops">Orquestación, DevOps &amp; Calidad</h4>
                         </div>
                         <div class="chip-row">
                             <span class="chip">ETL / ELT</span>
@@ -689,21 +687,21 @@
         <section id="certifications">
             <div class="container">
                 <div class="section-head">
-                    <span class="section-eyebrow">Credenciales</span>
-                    <h2 class="section-title">Certificaciones</h2>
-                    <p class="section-sub">Formación continua en cloud, datos e inteligencia artificial.</p>
+                    <span class="section-eyebrow" data-i18n="certs.eyebrow">Credenciales</span>
+                    <h2 class="section-title" data-i18n="certs.title">Certificaciones</h2>
+                    <p class="section-sub" data-i18n="certs.sub">Formación continua en cloud, datos e inteligencia artificial.</p>
                 </div>
 
                 <div class="cert-category reveal">
-                    <div class="cert-category-title">Arquitectura Cloud e Ingeniería de Datos</div>
+                    <div class="cert-category-title" data-i18n="certcat.cloud">Arquitectura Cloud e Ingeniería de Datos</div>
                     <div class="cert-grid">
                         <div class="card cert-card">
                             <span class="cert-badge"><i class="fas fa-certificate"></i></span>
-                            <div><h5>Ingeniero de Datos de Fabric Asociado (DP-700)</h5><span>Microsoft, 09.2026</span></div>
+                            <div><h5 data-i18n="cert.dp700">Ingeniero de Datos de Fabric Asociado (DP-700)</h5><span>Microsoft, 09.2026</span></div>
                         </div>
                         <div class="card cert-card">
                             <span class="cert-badge"><i class="fas fa-certificate"></i></span>
-                            <div><h5>Bootcamp Ingeniero de Datos en Fabric</h5><span>03.2026</span></div>
+                            <div><h5 data-i18n="cert.fabricBootcamp">Bootcamp Ingeniero de Datos en Fabric</h5><span>03.2026</span></div>
                         </div>
                         <div class="card cert-card">
                             <span class="cert-badge"><i class="fab fa-aws"></i></span>
@@ -717,7 +715,7 @@
                 </div>
 
                 <div class="cert-category reveal">
-                    <div class="cert-category-title">Data Lakehouse &amp; Ecosistema Databricks</div>
+                    <div class="cert-category-title" data-i18n="certcat.databricks">Data Lakehouse &amp; Ecosistema Databricks</div>
                     <div class="cert-grid">
                         <div class="card cert-card">
                             <span class="cert-badge"><i class="fas fa-database"></i></span>
@@ -739,7 +737,7 @@
                 </div>
 
                 <div class="cert-category reveal">
-                    <div class="cert-category-title">Inteligencia Artificial Generativa y LLMs</div>
+                    <div class="cert-category-title" data-i18n="certcat.genai">Inteligencia Artificial Generativa y LLMs</div>
                     <div class="cert-grid">
                         <div class="card cert-card">
                             <span class="cert-badge"><i class="fas fa-brain"></i></span>
@@ -762,13 +760,13 @@
         <section id="projects" class="section-alt">
             <div class="container">
                 <div class="section-head">
-                    <span class="section-eyebrow">Emprendimiento</span>
+                    <span class="section-eyebrow" data-i18n="projects.eyebrow">Emprendimiento</span>
                     <h2 class="section-title">Iris Business Data Analytics</h2>
-                    <p class="section-sub">Proyectos ejecutados como freelancer y fundador.</p>
+                    <p class="section-sub" data-i18n="projects.sub">Proyectos ejecutados como freelancer y fundador.</p>
                 </div>
 
                 <div class="card iris-banner reveal">
-                    <p>
+                    <p data-i18n="iris.banner">
                         Como freelancer y fundador de <strong>Iris Business Data Analytics</strong>, lidero proyectos
                         de extremo a extremo: desarrollo full-stack, infraestructura cloud e ingeniería de datos,
                         bajo el lema <em>"Iris, tecnología a tu alcance"</em>.
@@ -778,43 +776,43 @@
                 <div class="projects-grid">
                     <div class="card project-card reveal">
                         <div class="pillar-icon"><i class="fas fa-sitemap"></i></div>
-                        <h5>Ingeniería de Datos</h5>
-                        <p>Arquitectura Medallion y Data Governance en Gestcobra para estandarizar el flujo y la calidad de los datos.</p>
+                        <h5 data-i18n="proj1.title">Ingeniería de Datos</h5>
+                        <p data-i18n="proj1.desc">Arquitectura Medallion y Data Governance en Gestcobra para estandarizar el flujo y la calidad de los datos.</p>
                     </div>
                     <div class="card project-card reveal">
                         <div class="pillar-icon"><i class="fas fa-database"></i></div>
                         <h5>Data Warehouse</h5>
-                        <p>Diseño de un Data Warehouse estructurado para el software de cobranzas TCobro.</p>
+                        <p data-i18n="proj2.desc">Diseño de un Data Warehouse estructurado para el software de cobranzas TCobro.</p>
                     </div>
                     <div class="card project-card reveal">
                         <div class="pillar-icon"><i class="fas fa-chart-column"></i></div>
                         <h5>Business Intelligence</h5>
-                        <p>Cuadros de mando e informes analíticos en Power BI para GVMARMOL y Panadería Nathalia.</p>
+                        <p data-i18n="proj3.desc">Cuadros de mando e informes analíticos en Power BI para GVMARMOL y Panadería Nathalia.</p>
                     </div>
                     <div class="card project-card reveal">
                         <div class="pillar-icon"><i class="fas fa-cloud"></i></div>
                         <h5>DevOps &amp; Cloud</h5>
-                        <p>Pipelines CI/CD y contenedores Docker en AWS/Azure para despliegue automatizado de APIs.</p>
+                        <p data-i18n="proj4.desc">Pipelines CI/CD y contenedores Docker en AWS/Azure para despliegue automatizado de APIs.</p>
                     </div>
                     <div class="card project-card reveal">
                         <div class="pillar-icon"><i class="fas fa-server"></i></div>
                         <h5>Backend</h5>
-                        <p>Flujos ETL en Python para automatizar el procesamiento de datos en la Cooperativa Santa Rosa.</p>
+                        <p data-i18n="proj5.desc">Flujos ETL en Python para automatizar el procesamiento de datos en la Cooperativa Santa Rosa.</p>
                     </div>
                     <div class="card project-card reveal">
                         <div class="pillar-icon"><i class="fas fa-desktop"></i></div>
                         <h5>Front-End</h5>
-                        <p>Interfaz del software de cobranzas TCOBRO para gestión de carteras vencidas.</p>
+                        <p data-i18n="proj6.desc">Interfaz del software de cobranzas TCOBRO para gestión de carteras vencidas.</p>
                     </div>
                     <div class="card project-card reveal">
                         <div class="pillar-icon"><i class="fas fa-network-wired"></i></div>
-                        <h5>Infraestructura &amp; Networking</h5>
-                        <p>Servidor Issabel y Gateway Openbox para el Call Center de Multigesión Ambato.</p>
+                        <h5 data-i18n="proj7.title">Infraestructura &amp; Networking</h5>
+                        <p data-i18n="proj7.desc">Servidor Issabel y Gateway Openbox para el Call Center de Multigesión Ambato.</p>
                     </div>
                     <div class="card project-card reveal">
                         <div class="pillar-icon"><i class="fas fa-phone-volume"></i></div>
-                        <h5>Telefonía IP</h5>
-                        <p>Optimización de campañas outbound e IVRs sobre plataformas de telefonía IP.</p>
+                        <h5 data-i18n="proj8.title">Telefonía IP</h5>
+                        <p data-i18n="proj8.desc">Optimización de campañas outbound e IVRs sobre plataformas de telefonía IP.</p>
                     </div>
                 </div>
             </div>
@@ -824,9 +822,9 @@
         <section id="contact">
             <div class="container">
                 <div class="section-head">
-                    <span class="section-eyebrow">Contacto</span>
-                    <h2 class="section-title">Trabajemos juntos</h2>
-                    <p class="section-sub">Disponible para nuevas oportunidades, proyectos de consultoría o soporte de infraestructura.</p>
+                    <span class="section-eyebrow" data-i18n="contact.eyebrow">Contacto</span>
+                    <h2 class="section-title" data-i18n="contact.title">Trabajemos juntos</h2>
+                    <p class="section-sub" data-i18n="contact.sub">Disponible para nuevas oportunidades, proyectos de consultoría o soporte de infraestructura.</p>
                 </div>
 
                 <div class="contact-grid">
@@ -837,7 +835,7 @@
                         </a>
                         <a href="https://wa.me/593959720085" target="_blank" class="card contact-item">
                             <span class="contact-icon"><i class="fab fa-whatsapp"></i></span>
-                            <span><span class="lbl">Teléfono / WhatsApp</span><span class="val">+593 959 720 085</span></span>
+                            <span><span class="lbl" data-i18n="contact.phoneLabel">Teléfono / WhatsApp</span><span class="val">+593 959 720 085</span></span>
                         </a>
                         <a href="https://www.linkedin.com/in/jhossua-vega-659526192/" target="_blank" class="card contact-item">
                             <span class="contact-icon"><i class="fab fa-linkedin-in"></i></span>
@@ -849,15 +847,15 @@
                         </a>
                         <div class="card contact-item">
                             <span class="contact-icon"><i class="fas fa-map-marker-alt"></i></span>
-                            <span><span class="lbl">Ubicación</span><span class="val">Quito, Ecuador</span></span>
+                            <span><span class="lbl" data-i18n="contact.locationLabel">Ubicación</span><span class="val">Quito, Ecuador</span></span>
                         </div>
                     </div>
 
                     <div class="card contact-cta reveal">
-                        <h3>¿Tienes un proyecto de datos en mente?</h3>
-                        <p>Escríbeme y conversemos sobre cómo puedo ayudarte a construir tu plataforma de datos.</p>
+                        <h3 data-i18n="contact.cta.title">¿Tienes un proyecto de datos en mente?</h3>
+                        <p data-i18n="contact.cta.desc">Escríbeme y conversemos sobre cómo puedo ayudarte a construir tu plataforma de datos.</p>
                         <a href="mailto:anthoy_vega95@hotmail.com" class="btn btn-primary">
-                            <i class="fas fa-paper-plane"></i> Enviar un correo
+                            <i class="fas fa-paper-plane"></i> <span data-i18n="contact.cta.button">Enviar un correo</span>
                         </a>
                     </div>
                 </div>
@@ -868,6 +866,7 @@
 
     <div id="footer-placeholder"></div>
 
+    <script src="i18n.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

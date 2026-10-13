@@ -3,21 +3,31 @@ document.addEventListener("DOMContentLoaded", function () {
     // ----------------------------------------------------
     // 1. Cargar parciales (header / footer)
     // ----------------------------------------------------
-    const loadPartial = (url, elementId, callback) => {
-        fetch(url)
+    const loadPartial = (url, elementId) => {
+        return fetch(url)
             .then((response) => response.text())
             .then((data) => {
                 const placeholder = document.getElementById(elementId);
                 if (placeholder) {
                     placeholder.innerHTML = data;
                 }
-                if (callback) callback();
             })
             .catch((error) => console.error(`Error al cargar ${url}:`, error));
     };
 
-    loadPartial('partials/header.html', 'header-placeholder', setupHeader);
-    loadPartial('partials/footer.html', 'footer-placeholder', setupFooterYear);
+    Promise.all([
+        loadPartial('partials/header.html', 'header-placeholder'),
+        loadPartial('partials/footer.html', 'footer-placeholder')
+    ]).then(() => {
+        setupHeader();
+        setupFooterYear();
+
+        // Aplica el idioma guardado (o el predeterminado) ahora que el
+        // header y el footer ya están en el DOM, y conecta el botón de idioma.
+        if (window.JVI18N) {
+            window.JVI18N.init();
+        }
+    });
 
     // ----------------------------------------------------
     // 2. Header: sticky, menú móvil, scroll spy, smooth scroll, tema
@@ -122,8 +132,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
             diagram.classList.toggle('is-open', willOpen);
             btn.classList.toggle('is-open', willOpen);
+
+            const lang = window.JVI18N ? window.JVI18N.getLang() : 'es';
+            const hideLabel = (window.JVI18N && window.JVI18N.dict[lang])
+                ? window.JVI18N.dict[lang]['flow.hideLabel']
+                : 'Ocultar diagrama';
+
             btn.querySelector('.flow-toggle-label').textContent = willOpen
-                ? 'Ocultar diagrama'
+                ? hideLabel
                 : btn.dataset.label;
         });
     });
