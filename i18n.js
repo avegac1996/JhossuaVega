@@ -12,7 +12,7 @@
             "hero.kicker": "Disponible para nuevas oportunidades",
             "hero.titleLead": "Hola, soy",
             "hero.role": "<strong>Arquitecto de Datos</strong> &amp; Soluciones Cloud",
-            "hero.lede": "Diseño arquitecturas de datos escalables: plataformas Lakehouse, patrones Medallion y estrategias cloud sobre AWS, Azure y Databricks — desde la gobernanza y los estándares técnicos hasta la ejecución, con base en más de 5 años de ingeniería de datos.",
+            "hero.lede": "Diseño arquitecturas de datos escalables: plataformas Data Lakehouse bajo el patrón Medallion, y estrategias cloud sobre AWS, Azure y Databricks — desde la gobernanza y los estándares técnicos hasta la ejecución, con base en más de 5 años de ingeniería de datos.",
             "hero.ctaCv": "Descargar CV",
             "hero.ctaContact": "Contáctame",
             "hero.statA": "Años en<br>Datos &amp; Cloud",
@@ -23,7 +23,7 @@
             "about.sub": "Arquitectura de datos con base sólida en ingeniería y gobernanza.",
             "about.cardTitle": "Ingeniero en Ciencias de la Computación",
             "about.roleLine": "Arquitecto de Datos &amp; Soluciones Cloud",
-            "about.p1": "Soy <strong>Arquitecto de Datos</strong> con más de <strong>5 años de trayectoria</strong> en ingeniería y gobernanza de datos. Defino el stack tecnológico, diseño patrones <strong>Medallion</strong> y <strong>Data Lakehouse</strong>, y despliego soluciones robustas en <strong>AWS, Azure y Databricks</strong>.",
+            "about.p1": "Soy <strong>Arquitecto de Datos</strong> con más de <strong>5 años de trayectoria</strong> en ingeniería y gobernanza de datos. Defino el stack tecnológico, diseño arquitecturas <strong>Data Lakehouse</strong> bajo el patrón <strong>Medallion</strong>, y despliego soluciones robustas en <strong>AWS, Azure y Databricks</strong>.",
             "about.p2": "Lidero equipos técnicos y combino visión arquitectónica con experiencia hands-on en <strong>Python</strong> y pipelines ETL/ELT, lo que se traduce en soluciones realistas, automatizadas y de alto rendimiento que sostienen decisiones de negocio.",
             "about.detail.birth": "Fecha de nacimiento",
             "about.detail.birthValue": "27 oct. 1996",
@@ -53,25 +53,30 @@
             "exp.badge.current": "Actual",
 
             "exp.turingtech.date": "Ene 2025 — Actualidad",
-            "exp.turingtech.title": "Arquitecto de Soluciones y Tech Lead",
+            "exp.turingtech.title": "Arquitecto de Soluciones",
             "exp.turingtech.toggle": "Ver diseño de arquitectura",
 
             "exp.handytec.date": "Nov 2025 — Actualidad",
             "exp.handytec.toggle": "Ver proceso de linaje",
 
+            "exp.gestcobra.date": "Mar 2024 — Nov 2025",
             "exp.gestcobra.toggle": "Ver proceso ETL",
 
+            "exp.procuraduria.date": "Ago 2023 — Feb 2024",
             "exp.procuraduria.title": "Administrador de Base de Datos",
             "exp.procuraduria.company": "Procuraduría General del Estado",
             "exp.procuraduria.toggle": "Ver estrategia de continuidad",
 
+            "exp.fisa.date": "Ene 2022 — Jul 2023",
             "exp.fisa.title": "Data Engineer y BI Developer",
             "exp.fisa.toggle": "Ver pipeline de datos",
 
             "exp.marmoles.title": "Pasante de Data Engineering",
             "exp.marmoles.toggle": "Ver flujo de datos",
 
+            "exp.igm.date": "Sep 2017 — Ene 2019",
             "exp.igm.title": "Especialista en Calidad y Confiabilidad de Datos",
+            "exp.igm.company": "Instituto Geográfico Militar",
             "exp.igm.toggle": "Ver proceso de calidad",
 
             "flow.dataSources": "Fuentes de Datos",
@@ -81,6 +86,7 @@
             "flow.relationalModel": "Modelo Relacional",
             "flow.businessRequirement": "Requerimiento de Negocio",
             "flow.architecturalDesign": "Diseño Arquitectónico",
+            "flow.microservicesPattern": "Microservicios / Hexagonal",
             "flow.cloudDeployment": "Despliegue Cloud",
             "flow.technicalTeam": "Equipo Técnico",
             "flow.fourPeople": "4 personas",
@@ -102,8 +108,13 @@
             "edu.eyebrow": "Formación",
             "edu.title": "Educación",
             "edu1.title": "Ingeniería en Ciencias de la Computación",
+            "edu1.date": "Ago 2018 — Feb 2025",
             "edu2.title": "Pedagogía de los Idiomas (Inglés)",
+            "edu2.date": "Ago 2021 — Ago 2025",
             "edu3.title": "Bachillerato Técnico en Informática",
+            "edu4.title": "Servicio Militar",
+            "edu4.date": "Oct 2016 — Ago 2017",
+            "edu4.company": "Fuerte Militar Atahualpa — Batallón de Infantería Motorizada N.º 27 \"Vencedores\". Disciplina, trabajo en equipo y liderazgo bajo presión.",
 
             "skills.eyebrow": "Stack técnico",
             "skills.title": "Habilidades",
@@ -168,7 +179,7 @@
             "hero.kicker": "Open to new opportunities",
             "hero.titleLead": "Hi, I'm",
             "hero.role": "<strong>Data Architect</strong> &amp; Cloud Solutions",
-            "hero.lede": "I design scalable data architectures: Lakehouse platforms, Medallion patterns, and cloud strategy across AWS, Azure, and Databricks — from governance and technical standards through execution, built on more than 5 years in data engineering.",
+            "hero.lede": "I design scalable data architectures: Data Lakehouse platforms under the Medallion pattern, and cloud strategy across AWS, Azure, and Databricks — from governance and technical standards through execution, built on more than 5 years in data engineering.",
             "hero.ctaCv": "Download CV",
             "hero.ctaContact": "Get in touch",
             "hero.statA": "Years in<br>Data &amp; Cloud",
@@ -179,7 +190,7 @@
             "about.sub": "Data architecture grounded in strong engineering and governance.",
             "about.cardTitle": "B.S. in Computer Science Engineering",
             "about.roleLine": "Data Architect &amp; Cloud Solutions",
-            "about.p1": "I'm a <strong>Data Architect</strong> with over <strong>5 years</strong> of experience in data engineering and governance. I define the technology stack, design <strong>Medallion</strong> and <strong>Data Lakehouse</strong> patterns, and deploy robust solutions on <strong>AWS, Azure, and Databricks</strong>.",
+            "about.p1": "I'm a <strong>Data Architect</strong> with over <strong>5 years</strong> of experience in data engineering and governance. I define the technology stack, design <strong>Data Lakehouse</strong> architectures under the <strong>Medallion</strong> pattern, and deploy robust solutions on <strong>AWS, Azure, and Databricks</strong>.",
             "about.p2": "I lead technical teams and pair architectural vision with hands-on experience in <strong>Python</strong> and ETL/ELT pipelines — translating into realistic, automated, high-performance solutions that support business decisions.",
             "about.detail.birth": "Date of birth",
             "about.detail.birthValue": "Oct 27, 1996",
@@ -209,25 +220,30 @@
             "exp.badge.current": "Current",
 
             "exp.turingtech.date": "Jan 2025 — Present",
-            "exp.turingtech.title": "Solutions Architect &amp; Tech Lead",
+            "exp.turingtech.title": "Solutions Architect",
             "exp.turingtech.toggle": "View architecture design",
 
             "exp.handytec.date": "Nov 2025 — Present",
             "exp.handytec.toggle": "View lineage process",
 
+            "exp.gestcobra.date": "Mar 2024 — Nov 2025",
             "exp.gestcobra.toggle": "View ETL process",
 
+            "exp.procuraduria.date": "Aug 2023 — Feb 2024",
             "exp.procuraduria.title": "Database Administrator",
             "exp.procuraduria.company": "Office of the Attorney General of Ecuador",
             "exp.procuraduria.toggle": "View continuity strategy",
 
+            "exp.fisa.date": "Jan 2022 — Jul 2023",
             "exp.fisa.title": "Data Engineer &amp; BI Developer",
             "exp.fisa.toggle": "View data pipeline",
 
             "exp.marmoles.title": "Data Engineering Intern",
             "exp.marmoles.toggle": "View data flow",
 
+            "exp.igm.date": "Sep 2017 — Jan 2019",
             "exp.igm.title": "Data Quality &amp; Reliability Specialist",
+            "exp.igm.company": "Military Geographic Institute of Ecuador",
             "exp.igm.toggle": "View quality process",
 
             "flow.dataSources": "Data Sources",
@@ -237,6 +253,7 @@
             "flow.relationalModel": "Relational Model",
             "flow.businessRequirement": "Business Requirement",
             "flow.architecturalDesign": "Architectural Design",
+            "flow.microservicesPattern": "Microservices / Hexagonal",
             "flow.cloudDeployment": "Cloud Deployment",
             "flow.technicalTeam": "Technical Team",
             "flow.fourPeople": "4 people",
@@ -258,8 +275,13 @@
             "edu.eyebrow": "Education",
             "edu.title": "Education",
             "edu1.title": "B.S. in Computer Science Engineering",
+            "edu1.date": "Aug 2018 — Feb 2025",
             "edu2.title": "Language Pedagogy (English)",
+            "edu2.date": "Aug 2021 — Aug 2025",
             "edu3.title": "Technical Baccalaureate in Information Technology",
+            "edu4.title": "Military Service",
+            "edu4.date": "Oct 2016 — Aug 2017",
+            "edu4.company": "Atahualpa Military Fort — 27th Motorized Infantry Battalion \"Vencedores.\" Discipline, teamwork, and leadership under pressure.",
 
             "skills.eyebrow": "Tech Stack",
             "skills.title": "Skills",
@@ -325,8 +347,8 @@
     var LISTS = {
         es: {
             "exp.turingtech.bullets": [
-                "Diseño la arquitectura y lidero el despliegue cloud de soluciones a medida en BI, IA e Ingeniería de Datos.",
-                "Defino el stack tecnológico y los patrones arquitectónicos (microservicios, serverless).",
+                "Cofundador de mi consultora, en paralelo a mi rol principal: diseño arquitecturas end-to-end en BI, IA e Ingeniería de Datos.",
+                "Defino el stack tecnológico y los patrones arquitectónicos (microservicios, arquitectura hexagonal, serverless, IaC con Terraform).",
                 "Dirijo un equipo técnico de 4 personas, garantizando escalabilidad, seguridad y optimización de costos."
             ],
             "exp.handytec.bullets": [
@@ -356,14 +378,15 @@
                 "Construí pipelines en Python para ingesta desde fuentes no estructuradas."
             ],
             "exp.igm.bullets": [
-                "Validé, estandaricé y curé grandes volúmenes de datos geoespaciales.",
-                "Diseñé y ejecuté procesos de Data Quality Assurance."
+                "Ejecuté procesos de Data Quality Assurance (DQA) sobre datos geoespaciales a gran escala, detectando inconsistencias y errores estructurales.",
+                "Diseñé reglas de calidad, criterios de validación y procesos de auditoría para el Data Warehouse institucional.",
+                "Normalicé datasets para análisis cartográfico y sistemas GIS, asegurando trazabilidad mediante control de versiones."
             ]
         },
         en: {
             "exp.turingtech.bullets": [
-                "I design the architecture and lead cloud deployment of custom solutions across BI, AI, and Data Engineering.",
-                "I define the technology stack and architectural patterns (microservices, serverless).",
+                "Co-founder of my consultancy, in parallel with my primary role: I design end-to-end architectures across BI, AI, and Data Engineering.",
+                "I define the technology stack and architectural patterns (microservices, hexagonal architecture, serverless, IaC with Terraform).",
                 "I direct a technical team of 4, ensuring scalability, security, and cost optimization."
             ],
             "exp.handytec.bullets": [
@@ -393,8 +416,9 @@
                 "I built Python pipelines to ingest data from unstructured sources."
             ],
             "exp.igm.bullets": [
-                "I validated, standardized, and curated large volumes of geospatial data.",
-                "I designed and executed Data Quality Assurance processes."
+                "I executed Data Quality Assurance (DQA) processes on large-scale geospatial data, detecting inconsistencies and structural errors.",
+                "I designed data quality rules, validation criteria, and audit processes for the institutional Data Warehouse.",
+                "I standardized datasets for cartographic analysis and GIS systems, ensuring traceability through version control."
             ]
         }
     };
