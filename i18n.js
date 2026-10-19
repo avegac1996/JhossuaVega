@@ -114,7 +114,7 @@
             "edu3.title": "Bachillerato Técnico en Informática",
             "edu4.title": "Servicio Militar",
             "edu4.date": "Oct 2016 — Ago 2017",
-            "edu4.company": "Fuerte Militar Atahualpa — Batallón de Infantería Motorizada N.º 27 \"Vencedores\". Disciplina, trabajo en equipo y liderazgo bajo presión.",
+            "edu4.company": "Fuerte Militar Atahualpa — Batallón de Infantería Motorizada N.º 37 \"Vencedores\". Disciplina, trabajo en equipo y liderazgo bajo presión.",
 
             "skills.eyebrow": "Stack técnico",
             "skills.title": "Habilidades",
@@ -281,7 +281,7 @@
             "edu3.title": "Technical Baccalaureate in Information Technology",
             "edu4.title": "Military Service",
             "edu4.date": "Oct 2016 — Aug 2017",
-            "edu4.company": "Atahualpa Military Fort — 27th Motorized Infantry Battalion \"Vencedores.\" Discipline, teamwork, and leadership under pressure.",
+            "edu4.company": "Atahualpa Military Fort — 37th Motorized Infantry Battalion \"Vencedores.\" Discipline, teamwork, and leadership under pressure.",
 
             "skills.eyebrow": "Tech Stack",
             "skills.title": "Skills",
