@@ -2,11 +2,11 @@
 
 #cv(
   role: "Data Architect & Cloud Solutions",
-  summary: "Data Architect with over 5 years of experience in data engineering and governance. I define the technology stack, design Medallion and Data Lakehouse patterns, and deploy robust solutions on AWS, Azure, and Databricks.",
+  summary: "Data Architect with over 5 years of experience in data engineering and governance. I define the technology stack, design Data Lakehouse architectures under the Medallion pattern, and deploy robust solutions on AWS, Azure, and Databricks.",
   portfolio-label: "Portfolio",
   born-label: "Oct 27, 1996",
   phone: "+593 95 972 0085",
-  email: "anthoy_vega95@hotmail.com",
+  email: "anthony_vega95@hotmail.com",
   location: "Quito, Ecuador",
   linkedin: "linkedin.com/in/jhossua-vega-659526192",
   section-education: "Education",
@@ -20,18 +20,18 @@
 
   education: (
     ("Universidad Politécnica Salesiana (UPS)", "B.S. in Computer Science Engineering", "Aug 2018 – Feb 2025"),
-    ("Universidad Estatal de Milagro (UNEMI)", "Language Pedagogy (English)", "Aug 2021 – Aug 2025"),
     ("Colegio Técnico Vida Nueva", "Technical Baccalaureate in Information Technology", "Sep 2009 – Jun 2016"),
+    ("Ecuadorian Armed Forces", "Military Service", "Oct 2016 – Aug 2017"),
   ),
 
   experience: (
     (
-      "TuringTech — Solutions Architect & Tech Lead",
+      "TuringTech — Solutions Architect",
       "January 2025 – Present",
       (
-        "I design the architecture and lead cloud deployment of custom solutions across BI, AI, and Data Engineering.",
-        "I define the technology stack and architectural patterns (microservices, serverless).",
-        "I direct a technical team of 4, ensuring scalability, security, and cost optimization.",
+        "Co-founder of my consultancy, in parallel with my primary role: I design end-to-end architectures across BI, AI, and Data Engineering.",
+        "I define the technology stack (Node.js, microservices with hexagonal architecture, Kafka for event-driven integration) and deploy serverless infrastructure and IaC with Terraform across AWS/Azure.",
+        "I lead a technical team of 4: I review architecture and code standards, define CI/CD practices, and ensure scalability, security, and cost optimization.",
       ),
     ),
     (
@@ -70,6 +70,15 @@
         "I implemented data quality controls and executive dashboards in RShiny.",
       ),
     ),
+    (
+      "Military Geographic Institute of Ecuador — Data Quality & Reliability Specialist",
+      "September 2017 – January 2019",
+      (
+        "I executed Data Quality Assurance (DQA) processes on large-scale geospatial data, detecting inconsistencies and structural errors.",
+        "I designed data quality rules, validation criteria, and audit processes for the institutional Data Warehouse.",
+        "I standardized datasets for cartographic analysis and GIS systems, ensuring traceability through version control.",
+      ),
+    ),
   ),
 
   skill-groups: (
@@ -77,8 +86,8 @@
     ("Frameworks & Development", ("Angular", "React", "Node.js", ".NET / C#")),
     ("Databases", ("SQL Server", "Oracle / PL-SQL", "PostgreSQL", "MySQL", "MongoDB", "Cosmos DB", "DynamoDB", "Redis")),
     ("Cloud & Platforms", ("AWS", "Azure", "S3", "Databricks", "Microsoft Fabric", "Data Factory")),
-    ("Architecture & Modeling", ("Data Lakehouse", "Data Warehouse", "Data Mesh", "Data Fabric", "Delta Lake")),
-    ("Orchestration, DevOps & Quality", ("ETL / ELT", "Apache Airflow", "CI/CD", "Docker", "Git", "Grafana", "SSIS")),
+    ("Architecture & Modeling", ("Data Lakehouse", "Medallion Architecture", "Data Governance", "Data Warehouse", "Delta Lake", "Microservices", "Hexagonal Architecture")),
+    ("Orchestration, DevOps & Quality", ("ETL / ELT", "Apache Airflow", "Terraform", "CI/CD", "Docker", "Git", "Grafana", "SSIS")),
   ),
 
   certifications: (
@@ -103,7 +112,8 @@
 
   references: (
     ("Gabriela Idrovo, Eng.", "Data Scientist", "Cell: +1 (437) 601-5041"),
-    ("Leonel Parrales, Eng.", "Data Engineer", "Cell: 098 000 5123"),
+    ("Leonel Parrales, Eng.", "Cloud Data & Solutions Architect", "Cell: 098 000 5123"),
     ("Fernanda Salazar, Dr.", "Head of IT", "Cell: 099 750 7217"),
+    ("Nicole Flores", "Project Manager", "Cell: 098 787 9595"),
   ),
 )
