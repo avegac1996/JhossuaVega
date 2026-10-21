@@ -11,7 +11,7 @@
         es: {
             "hero.kicker": "Disponible para nuevas oportunidades",
             "hero.titleLead": "Hola, soy",
-            "hero.role": "<strong>Arquitecto de Datos</strong> &amp; Soluciones Cloud",
+            "hero.role": "<strong>Ingeniero de Datos</strong> &amp; Arquitecto de Soluciones",
             "hero.lede": "Diseño arquitecturas de datos escalables: plataformas Data Lakehouse bajo el patrón Medallion, y estrategias cloud sobre AWS, Azure y Databricks — desde la gobernanza y los estándares técnicos hasta la ejecución, con base en más de 5 años de ingeniería de datos.",
             "hero.ctaCv": "Descargar CV",
             "hero.ctaContact": "Contáctame",
@@ -22,8 +22,8 @@
             "about.title": "Sobre mí",
             "about.sub": "Arquitectura de datos con base sólida en ingeniería y gobernanza.",
             "about.cardTitle": "Ingeniero en Ciencias de la Computación",
-            "about.roleLine": "Arquitecto de Datos &amp; Soluciones Cloud",
-            "about.p1": "Soy <strong>Arquitecto de Datos</strong> con más de <strong>5 años de trayectoria</strong> en ingeniería y gobernanza de datos. Defino el stack tecnológico, diseño arquitecturas <strong>Data Lakehouse</strong> bajo el patrón <strong>Medallion</strong>, y despliego soluciones robustas en <strong>AWS, Azure y Databricks</strong>.",
+            "about.roleLine": "Ingeniero de Datos &amp; Arquitecto de Soluciones",
+            "about.p1": "Soy <strong>Ingeniero de Datos y Arquitecto de Soluciones</strong> con más de <strong>5 años de trayectoria</strong> en ingeniería y gobernanza de datos. Diseño arquitecturas <strong>Data Lakehouse</strong> bajo el patrón <strong>Medallion</strong>, defino stacks tecnológicos y despliego soluciones robustas en <strong>AWS, Azure y Databricks</strong>.",
             "about.p2": "Lidero equipos técnicos y combino visión arquitectónica con experiencia hands-on en <strong>Python</strong> y pipelines ETL/ELT, lo que se traduce en soluciones realistas, automatizadas y de alto rendimiento que sostienen decisiones de negocio.",
             "about.detail.birth": "Fecha de nacimiento",
             "about.detail.birthValue": "27 oct. 1996",
@@ -53,7 +53,7 @@
             "exp.badge.current": "Actual",
 
             "exp.turingtech.date": "Ene 2025 — Actualidad",
-            "exp.turingtech.title": "Arquitecto de Soluciones",
+            "exp.turingtech.title": "Arquitecto de Soluciones (tiempo parcial)",
             "exp.turingtech.toggle": "Ver diseño de arquitectura",
 
             "exp.handytec.date": "Nov 2025 — Actualidad",
@@ -88,8 +88,8 @@
             "flow.architecturalDesign": "Diseño Arquitectónico",
             "flow.microservicesPattern": "Microservicios / Hexagonal",
             "flow.cloudDeployment": "Despliegue Cloud",
-            "flow.technicalTeam": "Equipo Técnico",
-            "flow.fourPeople": "4 personas",
+            "flow.technicalTeam": "Gobierno Técnico",
+            "flow.fourPeople": "Revisión & CI/CD",
             "flow.financialApis": "APIs Financieras",
             "flow.medallionPattern": "Patrón Medallion",
             "flow.collectionsKpis": "KPIs de cobranza",
@@ -152,6 +152,9 @@
             "proj8.title": "Telefonía IP",
             "proj8.desc": "Optimización de campañas outbound e IVRs sobre plataformas de telefonía IP.",
 
+            "proj9.title": "Dashboard Web",
+            "proj9.desc": "Sitio web para visualizar la información del Call Center de Multigesión Ambato.",
+
             "contact.eyebrow": "Contacto",
             "contact.title": "Trabajemos juntos",
             "contact.sub": "Disponible para nuevas oportunidades, proyectos de consultoría o soporte de infraestructura.",
@@ -178,7 +181,7 @@
         en: {
             "hero.kicker": "Open to new opportunities",
             "hero.titleLead": "Hi, I'm",
-            "hero.role": "<strong>Data Architect</strong> &amp; Cloud Solutions",
+            "hero.role": "<strong>Data Engineer</strong> &amp; Solutions Architect",
             "hero.lede": "I design scalable data architectures: Data Lakehouse platforms under the Medallion pattern, and cloud strategy across AWS, Azure, and Databricks — from governance and technical standards through execution, built on more than 5 years in data engineering.",
             "hero.ctaCv": "Download CV",
             "hero.ctaContact": "Get in touch",
@@ -189,8 +192,8 @@
             "about.title": "About Me",
             "about.sub": "Data architecture grounded in strong engineering and governance.",
             "about.cardTitle": "B.S. in Computer Science Engineering",
-            "about.roleLine": "Data Architect &amp; Cloud Solutions",
-            "about.p1": "I'm a <strong>Data Architect</strong> with over <strong>5 years</strong> of experience in data engineering and governance. I define the technology stack, design <strong>Data Lakehouse</strong> architectures under the <strong>Medallion</strong> pattern, and deploy robust solutions on <strong>AWS, Azure, and Databricks</strong>.",
+            "about.roleLine": "Data Engineer &amp; Solutions Architect",
+            "about.p1": "I'm a <strong>Data Engineer and Solutions Architect</strong> with over <strong>5 years</strong> of experience in data engineering and governance. I design <strong>Data Lakehouse</strong> architectures under the <strong>Medallion</strong> pattern, define technology stacks, and deploy robust solutions on <strong>AWS, Azure, and Databricks</strong>.",
             "about.p2": "I lead technical teams and pair architectural vision with hands-on experience in <strong>Python</strong> and ETL/ELT pipelines — translating into realistic, automated, high-performance solutions that support business decisions.",
             "about.detail.birth": "Date of birth",
             "about.detail.birthValue": "Oct 27, 1996",
@@ -220,7 +223,7 @@
             "exp.badge.current": "Current",
 
             "exp.turingtech.date": "Jan 2025 — Present",
-            "exp.turingtech.title": "Solutions Architect",
+            "exp.turingtech.title": "Solutions Architect (part-time)",
             "exp.turingtech.toggle": "View architecture design",
 
             "exp.handytec.date": "Nov 2025 — Present",
@@ -255,8 +258,8 @@
             "flow.architecturalDesign": "Architectural Design",
             "flow.microservicesPattern": "Microservices / Hexagonal",
             "flow.cloudDeployment": "Cloud Deployment",
-            "flow.technicalTeam": "Technical Team",
-            "flow.fourPeople": "4 people",
+            "flow.technicalTeam": "Technical Governance",
+            "flow.fourPeople": "Review & CI/CD",
             "flow.financialApis": "Financial APIs",
             "flow.medallionPattern": "Medallion Pattern",
             "flow.collectionsKpis": "Collections KPIs",
@@ -319,6 +322,9 @@
             "proj8.title": "IP Telephony",
             "proj8.desc": "Optimization of outbound campaigns and IVRs on IP telephony platforms.",
 
+            "proj9.title": "Web Dashboard",
+            "proj9.desc": "Website to view the Multigesión Ambato call center's information.",
+
             "contact.eyebrow": "Contact",
             "contact.title": "Let's work together",
             "contact.sub": "Open to new opportunities, consulting projects, or infrastructure support.",
@@ -347,9 +353,9 @@
     var LISTS = {
         es: {
             "exp.turingtech.bullets": [
-                "Cofundador de mi consultora, en paralelo a mi rol principal: diseño arquitecturas end-to-end en BI, IA e Ingeniería de Datos.",
-                "Defino el stack tecnológico y los patrones arquitectónicos (microservicios, arquitectura hexagonal, serverless, IaC con Terraform).",
-                "Dirijo un equipo técnico de 4 personas, garantizando escalabilidad, seguridad y optimización de costos."
+                "Cofundador de mi consultora, en tiempo parcial fuera de mi jornada laboral completa: diseño arquitecturas end-to-end en BI, IA e Ingeniería de Datos.",
+                "Defino el stack tecnológico (Node.js, microservicios con arquitectura hexagonal, Kafka para integración de eventos) y despliego infraestructura serverless e IaC con Terraform sobre AWS/Azure.",
+                "Dirijo el equipo técnico de la consultora: reviso arquitectura y estándares de código, defino prácticas de CI/CD, y logro una reducción del 30% en costos de infraestructura."
             ],
             "exp.handytec.bullets": [
                 "Implemento soluciones de datos en Microsoft Fabric y Databricks: Lakehouses, notebooks y pipelines ETL/ELT con PySpark, Dataflows y Python.",
@@ -358,18 +364,18 @@
                 "Administro la infraestructura en Azure, Fabric, Databricks y AWS."
             ],
             "exp.gestcobra.bullets": [
-                "Diseñé la arquitectura de datos empresarial bajo patrón Medallion, con estandarización y trazabilidad.",
+                "Diseñé la arquitectura de datos empresarial bajo patrón Medallion, con estandarización, trazabilidad y desarrollo en Microsoft Fabric.",
                 "Construí pipelines ETL/ELT en Python para datos transaccionales y APIs financieras.",
-                "Gestioné la infraestructura AWS (S3, EC2, IAM) y automaticé los KPIs de cobranza.",
+                "Gestioné la infraestructura AWS (S3, EC2, IAM) y automaticé los KPIs de cobranza, reduciendo en un 50% el tiempo dedicado a tareas repetitivas.",
                 "Entregué Data Marts y reportes avanzados en Power BI."
             ],
             "exp.procuraduria.bullets": [
                 "Administré y optimicé bases de datos institucionales de alta disponibilidad.",
                 "Implementé estrategias de respaldo, recuperación y continuidad operativa (RPO/RTO).",
-                "Automaticé migraciones estructuradas y la digitalización documental."
+                "Automaticé migraciones estructuradas y la digitalización documental con .NET/C#."
             ],
             "exp.fisa.bullets": [
-                "Orquesté y optimicé pipelines ETL, reduciendo los tiempos de carga.",
+                "Orquesté y optimicé pipelines ETL con Apache Airflow, reduciendo los tiempos de carga.",
                 "Diseñé modelos y procedimientos almacenados en SQL Server y PL/SQL.",
                 "Implementé controles de calidad de datos y dashboards gerenciales en RShiny."
             ],
@@ -385,9 +391,9 @@
         },
         en: {
             "exp.turingtech.bullets": [
-                "Co-founder of my consultancy, in parallel with my primary role: I design end-to-end architectures across BI, AI, and Data Engineering.",
-                "I define the technology stack and architectural patterns (microservices, hexagonal architecture, serverless, IaC with Terraform).",
-                "I direct a technical team of 4, ensuring scalability, security, and cost optimization."
+                "Co-founder of my consultancy, part-time outside my full-time role: I design end-to-end architectures across BI, AI, and Data Engineering.",
+                "I define the technology stack (Node.js, microservices with hexagonal architecture, Kafka for event-driven integration) and deploy serverless infrastructure and IaC with Terraform across AWS/Azure.",
+                "I lead the consultancy's technical team: I review architecture and code standards, define CI/CD practices, and achieve a 30% reduction in infrastructure costs."
             ],
             "exp.handytec.bullets": [
                 "I implement data solutions on Microsoft Fabric and Databricks: Lakehouses, notebooks, and ETL/ELT pipelines with PySpark, Dataflows, and Python.",
@@ -396,18 +402,18 @@
                 "I manage infrastructure across Azure, Fabric, Databricks, and AWS."
             ],
             "exp.gestcobra.bullets": [
-                "I designed the enterprise data architecture under the Medallion pattern, with standardization and traceability.",
+                "I designed the enterprise data architecture under the Medallion pattern, with standardization, traceability, and development on Microsoft Fabric.",
                 "I built ETL/ELT pipelines in Python for transactional data and financial APIs.",
-                "I managed AWS infrastructure (S3, EC2, IAM) and automated collections KPIs.",
+                "I managed AWS infrastructure (S3, EC2, IAM) and automated collections KPIs, cutting time spent on repetitive tasks by 50%.",
                 "I delivered Data Marts and advanced reporting in Power BI."
             ],
             "exp.procuraduria.bullets": [
                 "I administered and optimized high-availability institutional databases.",
                 "I implemented backup, recovery, and business continuity strategies (RPO/RTO).",
-                "I automated structured migrations and document digitization."
+                "I automated structured migrations and document digitization with .NET/C#."
             ],
             "exp.fisa.bullets": [
-                "I orchestrated and optimized ETL pipelines, reducing load times.",
+                "I orchestrated and optimized ETL pipelines with Apache Airflow, reducing load times.",
                 "I designed data models and stored procedures in SQL Server and PL/SQL.",
                 "I implemented data quality controls and executive dashboards in RShiny."
             ],

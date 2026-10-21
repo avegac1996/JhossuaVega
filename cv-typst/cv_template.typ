@@ -30,32 +30,32 @@
   #line(length: 100%, stroke: 1.1pt + navy)
 ]
 
-#let edu-item(line1, line2, dates) = block(below: 6pt, spacing: 0pt)[
+#let edu-item(line1, line2, dates) = block(below: 4.5pt, spacing: 0pt)[
   #text(size: 9pt, weight: 600, fill: navy)[#line1] \
   #text(size: 8.4pt, fill: text-mid)[#line2] #h(5pt) #text(size: 7.6pt, fill: text-soft)[#dates]
 ]
 
-#let exp-item(title-line, dates, bullets) = block(below: 10pt, spacing: 0pt)[
-  #text(size: 9.2pt, weight: 700, fill: navy)[#title-line] #h(5pt) #text(size: 7.8pt, fill: text-soft)[#dates]
-  #v(4pt)
-  #for b in bullets [
-    #block(below: 4.5pt, spacing: 0pt)[
-      #par(leading: 0.6em)[#text(size: 7.9pt, fill: text-dark)[#sym.bullet #h(3pt) #b]]
-    ]
-  ]
+#let exp-item(title-line, dates, bullets) = block(below: 5pt, spacing: 0pt)[
+  #par(justify: false)[#text(size: 9.2pt, weight: 700, fill: navy)[#title-line] #h(5pt) #text(size: 7.8pt, fill: text-soft)[#dates]]
+  #v(2.2pt)
+  #list(
+    marker: text(size: 7.6pt, fill: text-dark)[#sym.bullet],
+    indent: 0pt, body-indent: 7pt, spacing: 2.6pt,
+    ..bullets.map(b => par(leading: 0.52em)[#text(size: 7.4pt, fill: text-dark)[#b]])
+  )
 ]
 
 #let cert-group(cat, items) = block(below: 9pt, spacing: 0pt)[
   #text(size: 8pt, weight: 700, fill: navy)[#cat]
   #v(3pt)
-  #for it in items [
-    #block(below: 4pt, spacing: 0pt)[
-      #par(leading: 0.62em)[#text(size: 6.9pt, fill: text-mid)[#sym.dot.c #h(2pt) #it]]
-    ]
-  ]
+  #list(
+    marker: text(size: 6.9pt, fill: text-mid)[#sym.dot.c],
+    indent: 0pt, body-indent: 6pt, spacing: 4pt,
+    ..items.map(it => par(leading: 0.62em)[#text(size: 6.9pt, fill: text-mid)[#it]])
+  )
 ]
 
-#let ref-item(name, role, cell) = block(below: 4pt, spacing: 0pt)[
+#let ref-item(name, role, cell) = block(below: 3pt, spacing: 0pt)[
   #text(size: 7.9pt, weight: 600, fill: navy)[#name] #text(size: 7.3pt, fill: text-soft)[, #role — #cell]
 ]
 
@@ -83,11 +83,11 @@
   references: (),
 ) = {
   set page(width: 21cm, height: 29.7cm, margin: 0pt, fill: white)
-  set text(font: "Liberation Sans", fill: text-dark)
+  set text(font: "Liberation Sans", fill: text-dark, hyphenate: false)
   set par(leading: 0.58em, spacing: 0.6em)
 
   // ---------- HEADER ----------
-  block(width: 100%, fill: navy, inset: (left: 34pt, right: 34pt, top: 18pt, bottom: 14pt))[
+  block(width: 100%, fill: navy, inset: (left: 34pt, right: 34pt, top: 15pt, bottom: 11pt))[
     #grid(columns: (1fr, auto), align: top,
       [
         #text(size: 23pt, weight: 700, fill: white, tracking: 0.5pt)[JHOSSUA VEGA] \
@@ -117,8 +117,8 @@
   ]
 
   // ---------- BODY ----------
-  grid(columns: (1.5fr, 1.12fr), gutter: 10pt,
-    inset: (left: 34pt, right: 34pt, top: 11pt, bottom: 10pt),
+  grid(columns: (1.58fr, 1.08fr), gutter: 10pt,
+    inset: (left: 34pt, right: 34pt, top: 8pt, bottom: 6pt),
     // -- MAIN COLUMN --
     [
       #set par(justify: true)

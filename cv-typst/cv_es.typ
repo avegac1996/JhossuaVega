@@ -1,8 +1,8 @@
 #import "cv_template.typ": cv
 
 #cv(
-  role: "Data Architect & Cloud Solutions",
-  summary: "Arquitecto de Datos con más de 5 años de trayectoria en ingeniería y gobernanza de datos. Defino el stack tecnológico, diseño arquitecturas Data Lakehouse bajo el patrón Medallion, y despliego soluciones robustas en AWS, Azure y Databricks.",
+  role: "Ingeniero de Datos & Arquitecto de Soluciones",
+  summary: "Ingeniero de Datos y Arquitecto de Soluciones con más de 5 años de trayectoria en ingeniería y gobernanza de datos. Diseño arquitecturas Data Lakehouse bajo el patrón Medallion, defino stacks tecnológicos y despliego soluciones robustas en AWS, Azure y Databricks.",
   portfolio-label: "Portafolio",
   born-label: "27-10-1996",
   phone: "+593 95 972 0085",
@@ -26,12 +26,12 @@
 
   experience: (
     (
-      "TuringTech — Solutions Architect",
+      "TuringTech — Solutions Architect (tiempo parcial)",
       "Enero 2025 – Actualidad",
       (
-        "Cofundador de mi consultora, en paralelo a mi rol principal: diseño arquitecturas end-to-end en BI, IA e Ingeniería de Datos.",
+        "Cofundador de mi consultora, en tiempo parcial fuera de mi jornada laboral completa: diseño arquitecturas end-to-end en BI, IA e Ingeniería de Datos.",
         "Defino el stack tecnológico (Node.js, microservicios con arquitectura hexagonal, Kafka para integración de eventos) y despliego infraestructura serverless e IaC con Terraform sobre AWS/Azure.",
-        "Dirijo un equipo técnico de 4 personas: reviso arquitectura y estándares de código, defino prácticas de CI/CD, y garantizo escalabilidad, seguridad y optimización de costos.",
+        "Dirijo el equipo técnico de la consultora: reviso arquitectura y estándares de código, defino prácticas de CI/CD, y logro una reducción del 30% en costos de infraestructura.",
       ),
     ),
     (
@@ -47,9 +47,9 @@
       "Gestcobra Cía. Ltda. — Data Engineer",
       "Marzo 2024 – Noviembre 2025",
       (
-        "Diseñé la arquitectura de datos empresarial bajo patrón Medallion, con estandarización y trazabilidad.",
+        "Diseñé la arquitectura de datos empresarial bajo patrón Medallion, con estandarización, trazabilidad y desarrollo en Microsoft Fabric.",
         "Construí pipelines ETL/ELT en Python para datos transaccionales y APIs financieras.",
-        "Administré la infraestructura AWS (S3, EC2, IAM) y automaticé los KPIs de cobranza.",
+        "Administré la infraestructura AWS (S3, EC2, IAM) y automaticé los KPIs de cobranza, reduciendo en un 50% el tiempo dedicado a tareas repetitivas.",
       ),
     ),
     (
@@ -101,7 +101,7 @@
       "Agent Fundamentals — Databricks, 07.2026",
       "Generative AI Fundamentals — Databricks, 07.2026",
       "Databricks Fundamentals — Databricks, 07.2026",
-      "AI Practitioner Certificate — 04.2026",
+      "AI Practitioner Certificate — Handytec, 04.2026",
     )),
     ("Inteligencia Artificial Generativa y LLMs", (
       "Claude Code in Action — Anthropic Education, 03.2026",
@@ -112,8 +112,8 @@
 
   references: (
     ("Gabriela Idrovo, Ing.", "Data Scientist", "Cel: +1 (437) 601-5041"),
-    ("Leonel Parrales, Ing.", "Cloud Data & Solutions Architect", "Cel: 098 000 5123"),
-    ("Fernanda Salazar, Dra.", "Head of IT", "Cel: 099 750 7217"),
-    ("Nicole Flores", "Project Manager", "Cel: 098 787 9595"),
+    ("Leonel Parrales, Ing.", "Cloud Data & Solutions Architect", "Cel: +593 98 000 5123"),
+    ("Fernanda Salazar, Dra.", "Head of IT", "Cel: +593 99 750 7217"),
+    ("Nicole Flores", "Project Manager", "Cel: +593 98 787 9595"),
   ),
 )
